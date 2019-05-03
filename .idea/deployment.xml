@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="local" autoUploadExternalChanges="true">
     <serverData>
       <paths name="local">
         <serverdata>
           <mappings>
-            <mapping deploy="Git" local="$PROJECT_DIR$" web="/Git" />
+            <mapping deploy="Git/git_code" local="$PROJECT_DIR$/git_code" web="/Git/git_code" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
   </component>
 </project>

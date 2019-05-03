@@ -13,7 +13,7 @@ include ('library_form.php');
         <h1>Bienvenue à TravelCar!</h1>
           <div class="boite center">
             
-            <div class="boite_1">Réserver une place</div>
+            <div class="boite_1"><a href="reserver_place.php">Réserver une place</a></div>
             <div class="boite_1">Emprunter une voiture</div>
         </div>
         <div class="boite center">
