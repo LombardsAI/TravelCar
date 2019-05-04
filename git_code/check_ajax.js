@@ -15,7 +15,7 @@ var return_check=false;
             {  
                 xmlHttp = GetXmlHttpObject();
                 var data_url = "";
-                var url = "check_account.php?";
+                var url = "check_account.php";
                 
                 map.forEach(function(value,key){
                     
@@ -47,9 +47,11 @@ var return_check=false;
                         }
                     }
                     
-                }
-                xmlHttp.open("GET",url+data_url,true);
-                xmlHttp.send();
+                };
+                
+                xmlHttp.open("POST",url,true);
+                xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                xmlHttp.send(data_url);
             }
             
             function GetXmlHttpObject()
