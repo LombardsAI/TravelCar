@@ -14,6 +14,7 @@ and open the template in the editor.
 .center{
     margin:0px auto;
 }
+
 body.center{
     text-align:center
 }
@@ -21,27 +22,31 @@ h1{
     text-align:center 
 }
   
-  .boite{             
-      width:600px;     
+  .boite_size{             
+      width:800px;     
       height:50px;            
-      text-align: center;
   }
-  
+  .boite_size2{
+     width:800px;     
+     height:100px; 
+  }
+  .boite_border{
+     border:solid black; 
+  }
   .boite_1{
       font-size:20px;               
       width:40%;     
-      height:30px;           
-      border:solid black;
+      height:30p;
       text-align:center;
-      display: inline-block;
+      display:inline;
   }
   
    .boite_2{
       font-size:20px;               
       width:20%;     
       height:50px;           
-      text-align:center;
       display: inline-block;
+      margin-left: 3%;
   }
   .boite_3{             
       width:600px;     

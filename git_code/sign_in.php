@@ -8,10 +8,9 @@ include ('library_form.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="./pattern.css" />
-        <script src="jquery-3.3.1.js"></script>
-        <script src="angular.min.js"></script>
-  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="jquery-3.3.1.js"></script>
+  <script src="angular.min.js"></script>
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
             
            
@@ -60,6 +59,7 @@ echo ("Login")
    
 </html>
  <script src="check_ajax.js"></script> 
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script>
                 function set_check(){
                     var id = document.login.ID.value;

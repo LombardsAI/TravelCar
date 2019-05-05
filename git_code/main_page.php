@@ -8,40 +8,49 @@ include ('library_form.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="./pattern.css" />
+        <link rel="stylesheet" href="build/kalendae.css" type="text/css" charset="utf-8">
+        <script src="build/kalendae.standalone.js" type="text/javascript" charset="utf-8"></script>
+        <script src="angular.min.js"></script>
+        <script>
+            form_research = "reserver_place";
+           function choose_research(choix) {
+               form_research = document.research;
+               form_research.action = choix + ".php";
+            }
+            function submit_choice(){
+                form_research.submit();
+            }
+     </script> 
     </head>
-    <body>
+        <body>
         <h1>Bienvenue à TravelCar!</h1>
-          <div class="boite center">
-            
-            <div class="boite_1"><a href="reserver_place.php">Réserver une place</a></div>
-            <div class="boite_1">Emprunter une voiture</div>
+        <div class="boite_size center" >
+            <div class="boite_1"><button onclick="choose_research('reserver_place')">Réserver une place</button></div>
+            <div class="boite_1"><button onclick="choose_research('emprunter_voiture')">Emprunter une voiture</button></div>
         </div>
-        <div class="boite center">
+        <div class="boite_size2 center boite_border">
             <?php
             $lieu = array("Paris","Troyes");
-            form_begin("recherche","get","reserver.php");
             ?>
+            <form name='research' method='get' action="">
             <div class="boite_2">
                 <?php
               form_select("lieu","lieu",1,$lieu );
               ?>
             </div>
             <div class="boite_2">
-               <?php
-               form_input("date_debut",5);
-               ?>
+               <h5>date_debut</h5>
+               <input type="text" class="auto-kal" data-kal="mode: 'single', direction: 'future'" name="date_debut" size="10" >
                </div>
             <div class="boite_2">
-                <?php
-                form_input("date_fin",5);
-                ?>
+                <h5>date_debut</h5>
+                <input type="text" class="auto-kal" data-kal="mode: 'single', direction: 'future'" name="date_fin" size="10">
             </div>
              <div class="boite_2">
-                <?php
-               form_input_submit("Recherche");
-               form_end();
-                ?>
+                 <button class='btn btn-primary' type='submit' onclick="submit_research()">Recherche</button>
             </div>
+            </form>
         </div>
-    </body>
+        </body>
 </html>
+
