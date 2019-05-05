@@ -28,7 +28,7 @@ h1{
   }
   .boite_size2{
      width:800px;     
-     height:100px; 
+     height:150px; 
   }
   .boite_border{
      border:solid black; 
@@ -47,6 +47,7 @@ h1{
       height:50px;           
       display: inline-block;
       margin-left: 3%;
+      vertical-align: middle;
   }
   .boite_3{             
       width:600px;     
@@ -54,3 +55,7 @@ h1{
       margin-left: 20%;
 
   }
+  .boite_4{
+      display: inline;
+  }
+  
