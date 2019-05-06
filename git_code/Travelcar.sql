@@ -1,33 +1,43 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: May 04, 2019 at 02:04 PM
--- Server version: 5.7.23
--- PHP Version: 7.2.8
+-- 主机： 127.0.0.1:3306
+-- 生成日期： 2019-05-06 17:16:35
+-- 服务器版本： 5.7.24
+-- PHP 版本： 7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
--- Database: `travelcar`
+-- 数据库： `travelcar`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `aéroport`
+-- 表的结构 `aéroport`
 --
 
-CREATE TABLE `aéroport` (
+DROP TABLE IF EXISTS `aéroport`;
+CREATE TABLE IF NOT EXISTS `aéroport` (
   `IATA` varchar(3) NOT NULL,
   `ville` varchar(30) NOT NULL,
-  `nom_aeroport` varchar(50) NOT NULL
+  `nom_aeroport` varchar(50) NOT NULL,
+  PRIMARY KEY (`IATA`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `aéroport`
+-- 转存表中的数据 `aéroport`
 --
 
 INSERT INTO `aéroport` (`IATA`, `ville`, `nom_aeroport`) VALUES
@@ -43,40 +53,48 @@ INSERT INTO `aéroport` (`IATA`, `ville`, `nom_aeroport`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `emprunte`
+-- 表的结构 `emprunte`
 --
 
-CREATE TABLE `emprunte` (
+DROP TABLE IF EXISTS `emprunte`;
+CREATE TABLE IF NOT EXISTS `emprunte` (
   `n_véhicule` int(11) NOT NULL,
   `emprunteur` varchar(20) NOT NULL,
   `date_début` date NOT NULL,
-  `date_fin` date NOT NULL
+  `date_fin` date NOT NULL,
+  PRIMARY KEY (`n_véhicule`,`emprunteur`),
+  KEY `clé_étranger_enprunteur` (`emprunteur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gare`
+-- 表的结构 `gare`
 --
 
-CREATE TABLE `gare` (
-  `n_gare` int(11) NOT NULL,
+DROP TABLE IF EXISTS `gare`;
+CREATE TABLE IF NOT EXISTS `gare` (
+  `n_gare` int(11) NOT NULL AUTO_INCREMENT,
   `n_véhicule` int(11) NOT NULL,
   `label_du_parking` varchar(30) NOT NULL,
-  `date_bebut` date NOT NULL,
-  `date_fin` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date_debut` datetime NOT NULL,
+  `date_fin` datetime NOT NULL,
+  PRIMARY KEY (`n_gare`),
+  KEY `clé_étranger_véhicule` (`n_véhicule`),
+  KEY `clé_étranger_parking` (`label_du_parking`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gare`
+-- 转存表中的数据 `gare`
 --
 
-INSERT INTO `gare` (`n_gare`, `n_véhicule`, `label_du_parking`, `date_bebut`, `date_fin`) VALUES
-(3, 1, 'Chronopark', '2019-05-01', '2019-05-16');
+INSERT INTO `gare` (`n_gare`, `n_véhicule`, `label_du_parking`, `date_debut`, `date_fin`) VALUES
+(1, 1, 'Chronopark', '2019-05-01 00:00:00', '2019-05-16 00:00:00');
 
 --
--- Triggers `gare`
+-- 触发器 `gare`
 --
+DROP TRIGGER IF EXISTS `increment_uilise`;
 DELIMITER $$
 CREATE TRIGGER `increment_uilise` BEFORE INSERT ON `gare` FOR EACH ROW UPDATE parking SET parking.nombre_utilisé = parking.nombre_utilisé + 1
 where parking.label = new.label_du_parking
@@ -86,42 +104,46 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `parking`
+-- 表的结构 `parking`
 --
 
-CREATE TABLE `parking` (
+DROP TABLE IF EXISTS `parking`;
+CREATE TABLE IF NOT EXISTS `parking` (
   `label` varchar(30) NOT NULL,
-  `aéroport` varchar(3) NOT NULL,
+  `aeroport` varchar(3) NOT NULL,
   `prix_du_jour` int(11) NOT NULL,
   `adresse` varchar(50) NOT NULL,
   `nombre_max` int(11) NOT NULL,
-  `nombre_utilisé` int(11) NOT NULL
+  PRIMARY KEY (`label`),
+  KEY `clé_étranger_aéroport` (`aeroport`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `parking`
+-- 转存表中的数据 `parking`
 --
 
-INSERT INTO `parking` (`label`, `aéroport`, `prix_du_jour`, `adresse`, `nombre_max`, `nombre_utilisé`) VALUES
-('Chronopark', 'CDG', 18, '3 Route de Moussy, 77230 Villeneuve-sous-Dammartin', 7000, 6991),
-('Parking Roissy', 'CDG', 39, 'Route de Choisy, 95470 Vémars', 60000, 59995);
+INSERT INTO `parking` (`label`, `aeroport`, `prix_du_jour`, `adresse`, `nombre_max`) VALUES
+('Chronopark', 'CDG', 18, '3 Route de Moussy, 77230 Villeneuve-sous-Dammartin', 7000),
+('Parking Roissy', 'CDG', 39, 'Route de Choisy, 95470 Vémars', 60000);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `utilisateur`
+-- 表的结构 `utilisateur`
 --
 
-CREATE TABLE `utilisateur` (
+DROP TABLE IF EXISTS `utilisateur`;
+CREATE TABLE IF NOT EXISTS `utilisateur` (
   `id` varchar(20) NOT NULL,
   `nom` varchar(30) NOT NULL,
   `prenom` varchar(30) NOT NULL,
   `telephone` int(11) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `utilisateur`
+-- 转存表中的数据 `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `telephone`, `password`) VALUES
@@ -130,107 +152,54 @@ INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `telephone`, `password`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `véhicule`
+-- 表的结构 `véhicule`
 --
 
-CREATE TABLE `véhicule` (
-  `n_véhicule` int(11) NOT NULL,
-  `propriétaire` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `véhicule`;
+CREATE TABLE IF NOT EXISTS `véhicule` (
+  `n_véhicule` int(11) NOT NULL AUTO_INCREMENT,
+  `propriétaire` varchar(20) NOT NULL,
+  PRIMARY KEY (`n_véhicule`),
+  KEY `clé_étranger_propriétaire` (`propriétaire`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `véhicule`
+-- 转存表中的数据 `véhicule`
 --
 
 INSERT INTO `véhicule` (`n_véhicule`, `propriétaire`) VALUES
 (1, 'simon');
 
 --
--- Indexes for dumped tables
+-- 限制导出的表
 --
 
 --
--- Indexes for table `aéroport`
---
-ALTER TABLE `aéroport`
-  ADD PRIMARY KEY (`IATA`);
-
---
--- Indexes for table `emprunte`
---
-ALTER TABLE `emprunte`
-  ADD PRIMARY KEY (`n_véhicule`,`emprunteur`),
-  ADD KEY `clé_étranger_enprunteur` (`emprunteur`);
-
---
--- Indexes for table `gare`
---
-ALTER TABLE `gare`
-  ADD PRIMARY KEY (`n_gare`),
-  ADD KEY `clé_étranger_véhicule` (`n_véhicule`),
-  ADD KEY `clé_étranger_parking` (`label_du_parking`);
-
---
--- Indexes for table `parking`
---
-ALTER TABLE `parking`
-  ADD PRIMARY KEY (`label`),
-  ADD KEY `clé_étranger_aéroport` (`aéroport`);
-
---
--- Indexes for table `utilisateur`
---
-ALTER TABLE `utilisateur`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `véhicule`
---
-ALTER TABLE `véhicule`
-  ADD PRIMARY KEY (`n_véhicule`),
-  ADD KEY `clé_étranger_propriétaire` (`propriétaire`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `gare`
---
-ALTER TABLE `gare`
-  MODIFY `n_gare` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `véhicule`
---
-ALTER TABLE `véhicule`
-  MODIFY `n_véhicule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `emprunte`
+-- 限制表 `emprunte`
 --
 ALTER TABLE `emprunte`
   ADD CONSTRAINT `cle_etranger_emprunteur` FOREIGN KEY (`emprunteur`) REFERENCES `utilisateur` (`id`);
 
 --
--- Constraints for table `gare`
+-- 限制表 `gare`
 --
 ALTER TABLE `gare`
   ADD CONSTRAINT `clé_étranger_parking` FOREIGN KEY (`label_du_parking`) REFERENCES `parking` (`label`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `clé_étranger_véhicule` FOREIGN KEY (`n_véhicule`) REFERENCES `véhicule` (`n_véhicule`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `parking`
+-- 限制表 `parking`
 --
 ALTER TABLE `parking`
-  ADD CONSTRAINT `clé_étranger_aéroport` FOREIGN KEY (`aéroport`) REFERENCES `aéroport` (`IATA`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `clé_étranger_aéroport` FOREIGN KEY (`aeroport`) REFERENCES `aéroport` (`IATA`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `véhicule`
+-- 限制表 `véhicule`
 --
 ALTER TABLE `véhicule`
   ADD CONSTRAINT `cle_etranger_proprietaire` FOREIGN KEY (`propriétaire`) REFERENCES `utilisateur` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
