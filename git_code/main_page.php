@@ -52,7 +52,7 @@ include ('library_form.php');
         </div>
         <div class="boite_size2 center boite_border">
             <?php
-            $lieu = array("Paris","Troyes");
+            $lieu = array("CDG","FRA","HEL","LCY","LHR","ORY","PVG","SHA");
             $time = array();
             $tmp = 0;
             while($tmp < 24){

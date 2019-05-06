@@ -19,8 +19,16 @@ function conection($table){
 function check($sql){
   
     $result = mysqli_query($this->con, $sql);
-    $row = mysqli_fetch_array($result);
-    return $row;
+    if($result == false){
+        return $result;
+    }
+    else{
+    $result_sql=array();
+    while($row = mysqli_fetch_assoc($result)){
+     array_push($result_sql,$row);   
+    }
+    return $result_sql;
+    }
 }
 
 //clôture d'un sql
