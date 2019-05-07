@@ -15,7 +15,7 @@ include ('library_form.php');
     <body>
         <h1>Bienvenue à TravelCar!</h1>
         <div class="boite_3">
-        <form name="inscription" action="main_page.php" method="post" ng-app="">
+        <form name="inscription" action="add_sql.php" method="post" ng-app="">
                     <label for='nom'>nom</label>
                     <br>
                     <input name="nom" ng-model="nom" required><span style="color:red">*</span>
@@ -35,6 +35,13 @@ include ('library_form.php');
                     <input name="mail" ng-model="mail" type="email" required><span style="color:red">*</span>
                      <div>
                         <span style="color:red" ng-show="inscription.mail.$error.required && inscription.mail.$dirty && inscription.mail.$invalide">E-mail est vide</span>
+                    </div>
+                    <br>
+                    <label for='telephone'>Télephone</label>
+                    <br>
+                    <input name="telephone" ng-model="telephone" required ><span style="color:red">*</span>
+                    <div>
+                        <span style="color:red" ng-show="inscription.telephone.$error.required && inscription.telephone.$dirty">Télephone est vide</span>
                     </div>
                     <br>
                     <label for='id'>ID</label>
@@ -59,16 +66,16 @@ include ('library_form.php');
                 </form>
             </div>
 
-        <script src="check_ajax.js"></script>
-        <script>
-            var myMap = {"id":document.inscription.id};
-            $(document).ready(function(){
-            $("#id").on('input',function(){
-                if(check(myMap,return_info)){
-                $("#msg").html("exist");}
-            });
-            });
-
-        </script>
+<!--        <script src="check_ajax.js"></script>-->
+<!--        <script>-->
+<!--            var myMap = {"id":document.inscription.id};-->
+<!--            $(document).ready(function(){-->
+<!--            $("#id").on('input',function(){-->
+<!--                if(check_user(myMap)){-->
+<!--                $("#msg").html("exist");}-->
+<!--            });-->
+<!--            });-->
+<!---->
+<!--        </script>-->
     </body>
 </html>

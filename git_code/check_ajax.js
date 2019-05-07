@@ -11,7 +11,8 @@ var return_check=false;
                      return false;
                  }
             }
-            function check(map,callback)
+            //function check(map,callback)
+               function check(map)
             {
                 xmlHttp = GetXmlHttpObject();
                 var data_url = "";
@@ -45,10 +46,10 @@ var return_check=false;
                           return_check=true;
 
                         }
-                        if(typeof callback != "undefined"){
-                            callback();
-
-                        }
+                        // if(typeof callback != "undefined"){
+                        //     callback();
+                        //
+                        // }
                     }
 
                 };
@@ -79,6 +80,10 @@ var return_check=false;
                 return xmlHttp;
             }
 
+            function check_user(map){
+                check(map);
+                return return_info();
+            }
             // function check_user(map,callback)
             // {
             //     check(map,function(){

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b95cae16-03a0-441b-98ce-7196e999cdb6" name="Default Changelist" comment="add reserver_place.php et repertoire build pour calendar">
+    <list default="true" id="b95cae16-03a0-441b-98ce-7196e999cdb6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/git_code/add_sql.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/check_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/check_account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/Travelcar.sql" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/Travelcar.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/check_ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/check_ajax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/general_connection_sql.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/general_connection_sql.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/nbproject/private/private.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/nbproject/private/private.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/nbproject/project.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/nbproject/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/reserve_search_action.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/reserve_search_action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/library_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/library_form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/sign_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/sign_up.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,14 +32,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/git_code/sign_up.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+            <state relative-caret-position="-356">
+              <caret line="43" column="137" selection-start-line="43" selection-start-column="137" selection-end-line="43" selection-end-column="137" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -51,19 +48,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/sign_in.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/check_account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="405">
+              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -71,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/general_connection_sql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+            <state relative-caret-position="421">
+              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -86,11 +74,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/git_code/library_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/git_code/add_sql.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/git_code/Travelcar.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="141" column="33" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/check_ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="538">
+              <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -122,12 +137,14 @@
         <option value="$PROJECT_DIR$/git_code/Reserver_place.php" />
         <option value="$PROJECT_DIR$/git_code/main_page.php" />
         <option value="$PROJECT_DIR$/git_code/reserver_place.php" />
-        <option value="$PROJECT_DIR$/git_code/Travelcar.sql" />
         <option value="$PROJECT_DIR$/git_code/test.php" />
         <option value="$PROJECT_DIR$/git_code/check_account.php" />
+        <option value="$PROJECT_DIR$/git_code/check_ajax.js" />
+        <option value="$PROJECT_DIR$/git_code/Travelcar.sql" />
+        <option value="$PROJECT_DIR$/git_code/library_form.php" />
         <option value="$PROJECT_DIR$/git_code/general_connection_sql.php" />
         <option value="$PROJECT_DIR$/git_code/sign_up.php" />
-        <option value="$PROJECT_DIR$/git_code/check_ajax.js" />
+        <option value="$PROJECT_DIR$/git_code/add_sql.php" />
       </list>
     </option>
   </component>
@@ -218,30 +235,60 @@
       <option name="project" value="LOCAL" />
       <updated>1556922737237</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bug de sign up">
+      <created>1557237435608</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1557237435608</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19525000" />
+    <option name="totallyTimeSpent" value="23790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="737" extended-state="0" />
-    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19789983" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.49284577" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4165342" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3290938" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32954547" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32928804" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.24232633" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19789983" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="8" visible="true" weight="0.12559618" />
+      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.49284577" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.047694754" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.52305245" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3290938" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32954547" />
@@ -249,31 +296,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32928804" />
-      <window_info anchor="right" id="Remote Host" order="4" visible="true" weight="0.24232633" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19822006" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.37678856" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.047694754" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3290938" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32954547" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32928804" />
-      <window_info anchor="right" id="Remote Host" order="4" weight="0.12864077" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.24232633" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +345,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add general connection to sql" />
     <MESSAGE value="add reserver_place.php et repertoire build pour calendar" />
-    <option name="LAST_COMMIT_MESSAGE" value="add reserver_place.php et repertoire build pour calendar" />
+    <MESSAGE value="bug de sign up" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug de sign up" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/git_code/angular.min.js">
@@ -359,9 +383,6 @@
     <entry file="file://$PROJECT_DIR$/git_code/reserve_search_action.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/library_form.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/git_code/transition.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -381,13 +402,6 @@
     <entry file="file://$PROJECT_DIR$/git_code/check_username.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/Travelcar.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4155">
-          <caret line="205" selection-start-line="205" selection-end-line="205" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/git_code/jquery-3.3.1.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -398,15 +412,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/sign_up.php">
+    <entry file="file://$PROJECT_DIR$/git_code/library_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="756">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/Travelcar.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="141" column="33" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/check_ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -417,24 +440,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/general_connection_sql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/git_code/check_account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="25" />
+        <state relative-caret-position="405">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/check_ajax.js">
+    <entry file="file://$PROJECT_DIR$/git_code/general_connection_sql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="421">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/add_sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/sign_up.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-356">
+          <caret line="43" column="137" selection-start-line="43" selection-start-column="137" selection-end-line="43" selection-end-column="137" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

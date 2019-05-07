@@ -35,6 +35,10 @@ function form_select($label, $name, $size, $liste) {
             echo ("<button class='btn btn-primary' type='submit'>$value</button>");
         }
 
+        function form_input_submit_sql($value){
+     echo("<button class='btn btn-primary' type='submit' onclick=''>$value</button>");
+        }
+
 function form_end() {
             echo("</form>");
         }

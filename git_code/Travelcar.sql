@@ -139,6 +139,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `prenom` varchar(30) NOT NULL,
   `telephone` int(11) NOT NULL,
   `password` varchar(50) NOT NULL,
+  `ad_mail` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

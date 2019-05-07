@@ -31,6 +31,11 @@ function check($sql){
     }
 }
 
+function execute($sql){
+    $result = mysqli_query($this->con, $sql);
+    return $result;
+}
+
 //clôture d'un sql
 function close(){
     mysqli_close($this->con);
