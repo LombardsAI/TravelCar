@@ -66,15 +66,21 @@ include ('library_form.php');
                 </form>
             </div>
 
-        <script src="check_ajax.js"></script>
-        <script>
-            var myMap = {"id":document.inscription.id};
-            $(document).ready(function(){
+    </body>
+    <script type="text/javascript">
+      
+            $(document).ready(function(){ 
+            var myMap = new Map();
             $("#id").on('input',function(){
-                if(check(myMap,return_info)){
-                $("#msg").html("exist");}
-            });
-            });
-
+                myMap.set("id",document.inscription.id.value);
+                check(myMap,"sign_up");
+             });
+            
+          
+//            $("#id").on('blur',function(){
+//                  return_info();
+//            });
+           }
+      );
         </script>
 </html>
