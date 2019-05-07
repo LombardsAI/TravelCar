@@ -15,7 +15,7 @@ include ('library_form.php');
     <body>
         <h1>Bienvenue à TravelCar!</h1>
         <div class="boite_3">
-        <form name="inscription" action="main_page.php" method="post" ng-app="">
+        <form name="inscription" action="add_sql.php" method="post" ng-app="">
                     <label for='nom'>nom</label>
                     <br>
                     <input name="nom" ng-model="nom" required><span style="color:red">*</span>

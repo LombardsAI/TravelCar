@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89e42e04-4e61-463d-af01-8765cd591f6f" name="Revert &quot;ajax for sign up&quot;" comment="Revert &quot;ajax for sign up&quot;&#10;&#10;This reverts commit d9b9bcac">
+    <list default="true" id="b95cae16-03a0-441b-98ce-7196e999cdb6" name="Default Changelist" comment="ajax for sign up&#10;                                                                    &#10;                                                                    (cherry picked from commit d9b9bcac82dec00d05a4c80898d96a9c659fe63d)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/sign_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/sign_up.php" afterDir="false" />
+    </list>
+    <list id="372a5bb5-d659-4172-8864-0fa94bfbb9cf" name="ajax for sign up" comment="ajax for sign up&#10;&#10;(cherry picked from commit d9b9bcac82dec00d05a4c80898d96a9c659fe63d)">
+      <changelist_data name="Simoncjh" email="865167122@qq.com" date="1557263370000" />
       <change beforePath="$PROJECT_DIR$/git_code/check_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/check_account.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/check_ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/check_ajax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/sign_in.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/sign_in.php" afterDir="false" />
+    </list>
+    <list id="89e42e04-4e61-463d-af01-8765cd591f6f" name="Revert &quot;ajax for sign up&quot;" comment="Revert &quot;ajax for sign up&quot;&#10;&#10;This reverts commit d9b9bcac" />
+    <list id="0268000b-1f63-41cb-ad26-d5faaa62aa73" name="Revert &quot;ajax for sign up&quot;-2" comment="Revert &quot;ajax for sign up&quot;&#10;&#10;This reverts commit d9b9bcac">
       <change beforePath="$PROJECT_DIR$/git_code/sign_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/sign_up.php" afterDir="false" />
     </list>
-    <list id="b95cae16-03a0-441b-98ce-7196e999cdb6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/sign_up.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="-228">
+              <caret line="43" column="137" selection-start-line="43" selection-start-column="137" selection-end-line="43" selection-end-column="137" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -43,7 +49,23 @@
                 <element signature="n#style#0;n#span#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#5;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#5;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/git_code/sign_in.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-159">
+              <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -102,23 +124,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/check_ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="27" lean-forward="true" selection-end-line="90" />
+            <state relative-caret-position="-1666">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/reserve_search_action.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -130,6 +142,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Simoncjh &lt;865167122@qq.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -144,10 +161,19 @@
         <option value="$PROJECT_DIR$/git_code/library_form.php" />
         <option value="$PROJECT_DIR$/git_code/general_connection_sql.php" />
         <option value="$PROJECT_DIR$/git_code/add_sql.php" />
-        <option value="$PROJECT_DIR$/git_code/sign_up.php" />
         <option value="$PROJECT_DIR$/git_code/check_ajax.js" />
+        <option value="$PROJECT_DIR$/git_code/sign_up.php" />
       </list>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/git_code/sign_up.php">
+      <ranges>
+        <range start1="17" end1="18" start2="17" end2="18" changelist="b95cae16-03a0-441b-98ce-7196e999cdb6" />
+        <range start1="68" end1="72" start2="68" end2="73" changelist="0268000b-1f63-41cb-ad26-d5faaa62aa73" />
+        <range start1="73" end1="78" start2="74" end2="84" changelist="0268000b-1f63-41cb-ad26-d5faaa62aa73" />
+      </ranges>
+    </file>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds">
@@ -264,16 +290,24 @@
       <option name="project" value="LOCAL" />
       <updated>1557264986752</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Revert &quot;ajax for sign up&quot;&#10;&#10;This reverts commit d9b9bcac">
+      <created>1557265510833</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557265510834</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24758000" />
+    <option name="totallyTimeSpent" value="25412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="737" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19789983" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2584814" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -288,7 +322,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.24642289" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.5023847" />
+      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.047694754" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32954547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -442,13 +476,6 @@
     <entry file="file://$PROJECT_DIR$/git_code/jquery-3.3.1.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/sign_in.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/git_code/library_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
@@ -493,8 +520,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/git_code/sign_up.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="-228">
+          <caret line="43" column="137" selection-start-line="43" selection-start-column="137" selection-end-line="43" selection-end-column="137" />
           <folding>
             <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -502,14 +529,28 @@
             <element signature="n#style#0;n#span#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#4;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#5;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#5;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/git_code/check_ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="27" lean-forward="true" selection-end-line="90" />
+        <state relative-caret-position="-1666">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/sign_in.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-159">
+          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
         </state>
       </provider>
     </entry>
