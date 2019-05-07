@@ -23,7 +23,7 @@ $info = array();
 $info["aeroport"] = $_GET["lieu"];
 $info["time_debut"] = $time_debut;
 $info["time_fin"] = $time_fin;
-$result = reserver_search($info);
+$result = reserver_search($info,$_GET["option"]);
 if($result == false){
     echo ("Aucune résultat");
 }
