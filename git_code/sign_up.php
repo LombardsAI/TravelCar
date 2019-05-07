@@ -15,7 +15,7 @@ include ('library_form.php');
     <body>
         <h1>Bienvenue à TravelCar!</h1>
         <div class="boite_3">
-        <form name="inscription" action="add_sql.php" method="post" ng-app="">
+        <form name="inscription" action="main_page.php" method="post" ng-app="">
                     <label for='nom'>nom</label>
                     <br>
                     <input name="nom" ng-model="nom" required><span style="color:red">*</span>
@@ -66,16 +66,21 @@ include ('library_form.php');
                 </form>
             </div>
 
-<!--        <script src="check_ajax.js"></script>-->
-<!--        <script>-->
-<!--            var myMap = {"id":document.inscription.id};-->
-<!--            $(document).ready(function(){-->
-<!--            $("#id").on('input',function(){-->
-<!--                if(check_user(myMap)){-->
-<!--                $("#msg").html("exist");}-->
-<!--            });-->
-<!--            });-->
-<!---->
-<!--        </script>-->
     </body>
+    <script type="text/javascript">
+
+            $(document).ready(function(){
+            var myMap = new Map();
+            $("#id").on('input',function(){
+                myMap.set("id",document.inscription.id.value);
+                check(myMap,"sign_up");
+             });
+
+
+//            $("#id").on('blur',function(){
+//                  return_info();
+//            });
+           }
+      );
+        </script>
 </html>

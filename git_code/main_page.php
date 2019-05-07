@@ -13,14 +13,11 @@ include ('library_form.php');
         <script src="angular.min.js"></script>
         <script src="jquery-3.3.1.js"></script>
         <script>
-            form_research = "reserver_place";
+           
            function choose_research(choix) {
-               form_research = document.research;
-               form_research.action = choix + ".php";
+               $("#option").attr("value",choix);
             }
-            function submit_research(){
-                form_research.submit();
-            }
+           
        
      </script> 
      <script>
@@ -47,8 +44,8 @@ include ('library_form.php');
         <body>
         <h1>Bienvenue à TravelCar!</h1>
         <div class="boite_size center" >
-            <div class="boite_1"><button onclick="choose_research('reserver_place')">Réserver une place</button></div>
-            <div class="boite_1"><button onclick="choose_research('emprunter_voiture')">Emprunter une voiture</button></div>
+            <div class="boite_1"><button onclick="choose_research('reserver')">Réserver une place</button></div>
+            <div class="boite_1"><button onclick="choose_research('emprunter')">Emprunter une voiture</button></div>
         </div>
         <div class="boite_size2 center boite_border">
             <?php
@@ -77,6 +74,7 @@ include ('library_form.php');
             <div class="boite_2">
                 <div class="boite_4">
                <h5>date_debut</h5>
+               <input id='option' name='option' value='reserver' hidden>
                <input type="text" class="auto-kal" data-kal="mode: 'single', direction: 'future'" name="date_debut" size="11" >
                <?php
                form_select("","time_debut",1,$time );
@@ -94,7 +92,7 @@ include ('library_form.php');
             </div>
              <div class="boite_2">
                  <br>
-                 <button class='btn btn-primary' type='submit' onclick="submit_research()">Recherche</button>
+                 <button class='btn btn-primary' type='submit'>Recherche</button>
                  
             <span id="error_time" style="color:red"></span>
             
