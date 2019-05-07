@@ -30,7 +30,7 @@ else{
        
 }
 
-$con->conection("travelcar");
+$con->connection("travelcar");
 $row = $con->check($sql);
 $con->close();
 return $row;       

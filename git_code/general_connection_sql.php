@@ -7,7 +7,7 @@ function __construct($name_sql,$id,$pw) {
     $this->con = mysqli_connect($name_sql,$id,$pw);
 }
 //esseayer de connecter
-function conection($table){
+function connection($table){
     if (!$this->con)
     {
         die('Could not connect: ' . mysqli_error());
