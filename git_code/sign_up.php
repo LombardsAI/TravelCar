@@ -9,6 +9,8 @@ include ('library_form.php');
         <link rel="stylesheet" type="text/css" href="./bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="./pattern.css" />
         <script src="angular.min.js"></script>
+        <script src="check_ajax.js"></script>
+        <script src="jquery-3.3.1.js"></script>
     </head>
     <body>
         <h1>Bienvenue à TravelCar!</h1>
@@ -37,13 +39,11 @@ include ('library_form.php');
                     <br>
                     <label for='id'>ID</label>
                     <br>
-                    <input name="id" ng-model="id" required ><span style="color:red">*</span>
+                    <input name="id" ng-model="id" id="id" required ><span style="color:red">*</span>
                     <div>
                        <span style="color:red" ng-show="inscription.id.$error.required && inscription.id.$dirty">ID est vide</span>
-                       <script>
-                           var myMap = {"id":document.inscription.id}
-                       </script>
-                       <span style="color:red" ng-show="check(myMap)">ID existe</span>
+
+                       <span style="color:red" id="msg"></span>
                     </div>
                     <br>
                     <label for='password'>Mot de passe</label>
@@ -59,6 +59,16 @@ include ('library_form.php');
                 </form>
             </div>
 
-        <script src="check_ajax.js"></script> 
+        <script src="check_ajax.js"></script>
+        <script>
+            var myMap = {"id":document.inscription.id};
+            $(document).ready(function(){
+            $("#id").on('input',function(){
+                if(check(myMap,return_info)){
+                $("#msg").html("exist");}
+            });
+            });
+
+        </script>
     </body>
 </html>

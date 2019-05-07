@@ -16,7 +16,7 @@ $sql = "SELECT aeroport, p.label, prix_du_jour, adresse FROM parking p, "
         . " p.nombre_max > a.num) OR (p.label NOT IN (a.label))";
 
 
-$con->conection("travelcar");
+$con->connection("travelcar");
 $row = $con->check($sql);
 $con->close();
 return $row;       

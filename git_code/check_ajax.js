@@ -11,49 +11,53 @@ var return_check=false;
                      return false;
                  }
             }
-            function check(map)
-            {  
+            function check(map,callback)
+            {
                 xmlHttp = GetXmlHttpObject();
                 var data_url = "";
                 var url = "check_account.php";
-                
+
                 map.forEach(function(value,key){
-                    
-                    data_url += key + "=" + value + "&"; 
-                
+
+                    data_url += key + "=" + value + "&";
+
                 });
-                
+
                 //Supprimer le dernier "&";
                 data_url = data_url.substr(0,data_url.length-1);
-                
+
                 if (xmlHttp === null)
                 {
-                    alert("Navigateur ne support pas HTTP");                    
+                    alert("Navigateur ne support pas HTTP");
                     return;
                 }
-              
-                
-               
+
+
+
                 xmlHttp.onreadystatechange = function ()
-                {   
+                {
                     if (xmlHttp.readyState === 4 && xmlHttp.status === 200){
-                    
+
                         if (xmlHttp.responseText === "false") {
                           return_check=false;
-                         
+
                         } else if(xmlHttp.responseText === "true"){
                           return_check=true;
-                         
+
+                        }
+                        if(typeof callback != "undefined"){
+                            callback();
+
                         }
                     }
-                    
+
                 };
-                
+
                 xmlHttp.open("POST",url,true);
                 xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
                 xmlHttp.send(data_url);
             }
-            
+
             function GetXmlHttpObject()
             {
                 var xmlHttp = null;
@@ -74,3 +78,13 @@ var return_check=false;
                 }
                 return xmlHttp;
             }
+
+            // function check_user(map,callback)
+            // {
+            //     check(map,function(){
+            //         return return_check;
+            //     });
+            //
+            // }
+
+
