@@ -45,7 +45,7 @@ echo ("Login")
                     </div>
                     <br>
                     <div>
-                        <span id="error_msg" style="color:red" hidden>Wrong user</span>
+                        <span id="error_msg" style="color:red"></span>
                     </div>
                     <br>
                     
@@ -67,7 +67,6 @@ echo ("Login")
                     var myMap = new Map();
                     myMap.set("id",id);
                     myMap.set("password",pw);
-                    check(myMap,"sign_in");
+                    check(myMap);
                 }
-                
     </script>              
