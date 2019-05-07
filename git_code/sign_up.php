@@ -43,7 +43,7 @@ include ('library_form.php');
                     <div>
                        <span style="color:red" ng-show="inscription.id.$error.required && inscription.id.$dirty">ID est vide</span>
 
-                       <span style="color:red" id="msg"></span>
+                       <span style="color:red" id="error_msg" hidden>Existe!</span>
                     </div>
                     <br>
                     <label for='password'>Mot de passe</label>
@@ -59,16 +59,21 @@ include ('library_form.php');
                 </form>
             </div>
 
-        <script src="check_ajax.js"></script>
-        <script>
-            var myMap = {"id":document.inscription.id};
-            $(document).ready(function(){
-            $("#id").on('input',function(){
-                if(check(myMap,return_info)){
-                $("#msg").html("exist");}
-            });
-            });
-
-        </script>
     </body>
+    <script type="text/javascript">
+      
+            $(document).ready(function(){ 
+            var myMap = new Map();
+            $("#id").on('input',function(){
+                myMap.set("id",document.inscription.id.value);
+                check(myMap,"sign_up");
+             });
+            
+          
+//            $("#id").on('blur',function(){
+//                  return_info();
+//            });
+           }
+      );
+        </script>
 </html>

@@ -1,18 +1,33 @@
-var return_check=false;
-            function show_info(){
-                $("#error_msg").html("Wrong user");
-            }
+            var return_check=false;
+//              function show_info(){
+//               $("#error_msg").show();
+//            }
+            
             function return_info(){
                  if(return_check){
                      return true;
                  }
                  else {
-                     show_info();
+                  $("#error_msg").show();
                      return false;
                  }
             }
-            function check(map,callback)
-            {
+            
+            function return_info_inscri(){
+                 if(return_check){
+                    $("error_msg").show();
+                 }
+                 else {
+                   $("#error_msg").hide();   
+                 }
+            }
+            
+            
+       
+                
+            
+            function check(map,$msg)
+            { 
                 xmlHttp = GetXmlHttpObject();
                 var data_url = "";
                 var url = "check_account.php";
@@ -34,21 +49,26 @@ var return_check=false;
 
 
 
-                xmlHttp.onreadystatechange = function ()
-                {
+                xmlHttp.onreadystatechange = function(){
                     if (xmlHttp.readyState === 4 && xmlHttp.status === 200){
-
+                        
                         if (xmlHttp.responseText === "false") {
+                            if($msg === 'sign_in'){
                           return_check=false;
-
+                      }
+                      else{
+                          $("#error_msg").hide();
+                      }
                         } else if(xmlHttp.responseText === "true"){
+                            if($msg === 'sign_in'){
                           return_check=true;
+                      }
+                      else{
+                          $("#error_msg").show();
+                      }
 
                         }
-                        if(typeof callback != "undefined"){
-                            callback();
-
-                        }
+                          
                     }
 
                 };
