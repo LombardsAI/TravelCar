@@ -1,0 +1,144 @@
+
+body {
+    background: url(https://www.marjane.ma/skin/frontend/willskin2019/french/images/2019/bg-content.png);
+    color: #666;
+    font: 14px/22px 'Open Sans', Arial, sans-serif;
+    text-align: justify;
+}
+
+html {
+    background: #FFFFFF;
+}
+
+a {
+    color: #ED5E2F;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    color: #333;
+    font-family: 'Headland One', Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 0 25px;
+}
+
+pre, code {
+    font-family: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+    font-size: 12px;
+    line-height: 18px;
+    border: 1px solid #CCC;
+    padding: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+    background: #F8F8F8;
+    color: #333;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 45px 0 0;
+}
+
+.buttons {
+    width: 150px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+.button {
+    display: block;
+    background: #ED5E2F;
+    color: #FFF;
+    text-decoration: none;
+    width: 110px;
+    text-align: center;
+    padding: 10px;
+    margin: 15px 0 0 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.download {
+    width: 200px;
+}
+
+.button:hover {
+    background: #74A599;
+}
+
+.button:active {
+    background: #F6A953;
+}
+
+.socials {
+    font-size: 12px;
+    margin: 10px 0 20px;
+}
+
+.github-star-btn {
+    width: 100px;
+}
+
+/* Custom styles for popin & close button */
+.custom {
+    color: #555;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.custom p {
+    padding: 10px 20px;
+    margin: 30px 0 0;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.avgrund-close {
+    display: block;
+    text-transform: uppercase;
+    color: #555;
+    text-decoration: none;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    font-size: 13px;
+}
+
+.github, .dribble {
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    padding: 8px 18px;
+    margin: 18px 0 0 20px;
+    text-decoration: none;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+
+.github {
+    background: #F8E436;
+}
+
+.github:hover {
+    background: #F8EE40;
+}
+
+.dribble {
+    background: #2E4F96;
+}
+
+.dribble:hover {
+    background: #2E4FC3;
+}
