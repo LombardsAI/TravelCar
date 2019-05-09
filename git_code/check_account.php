@@ -12,7 +12,7 @@ include("general_connection_sql.php");
 //$sql="SELECT id,password FROM utilisateur WHERE id='$id'AND password='$pw'";
  $sql="SELECT * FROM utilisateur WHERE ";
  foreach($_POST as $key=>$value){
-     $sql.= $key."='".$value."' AND ";
+     $sql.= $key."=' ".$value." ' AND ";
  }
 $sql = substr($sql,0,strlen($sql)-4);
 $con->connection("travelcar");

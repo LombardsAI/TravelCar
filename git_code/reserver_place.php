@@ -37,6 +37,7 @@ else {
     echo ("</div>");
     echo ("<div class='boite_key'>");
     foreach($result as $value){
+        echo("<a href='' onclick='choose_car()'>");
         foreach($value as $valeur){
         echo("<div class='boite_arrange'>");
         echo($valeur);
@@ -48,3 +49,10 @@ else {
 }
 ?>
 </body>
+<script>
+       function choose_car(){
+           
+           
+       }
+</script>
+</html>
