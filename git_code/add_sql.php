@@ -1,6 +1,6 @@
 <?php
 include("general_connection_sql.php");
-$con = new Sql('localhost', 'root', 'root');
+$con = new Sql('localhost', 'root', '');
 $sql = "INSERT INTO `utilisateur` (`nom`, `prenom`,  `ad_mail`, `telephone`, `id`, `password` ) VALUES (";
 foreach($_POST as $key=>$value){
     $sql.=" '$value',";
