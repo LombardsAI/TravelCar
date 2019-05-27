@@ -1,21 +1,34 @@
 <?php
-include ('library_form.php');
+include('library_form.php');
+include 'fragmentHeader.html';
 ?>
-<html>
-    <head>
-        <title>inscription</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="./bootstrap.css" />
-        <link rel="stylesheet" type="text/css" href="./pattern.css" />
-        <script src="angular.min.js"></script>
-        <script src="check_ajax.js"></script>
-        <script src="jquery-3.3.1.js"></script>
-    </head>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#id").blur(function () {
+                var id = document.inscription.id.value;
+                var myMap = new Map();
+                myMap.set("param1", id);
+                checkAccount(myMap, 'sign_up');
+                document.cookie = "id=" + id;
+            });
+        });
+    </script>
     <body>
-        <h1>Bienvenue à TravelCar!</h1>
+    <div class="signContainer">
+        <!-- Jumbotrom -->
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Travel Car</h3>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <h1>  Welcome ! </h1>
+            <p>  Maximaliser le valeur de vos voitures ....</p>
+        </div>
         <div class="boite_3">
-        <form name="inscription" action="add_sql.php" method="post" ng-app="">
+        <form name="inscription" id="inscription" action="../controller/router.php" method="post" ng-app="" onsubmit="return return_Info(); ">
+            <input type="hidden" name='action' value='signUpDone'>
+            <input type="hidden" name='controlleur' value='utilisateur'>
                     <label for='nom'>nom</label>
                     <br>
                     <input name="nom" ng-model="nom" required><span style="color:red">*</span>
@@ -37,7 +50,7 @@ include ('library_form.php');
                         <span style="color:red" ng-show="inscription.mail.$error.required && inscription.mail.$dirty && inscription.mail.$invalide">E-mail est vide</span>
                     </div>
                     <br>
-                    <label for='telephone'>Télephone</label>
+                    <label for='telephone'>Téléphone</label>
                     <br>
                     <input name="telephone" ng-model="telephone" required ><span style="color:red">*</span>
                     <div>
@@ -67,20 +80,7 @@ include ('library_form.php');
             </div>
 
     </body>
-    <script type="text/javascript">
-      
-            $(document).ready(function(){ 
-            var myMap = new Map();
-            $("#id").on('input',function(){
-                myMap.set("id",document.inscription.id.value);
-                check(myMap,"sign_up");
-             });
-            
-          
-//            $("#id").on('blur',function(){
-//                  return_info();
-//            });
-           }
-      );
-        </script>
-</html>
+
+</div>
+<?php
+include 'fragmentFooter.html'?>

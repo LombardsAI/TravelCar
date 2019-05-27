@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../TP/.idea/TP.iml" filepath="$PROJECT_DIR$/../TP/.idea/TP.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/TravelCar.iml" filepath="$PROJECT_DIR$/.idea/TravelCar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/.idea/majane (上海）.iml" filepath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/.idea/majane (上海）.iml" />
     </modules>
   </component>
 </project>

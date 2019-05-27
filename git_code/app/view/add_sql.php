@@ -1,5 +1,5 @@
 <?php
-include("general_connection_sql.php");
+include("../model/general_connection_sql.php");
 $con = new Sql('localhost', 'root', 'root');
 $sql = "INSERT INTO `utilisateur` (`nom`, `prenom`,  `ad_mail`, `telephone`, `id`, `password` ) VALUES (";
 foreach($_POST as $key=>$value){
@@ -10,7 +10,7 @@ $sql.=")";
 $con->connection("travelcar");
 $result = $con->execute($sql);
 
-header("Location: main_page.php");
+//header("Location: viewReserver_parking.php");
 
 $con->close();
 

@@ -1,6 +1,6 @@
 <html>
     <head>
-<script src="angular.min.js"></script>
+<script src="../../public/js/angular.min.js"></script>
     </head>
     <body>
         <?php

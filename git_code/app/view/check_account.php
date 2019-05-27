@@ -1,5 +1,5 @@
 <?php
-include("general_connection_sql.php");
+include("../model/general_connection_sql.php");
 //$id = $_GET["id"];
 //$pw = $_GET["password"];
 //$con = mysqli_connect('localhost', 'root', '');
@@ -8,7 +8,7 @@ include("general_connection_sql.php");
 // die('Could not connect: ' . mysqli_error());
 // }
 // mysqli_select_db($con, "travelcar");
- $con = new Sql('localhost', 'root', '');
+ $con = new Sql('localhost', 'root', 'root');
 //$sql="SELECT id,password FROM utilisateur WHERE id='$id'AND password='$pw'";
  $sql="SELECT * FROM utilisateur WHERE ";
  foreach($_POST as $key=>$value){

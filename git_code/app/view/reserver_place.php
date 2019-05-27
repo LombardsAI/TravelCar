@@ -6,10 +6,10 @@ include("reserve_search_action.php");
     <title>acceuil</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="./pattern.css" />
-    <link rel="stylesheet" href="build/kalendae.css" type="text/css" charset="utf-8">
-    <script src="build/kalendae.standalone.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../public/css/pattern.css" />
+    <link rel="stylesheet" href="../../public/css/kalendae.css" type="text/css" charset="utf-8">
+    <script src="../../public/js/kalendae.standalone.js" type="text/javascript" charset="utf-8"></script>
 
 </head>
 <body>

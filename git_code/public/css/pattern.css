@@ -8,18 +8,18 @@ and open the template in the editor.
     Author     : Simon
 */
 
-.size_1{
-    width: 30%;
-}
-.center{
-    margin:0px auto;
-}
+/*.size_1{*/
+/*    width: 30%;*/
+/*}*/
+/*.center{*/
+/*    margin:0px auto;*/
+/*}*/
 
-body.center{
-    text-align:center
-}
+/*body.center{*/
+/*    text-align:center*/
+/*}*/
 h1{
-    text-align:center 
+    /*text-align:center*/
 }
   
   .boite_size{             
@@ -31,7 +31,7 @@ h1{
      height:150px; 
   }
   .boite_border{
-     border:solid black; 
+     /*border:solid black; */
   }
   .boite_1{
       font-size:20px;               
