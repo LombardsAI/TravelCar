@@ -15,6 +15,7 @@ $sql = "SELECT aeroport, p.label, prix_du_jour, adresse FROM parking p, "
 //        . " p.aeroport ='CDG' AND"
         . " p.label = a.label AND "
         . " p.nombre_max > a.num) OR (p.label NOT IN (a.label))";
+
 }
 else{
     $sql = "SELECT aeroport, p.label, adresse FROM parking p, "
