@@ -7,8 +7,8 @@ include 'fragmentHeader.html';
             var id = document.login.ID.value;
             var pw = document.login.password.value;
             var myMap = new Map();
-            myMap.set("param1",id);
-            myMap.set("param2",pw);
+            myMap.set("id",id);
+            myMap.set("password",pw);
             checkAccount(myMap,'sign_in');
             document.cookie = "id=" + id;
         }

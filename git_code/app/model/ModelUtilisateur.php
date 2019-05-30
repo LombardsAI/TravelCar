@@ -112,19 +112,12 @@ class ModelUtilisateur
         $this->ad_mail = $ad_mail;
     }
 
-    public static function insert($id, $nom, $prenom, $telephone, $password, $ad_mail) {
+    public static function insert($table) {
         try {
             $database = SModel::getInstance();
             $query = "insert into utilisateur value (:id, :nom, :prenom, :telephone, :password, :ad_mail)";
             $statement = $database->prepare($query);
-            $statement->execute([
-                'id' => $id,
-                'nom' => $nom,
-                'prenom' => $prenom,
-                'telephone' => $telephone,
-                'password' => $password,
-                'ad_mail' => $ad_mail
-            ]);
+            $statement->execute($table);
             return TRUE;
         } catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
@@ -132,11 +125,16 @@ class ModelUtilisateur
         }
     }
 
-    public static function checkAccount($id,$pw){
+    public static function checkAccount($table){
         try{
 
             $database = SModel::getInstance();
-            $query="SELECT * FROM utilisateur WHERE id = '$id' and password = '$pw'";
+//            $query="SELECT * FROM utilisateur WHERE id = '$id' and password = '$pw'";
+             $query="SELECT * FROM utilisateur WHERE ";
+             foreach($table as $key=>$value){
+                $query.=$key."='".$value."' AND "; 
+             }
+             $query = substr($query,0,strlen($query)-4);
             $result = $database->query($query);
             if($result->rowCount() === 0){
                 echo('false');
@@ -151,11 +149,16 @@ class ModelUtilisateur
         }
     }
 
-    public static function checkExistance($id){
+    public static function checkExistance($table){
         try{
 
             $database = SModel::getInstance();
-            $query="SELECT * FROM utilisateur WHERE id = '$id'";
+            $query="SELECT * FROM utilisateur WHERE ";
+             foreach($table as $key=>$value){
+                $query.=$key."='".$value."' AND "; 
+             }
+             $query = substr($query,0,strlen($query)-4);
+           
             $result = $database->query($query);
             if($result->rowCount() === 0){
                 echo('true');

@@ -69,25 +69,25 @@ include ('../model/ModelReservation.php');
                 <input class="hidden" name="controlleur" value="reservation">
             <div class="boite_2">
                 <?php
-              form_select("param1","param1",1,$lieu );
+              form_select("param1","aeroport",1,$lieu );
               ?>
             </div>
             <div class="boite_2">
                 <div class="boite_4">
                <h5>date_debut</h5>
                <input id='option' name='option' value='reserver' hidden>
-               <input type="text" class="auto-kal" data-kal="mode: 'single', direction: 'future'" name="param2" size="11" >
+               <input type="text" class="auto-kal" data-kal="mode: 'single', direction: 'future'" name="date_debut" size="11" >
                <?php
-               form_select("","param3",1,$time );
+               form_select("","time_debut",1,$time );
                ?>
                 </div>
                </div>
             <div class="boite_2">
                 <div class="boite_4">
-                <h5>date_debut</h5>
-                <input type="text" class="auto-kal" data-kal="mode: 'single', direction: 'future'" name="param4" size="11">
+                <h5>date_fin</h5>
+                <input type="text" class="auto-kal" data-kal="mode: 'single', direction: 'future'" name="date_fin" size="11">
                 <?php
-               form_select("","param5",1,$time );
+               form_select("","time_fin",1,$time );
                ?>
                 </div>
             </div>

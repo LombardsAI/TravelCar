@@ -7,13 +7,13 @@ class controllerReservation
         require ('../view/viewReserver_parking.php');
     }
 
-    public static function reserverParkingDetail($lieu,$date_debut,$time_debut,$date_fin,$time_fin){
-        $date_debut.=" ".$time_debut.":00";
-        $date_fin.=" ".$time_fin.":00";
+    public static function reserverParkingDetail($table){
+        $table["date_debut"].=" ".$table["time_debut"].":00";
+        $table["date_fin"].=" ".$table["time_fin"].":00";
         $info = array();
-        $info["aeroport"] = $lieu;
-        $info["time_debut"] = $date_debut;
-        $info["time_fin"] = $date_fin;
+        $info["aeroport"] = $table["aeroport"];
+        $info["time_debut"] = $table["date_debut"];
+        $info["time_fin"] = $table["date_fin"];
         $results = ModelReservation::reserver_search($info);
         require ('../view/viewReserver_parking_result.php');
     }

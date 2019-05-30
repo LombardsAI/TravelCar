@@ -2,44 +2,55 @@ var returnInfo = false;
 
 function checkAccount(map,$msg) {
     xmlHttp = GetXmlHttpObject();
-    // var data_url = "";
-    // var url = "../../app/model/ModelUtilisateur.php";
+    var data_url = "";
+    var url = "../../app/controller/router.php";
+//    var url = "../../app/view/check_account.php";
     if($msg == 'sign_in') {
-        var url = "../../app/controller/router.php?action=checkAccount&controlleur=utilisateur&";
+         data_url += "action=checkAccount&controlleur=utilisateur&";
     }
     else if($msg == 'sign_up') {
-        var url = "../../app/controller/router.php?action=checkExistance&controlleur=utilisateur&";
+         data_url += "action=checkExistance&controlleur=utilisateur&";
     }
 
     map.forEach(function (value, key) {
 
-        url += key + "=" + value + "&";
+       data_url += key + "=" + value + "&";
 
     });
 
     //Supprimer le dernier "&";
-    url = url.substr(0, url.length - 1);
+    data_url = data_url.substr(0, data_url.length - 1);
 
     if (xmlHttp === null) {
         alert("Navigateur ne support pas HTTP");
         return;
     }
     xmlHttp.onreadystatechange = function () {
+      
         if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
-            if (xmlHttp.responseText === "true") {
-                $("#error_msg").hide();
-                returnInfo = true;
-            }
-            else if (xmlHttp.responseText === "false") {
-                $("#error_msg").show();
-                returnInfo = false;
-            }
+           
+          if (xmlHttp.responseText === "false") {
+             
+                              returnInfo=false;
+                          $("#error_msg").show();
+                     
+                      }
+                        else if(xmlHttp.responseText === "true"){
+                            
+                          
+                          returnInfo=true;
+                          $("#error_msg").hide();
+                      }
 
-        }
+                        
+                        else{
+                            alert(xmlHttp.responseText);
+                        }  
+                    }
     };
     xmlHttp.open("POST",url,true);
     xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-    xmlHttp.send('');
+    xmlHttp.send(data_url);
 
 
     function GetXmlHttpObject()

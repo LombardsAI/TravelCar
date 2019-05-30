@@ -17,17 +17,17 @@ class controllerUtilisateur
     }
 
     // Ajout des données d'un nouveau utilisateur et affiche un message de confirmation
-    public static function signUpDone() {
+    public static function signUpDone($table) {
         // ajouter une validation des informations du formulaire
-        $results = ModelUtilisateur::insert ($_POST['id'], $_POST['nom'], $_POST['prenom'], $_POST['telephone'], $_POST['password'], $_POST['mail']);
+        $results = ModelUtilisateur::insert ($table);
         require '../view/viewSign_upResult.php';
     }
 
-    public static function checkAccount($id,$pw){
-        ModelUtilisateur::checkAccount($id,$pw);
+    public static function checkAccount($table){
+        ModelUtilisateur::checkAccount($table);
     }
 
-    public static function checkExistance($id){
-        ModelUtilisateur::checkExistance($id);
+    public static function checkExistance($table){
+        ModelUtilisateur::checkExistance($table);
     }
 }

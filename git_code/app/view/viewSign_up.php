@@ -2,17 +2,17 @@
 include('library_form.php');
 include 'fragmentHeader.html';
 ?>
-    <script type="text/javascript">
+<!--    <script type="text/javascript">
         $(document).ready(function() {
             $("#id").blur(function () {
                 var id = document.inscription.id.value;
                 var myMap = new Map();
-                myMap.set("param1", id);
+                myMap.set("id", id);
                 checkAccount(myMap, 'sign_up');
                 document.cookie = "id=" + id;
             });
         });
-    </script>
+    </script>-->
     <body>
     <div class="signContainer">
         <!-- Jumbotrom -->
@@ -45,7 +45,7 @@ include 'fragmentHeader.html';
                     <br>
                     <label for='mail'>E-mail</label>
                     <br>
-                    <input name="mail" ng-model="mail" type="email" required><span style="color:red">*</span>
+                    <input name="ad_mail" ng-model="mail" type="email" required><span style="color:red">*</span>
                      <div>
                         <span style="color:red" ng-show="inscription.mail.$error.required && inscription.mail.$dirty && inscription.mail.$invalide">E-mail est vide</span>
                     </div>
@@ -78,9 +78,21 @@ include 'fragmentHeader.html';
                     ?>
                 </form>
             </div>
-
-    </body>
-
 </div>
+    </body>
+<script type="text/javascript">
+      
+            $(document).ready(function(){ 
+            var myMap = new Map();
+            $("#id").on('input',function(){
+                myMap.set("id",document.inscription.id.value);
+                checkAccount(myMap,"sign_up");
+             });
+            
+           }
+            
+      );
+        </script>
+
 <?php
 include 'fragmentFooter.html'?>
