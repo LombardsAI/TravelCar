@@ -67,14 +67,7 @@ include('library_form.php');
             }
             ?>
             <form name='research' id ="research" method='get' action="../controller/router.php" onsubmit="return check_time()" autocomplete="off">
-                <?php
-                if($check=="parking"){
-                 echo "<input class='hidden' name='action' value='reserverParkingDetail'>";
-                }
-                else{
-                     echo "<input class='hidden' name='action' value='reserverVehiculeDetail'>";
-                }
-                   ?>
+                 <input class="hidden" name="action" value="reserverParkingDetail">
                 <input class="hidden" name="controlleur" value="reservation">
             <div class="boite_2">
                 <?php
