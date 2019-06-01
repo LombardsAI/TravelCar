@@ -1,0 +1,53 @@
+<?php
+require_once 'SModel.php';
+
+
+class ModelReservationVehicule
+{
+
+    private $marque,$capacite,$prix,$aeroport, $label, $adresse;
+
+    public function __construct($marque=NULL,$capacite=NULL,$prix=NULL,$aeroport=NULL, $label=NULL, $adresse=NULL)
+    {
+        if(!is_null($aeroport)){
+        $this->marque = $marque;    
+        $this->capacite = $capacite;
+        $this->prix = $prix;
+        $this->aeroport = $aeroport;
+        $this->label = $label;
+        $this->adresse = $adresse;
+    }
+
+    }
+
+    public static function reserver_search_vehicule($info){
+        
+          try {
+          $database = SModel::getInstance();
+          $sql = "SELECT aeroport, p.label, adresse,v.marque,v.capacité as capacite, v.prix_emprunte as prix FROM parking p,véhicule v, "
+        . "(SELECT label_du_parking as label,n_plaque FROM gare g WHERE "
+       . "unix_timestamp(g.date_debut) < unix_timestamp('" .$info["date_debut"] ."') AND "
+//       . "unix_timestamp(g.date_debut)< unix_timestamp('05/08/2019 00:00:00') OR "
+        . "unix_timestamp(g.date_fin) > unix_timestamp('" .$info["date_fin"]."') AND g.TYPE = 1)a WHERE "
+//        . "unix_timestamp(g.date_fin)> unix_timestamp('05/09/2019 00:00:00'))a WHERE"
+        . "p.aeroport ='" .$info["aeroport"] ."' AND "
+        . " p.label = a.label AND v.n_plaque = a.n_plaque AND "
+        . " NOT EXISTS (SELECT e.n_plaque FROM emprunte e "
+        . "WHERE (unix_timestamp(e.date_debut) > unix_timestamp('" .$info["date_debut"] ."') AND  "
+        . "unix_timestamp(e.date_debut) < unix_timestamp('" .$info["date_fin"] ."')) OR "
+          . " (unix_timestamp(e.date_fin) > unix_timestamp('" .$info["date_debut"] ."') AND  "
+        . "unix_timestamp(e.date_fin) < unix_timestamp('" .$info["date_fin"] ."')) AND e.TYPE = 1"
+         . ")";
+//          echo $sql;
+           $result = $database -> query($sql);
+            $list = $result->fetchAll(PDO::FETCH_CLASS,"ModelReservationVehicule");
+            return $list;
+          }
+          catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+    }
+}
+
+
