@@ -6,16 +6,14 @@ class ModelUtilisateur
     private $id, $nom, $prenom, $telephone, $password, $ad_mail;
 
 
-    public function __construct($id = NULL, $nom = NULL, $prenom = NULL, $telephone = NULL, $password = NULL, $ad_mail = NULL)
+    public function __construct($id, $nom, $prenom, $telephone, $password, $ad_mail)
     {
-        if(!is_null($id)) {
-            $this->id = $id;
-            $this->nom = $nom;
-            $this->prenom = $prenom;
-            $this->telephone = $telephone;
-            $this->password = $password;
-            $this->ad_mail = $ad_mail;
-        }
+        $this->id = $id;
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+        $this->telephone = $telephone;
+        $this->password = $password;
+        $this->ad_mail = $ad_mail;
     }
 
     /**
@@ -153,6 +151,7 @@ class ModelUtilisateur
 
     public static function checkExistance($table){
         try{
+
             $database = SModel::getInstance();
             $query="SELECT * FROM utilisateur WHERE ";
              foreach($table as $key=>$value){
@@ -167,35 +166,6 @@ class ModelUtilisateur
             else{
                 echo('false');
             }
-        }
-        catch (PDOException $e) {
-            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
-            return FALSE;
-        }
-    }
-
-    public static function chercherUtilisateur(){
-        try{
-            $id = $_COOKIE['id'];
-            $database = SModel::getInstance();
-            $query="SELECT * FROM utilisateur WHERE id = '$id'";
-            $result = $database->query($query);
-            $list = $result->fetchAll(PDO::FETCH_CLASS,"ModelUtilisateur");
-            return $list;
-        }
-        catch (PDOException $e) {
-            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
-            return FALSE;
-        }
-    }
-
-    public static function modifyUtilisateur($table){
-        try{
-            $database = SModel::getInstance();
-            $query="UPDATE `utilisateur` SET `nom` = :nom, `prenom` = :prenom, `telephone` = :telephone, `password` = :password, `ad_mail` = :ad_mail WHERE `utilisateur`.`id` = :id;";
-            $result = $database->prepare($query);
-            $result ->execute(['nom' => $table['nom'], 'prenom' => $table['prenom'], 'telephone' => $table['telephone'], 'password' => $table['password'], 'ad_mail' => $table['ad_mail'], 'id' => $_COOKIE['id']]);
-            return TRUE;
         }
         catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());

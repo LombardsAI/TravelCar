@@ -33,7 +33,6 @@ if(!empty($results)){
 //  }
  $str=json_encode($info);
 
-  $num = 0;
         // La liste des vins est dans une variable $results
         foreach ($results as $mv) {
         ?>
@@ -41,11 +40,9 @@ if(!empty($results)){
    <?php    
 //   $info_label = array();
   $temp=(string)$mv->getLabel();
-//  $info_label[++$num]=(string)$temp;
-//  echo $info_label[$num];
-//  echo $info_url;
+
             printf(
-                "<tr class = 'choose' id = $temp style='cursor:pointer' onclick='getPlaque(this,$str)' ><td>%s</td><td>%s</td><td>%d</td><td>%s</td></tr>",
+                "<tr class = 'choose' id = '$temp' style='cursor:pointer' onclick='getPlaque(this,$str)' ><td>%s</td><td>%s</td><td>%d</td><td>%s</td></tr>",
                 $mv->getAeroport(), $mv->getLabel(), $mv->getPrix(), $mv->getAdresse());
             
         }
@@ -76,7 +73,7 @@ var str = JSON.stringify(info);
      url+=key+'='+arr[key]+'&';
  }
     url+='label_du_parking='+t.id+'&n_plaque='+n_plaque;
-
+    
     window.location.href = url;
     }
 
