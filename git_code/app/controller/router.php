@@ -40,6 +40,7 @@ switch ($action) {
     case "checkAccount" :
     case "reserverParking" :
     case "reserverParkingDetail" :
+    case "add_gare":
         break;
 
     default:

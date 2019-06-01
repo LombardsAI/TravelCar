@@ -1,7 +1,7 @@
 <?php
 require ('fragmentHeader.html');
 include('library_form.php');
-include ('../model/ModelReservation.php');
+//include ('../model/ModelReservation.php');
 ?>
 
     <script>
@@ -12,10 +12,12 @@ include ('../model/ModelReservation.php');
 
             var date_debut = document.research.date_debut.value.split("/");
             var date_fin = document.research.date_fin.value.split("/");
-            var time_debut =  document.research.time_debut.value.split(":");
-            var time_fin =  document.research.time_fin.value.split(":");
-            var begin = new Date(date_debut[2],date_debut[0],date_debut[1],time_debut[0],time_debut[1]);
-            var end = new Date(date_fin[2],date_fin[0],date_fin[1],time_fin[0],time_fin[1]);
+            var time_debut =  document.research.time_debut.value;
+            var time_fin =  document.research.time_fin.value;
+            var date_temp_debut=date_debut[2]+'/'+date_debut[0]+'/'+date_debut[1]+' '+time_debut+':00';
+            var date_temp_fin=date_fin[2]+'/'+date_fin[0]+'/'+date_fin[1]+' '+time_fin+':00';
+            var begin = new Date(date_temp_debut);
+            var end = new Date(date_temp_fin);
             if(begin < end){
                 return true;
             }
@@ -76,7 +78,7 @@ include ('../model/ModelReservation.php');
                 <div class="boite_4">
                <h5>date_debut</h5>
                <input id='option' name='option' value='reserver' hidden>
-               <input type="text" class="auto-kal" data-kal="mode: 'single', direction: 'future'" name="date_debut" size="11" >
+               <input  type="text" class="auto-kal" data-kal="mode: 'single', direction: 'today-future'" name="date_debut" size="11" >
                <?php
                form_select("","time_debut",1,$time );
                ?>
@@ -85,7 +87,7 @@ include ('../model/ModelReservation.php');
             <div class="boite_2">
                 <div class="boite_4">
                 <h5>date_fin</h5>
-                <input type="text" class="auto-kal" data-kal="mode: 'single', direction: 'future'" name="date_fin" size="11">
+                <input type="text" class="auto-kal" data-kal="mode: 'single', direction: 'today-future'" name="date_fin" size="11">
                 <?php
                form_select("","time_fin",1,$time );
                ?>

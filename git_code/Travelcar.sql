@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1:3306
--- 生成日期： 2019-05-06 17:16:35
+-- 生成日期： 2019-06-01 13:24:48
 -- 服务器版本： 5.7.24
 -- PHP 版本： 7.2.14
 
@@ -58,12 +58,15 @@ INSERT INTO `aéroport` (`IATA`, `ville`, `nom_aeroport`) VALUES
 
 DROP TABLE IF EXISTS `emprunte`;
 CREATE TABLE IF NOT EXISTS `emprunte` (
-  `n_véhicule` int(11) NOT NULL,
+  `n_plaque` char(10) NOT NULL,
   `emprunteur` varchar(20) NOT NULL,
+  `label_du_parking` varchar(30) NOT NULL,
   `date_début` date NOT NULL,
   `date_fin` date NOT NULL,
-  PRIMARY KEY (`n_véhicule`,`emprunteur`),
-  KEY `clé_étranger_enprunteur` (`emprunteur`)
+  `TYPE` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`n_plaque`,`emprunteur`,`date_début`),
+  KEY `clé_étranger_enprunteur` (`emprunteur`),
+  KEY `clé_étranger_parking_2` (`label_du_parking`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -74,32 +77,26 @@ CREATE TABLE IF NOT EXISTS `emprunte` (
 
 DROP TABLE IF EXISTS `gare`;
 CREATE TABLE IF NOT EXISTS `gare` (
-  `n_gare` int(11) NOT NULL AUTO_INCREMENT,
-  `n_véhicule` int(11) NOT NULL,
+  `n_plaque` char(10) NOT NULL,
+  `id_client` varchar(20) NOT NULL,
   `label_du_parking` varchar(30) NOT NULL,
   `date_debut` datetime NOT NULL,
   `date_fin` datetime NOT NULL,
-  PRIMARY KEY (`n_gare`),
-  KEY `clé_étranger_véhicule` (`n_véhicule`),
-  KEY `clé_étranger_parking` (`label_du_parking`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `n_place` varchar(10) DEFAULT NULL,
+  `TYPE` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`n_plaque`,`id_client`,`date_debut`),
+  KEY `clé_étranger_véhicule` (`n_plaque`),
+  KEY `clé_étranger_parking` (`label_du_parking`),
+  KEY `clé_étranger_client` (`id_client`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `gare`
 --
 
-INSERT INTO `gare` (`n_gare`, `n_véhicule`, `label_du_parking`, `date_debut`, `date_fin`) VALUES
-(1, 1, 'Chronopark', '2019-05-01 00:00:00', '2019-05-16 00:00:00');
-
---
--- 触发器 `gare`
---
-DROP TRIGGER IF EXISTS `increment_uilise`;
-DELIMITER $$
-CREATE TRIGGER `increment_uilise` BEFORE INSERT ON `gare` FOR EACH ROW UPDATE parking SET parking.nombre_utilisé = parking.nombre_utilisé + 1
-where parking.label = new.label_du_parking
-$$
-DELIMITER ;
+INSERT INTO `gare` (`n_plaque`, `id_client`, `label_du_parking`, `date_debut`, `date_fin`, `n_place`, `TYPE`) VALUES
+('BD51SMR', 'simon', 'Chronopark', '2019-05-09 00:00:00', '2019-05-15 00:00:00', '1', 2),
+('fre15fre', 'simon', 'Chronopark', '2019-06-04 00:00:00', '2019-06-09 00:00:00', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -147,8 +144,8 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 -- 转存表中的数据 `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `telephone`, `password`) VALUES
-('simon', 'simon', 'chen', 123456789, '111111');
+INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `telephone`, `password`, `ad_mail`) VALUES
+('simon', 'chen', 'simon', 653954426, '111111', '865133516@qq.com');
 
 -- --------------------------------------------------------
 
@@ -158,18 +155,19 @@ INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `telephone`, `password`) VALUE
 
 DROP TABLE IF EXISTS `véhicule`;
 CREATE TABLE IF NOT EXISTS `véhicule` (
-  `n_véhicule` int(11) NOT NULL AUTO_INCREMENT,
-  `propriétaire` varchar(20) NOT NULL,
-  PRIMARY KEY (`n_véhicule`),
-  KEY `clé_étranger_propriétaire` (`propriétaire`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `n_plaque` char(10) NOT NULL,
+  `marque` char(15) DEFAULT NULL,
+  `capacité` int(2) DEFAULT NULL,
+  PRIMARY KEY (`n_plaque`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `véhicule`
 --
 
-INSERT INTO `véhicule` (`n_véhicule`, `propriétaire`) VALUES
-(1, 'simon');
+INSERT INTO `véhicule` (`n_plaque`, `marque`, `capacité`) VALUES
+('BD51SMR', 'renault', 5),
+('fre15fre', NULL, NULL);
 
 --
 -- 限制导出的表
@@ -179,26 +177,23 @@ INSERT INTO `véhicule` (`n_véhicule`, `propriétaire`) VALUES
 -- 限制表 `emprunte`
 --
 ALTER TABLE `emprunte`
-  ADD CONSTRAINT `cle_etranger_emprunteur` FOREIGN KEY (`emprunteur`) REFERENCES `utilisateur` (`id`);
+  ADD CONSTRAINT `cle_etranger_emprunteur` FOREIGN KEY (`emprunteur`) REFERENCES `utilisateur` (`id`),
+  ADD CONSTRAINT `clé_étranger_parking_2` FOREIGN KEY (`label_du_parking`) REFERENCES `parking` (`label`),
+  ADD CONSTRAINT `clé_étranger_plaque_2` FOREIGN KEY (`n_plaque`) REFERENCES `véhicule` (`n_plaque`);
 
 --
 -- 限制表 `gare`
 --
 ALTER TABLE `gare`
+  ADD CONSTRAINT `clé_étranger_client` FOREIGN KEY (`id_client`) REFERENCES `utilisateur` (`id`),
   ADD CONSTRAINT `clé_étranger_parking` FOREIGN KEY (`label_du_parking`) REFERENCES `parking` (`label`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `clé_étranger_véhicule` FOREIGN KEY (`n_véhicule`) REFERENCES `véhicule` (`n_véhicule`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `clé_étranger_plaque` FOREIGN KEY (`n_plaque`) REFERENCES `véhicule` (`n_plaque`);
 
 --
 -- 限制表 `parking`
 --
 ALTER TABLE `parking`
   ADD CONSTRAINT `clé_étranger_aéroport` FOREIGN KEY (`aeroport`) REFERENCES `aéroport` (`IATA`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- 限制表 `véhicule`
---
-ALTER TABLE `véhicule`
-  ADD CONSTRAINT `cle_etranger_proprietaire` FOREIGN KEY (`propriétaire`) REFERENCES `utilisateur` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

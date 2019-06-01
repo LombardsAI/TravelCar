@@ -1,7 +1,6 @@
-<?php
-$url = "viewReserver_parking.php?";
 
-    $url=$url."ID=".$value.$_GET["ID"];
+<?php
+$url = "/TravelCar/app/view/viewReserver_parking.php";
 
 header("Location:$url");
 ?>
