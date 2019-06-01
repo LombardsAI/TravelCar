@@ -41,6 +41,8 @@ switch ($action) {
     case "reserverParking" :
     case "reserverParkingDetail" :
     case "add_gare":
+    case "reserverVehicule":
+    case "reserverVehiculeDetail":
         break;
 
     default:
