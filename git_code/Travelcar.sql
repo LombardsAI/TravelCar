@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1:3306
--- 生成日期： 2019-06-01 16:01:59
+-- 生成日期： 2019-06-01 13:24:48
 -- 服务器版本： 5.7.24
 -- PHP 版本： 7.2.14
 
@@ -61,20 +61,13 @@ CREATE TABLE IF NOT EXISTS `emprunte` (
   `n_plaque` char(10) NOT NULL,
   `emprunteur` varchar(20) NOT NULL,
   `label_du_parking` varchar(30) NOT NULL,
-  `date_debut` datetime NOT NULL,
-  `date_fin` datetime NOT NULL,
+  `date_début` date NOT NULL,
+  `date_fin` date NOT NULL,
   `TYPE` int(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`n_plaque`,`emprunteur`,`date_debut`),
+  PRIMARY KEY (`n_plaque`,`emprunteur`,`date_début`),
   KEY `clé_étranger_enprunteur` (`emprunteur`),
   KEY `clé_étranger_parking_2` (`label_du_parking`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- 转存表中的数据 `emprunte`
---
-
-INSERT INTO `emprunte` (`n_plaque`, `emprunteur`, `label_du_parking`, `date_debut`, `date_fin`, `TYPE`) VALUES
-('BD51SMR', 'simon', 'Chronopark', '2019-05-10 00:00:00', '2019-05-14 00:00:00', 2);
 
 -- --------------------------------------------------------
 
@@ -103,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `gare` (
 
 INSERT INTO `gare` (`n_plaque`, `id_client`, `label_du_parking`, `date_debut`, `date_fin`, `n_place`, `TYPE`) VALUES
 ('BD51SMR', 'simon', 'Chronopark', '2019-05-09 00:00:00', '2019-05-15 00:00:00', '1', 2),
-('fre15fre', 'simon', 'Chronopark', '2019-06-04 00:00:00', '2019-06-09 00:00:00', NULL, 1);
+('fre15fre', 'simon', 'Chronopark', '2019-06-04 00:00:00', '2019-06-09 00:00:00', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -165,7 +158,6 @@ CREATE TABLE IF NOT EXISTS `véhicule` (
   `n_plaque` char(10) NOT NULL,
   `marque` char(15) DEFAULT NULL,
   `capacité` int(2) DEFAULT NULL,
-  `prix_emprunte` int(5) DEFAULT NULL,
   PRIMARY KEY (`n_plaque`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -173,9 +165,9 @@ CREATE TABLE IF NOT EXISTS `véhicule` (
 -- 转存表中的数据 `véhicule`
 --
 
-INSERT INTO `véhicule` (`n_plaque`, `marque`, `capacité`, `prix_emprunte`) VALUES
-('BD51SMR', 'renault', 5, 100),
-('fre15fre', NULL, NULL, NULL);
+INSERT INTO `véhicule` (`n_plaque`, `marque`, `capacité`) VALUES
+('BD51SMR', 'renault', 5),
+('fre15fre', NULL, NULL);
 
 --
 -- 限制导出的表

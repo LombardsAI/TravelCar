@@ -33,6 +33,7 @@ if(!empty($results)){
 //  }
  $str=json_encode($info);
 
+  $num = 0;
         // La liste des vins est dans une variable $results
         foreach ($results as $mv) {
         ?>

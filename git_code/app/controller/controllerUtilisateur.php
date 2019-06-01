@@ -20,6 +20,7 @@ class controllerUtilisateur
     public static function signUpDone($table) {
         // ajouter une validation des informations du formulaire
         $results = ModelUtilisateur::insert ($table);
+        $type = 'signUp';
         require '../view/viewSign_upResult.php';
     }
 
@@ -29,5 +30,16 @@ class controllerUtilisateur
 
     public static function checkExistance($table){
         ModelUtilisateur::checkExistance($table);
+    }
+
+    public static function modifierUtilisateur(){
+        $results = ModelUtilisateur::chercherUtilisateur();
+        require '../view/viewModify_utilisateur.php';
+    }
+
+    public static function modifierDone($table){
+        $results = ModelUtilisateur::modifyUtilisateur($table);
+        $type = 'modify';
+        require '../view/viewSign_upResult.php';
     }
 }
