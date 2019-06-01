@@ -1,6 +1,6 @@
 
 <?php
-$url = "/TravelCar/app/view/viewReserver_parking.php";
+$url = "/TravelCar/app/view/viewAccueil.php";
 
 header("Location:$url");
 ?>
