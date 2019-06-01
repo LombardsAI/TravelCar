@@ -38,6 +38,8 @@ switch ($action) {
     case "signUpDone" :
     case "checkExistance" :
     case "checkAccount" :
+    case "modifierUtilisateur" :
+    case "modifierDone" :
     case "reserverParking" :
     case "reserverParkingDetail" :
     case "add_gare":

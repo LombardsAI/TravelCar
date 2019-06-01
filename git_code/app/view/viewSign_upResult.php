@@ -4,7 +4,7 @@ include 'fragmentHeader.html';
 <body>
 <div class="container">
     <?php
-    if($results){
+    if(($results & $type == 'signUp') || $type == 'modify'){
         include 'fragmentMenu.html';
     }
     ?>
@@ -19,13 +19,20 @@ include 'fragmentHeader.html';
         <p>  Maximaliser le valeur de vos voitures ....</p>
     </div>
     <?php
-    if ($results) {
-        echo ("<h2>Inscription est fait !</h2>");
-        setcookie('id',$_POST['id']);
+    if($type == 'signUp') {
+        if ($results) {
+            echo("<h2>Inscription est fait !</h2>");
+            setcookie('id', $_POST['id']);
 //        echo ("<h3>id = " . $_COOKIE['id'] . "</h3>");
-    } else {
-        echo ("<h2>Il y a  un problème pour l'inscription</h2>");
-        echo ("<h3>id = " . $_POST['id'] . "</h3>");
+        } else {
+            echo("<h2>Il y a  un problème pour l'inscription</h2>");
+            echo("<h3>id = " . $_POST['id'] . "</h3>");
+        }
+    }
+    else if($type == 'modify'){
+        if($results){
+            echo("<h2>Modification est fait !</h2>");
+        }
     }
     include('fragmentFooter.html');
     ?>
