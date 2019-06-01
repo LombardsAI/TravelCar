@@ -4,7 +4,7 @@ include 'fragmentHeader.html';
 <body>
 <div class="container">
     <?php
-    if($results){
+    if(($results & $type == 'signUp') || $type == 'modify'){
         include 'fragmentMenu.html';
     }
     ?>

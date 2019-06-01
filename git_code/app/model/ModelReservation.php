@@ -21,16 +21,13 @@ class ModelReservation
     {
         try {
             $database = SModel::getInstance();
-                $sql = "SELECT aeroport, p.label, prix_du_jour as prix, adresse FROM parking p LEFT JOIN"
+                $sql = "SELECT aeroport, p.label, prix_du_jour as prix, adresse FROM parking p, "
                     . "(SELECT count(*) as num, label_du_parking as label FROM gare g WHERE "
-                    . "(unix_timestamp(g.date_debut) > unix_timestamp('" . $info["date_debut"] . "') AND "
+                    . "unix_timestamp(g.date_debut) < unix_timestamp('" . $info["date_debut"] . "') OR "
 //       . "unix_timestamp(g.date_debut)< unix_timestamp('05/08/2019 00:00:00') OR "
-                    . "unix_timestamp(g.date_debut) < unix_timestamp('" . $info["date_fin"] . "') ) OR "
-                     . "(unix_timestamp(g.date_fin) > unix_timestamp('" . $info["date_debut"] . "') AND "
-//       . "unix_timestamp(g.date_debut)< unix_timestamp('05/08/2019 00:00:00') OR "
-                    . "unix_timestamp(g.date_fin) < unix_timestamp('" . $info["date_fin"] . "') )"
+                    . "unix_timestamp(g.date_fin) > unix_timestamp('" . $info["date_fin"] . "') "
                         . "AND g.TYPE !=-1 AND g.TYPE !=-2 "
-                        . "GROUP BY label_du_parking)a ON "
+                        . "GROUP BY label_du_parking)a WHERE "
 //        . "unix_timestamp(g.date_fin)> unix_timestamp('05/09/2019 00:00:00'))a WHERE"
                     . "(p.aeroport ='" . $info["aeroport"] . "'AND"
 //        . " p.aeroport ='CDG' AND"
@@ -52,24 +49,31 @@ class ModelReservation
     public static function add_gare($info){
          try {
             $database = SModel::getInstance();
+            //verifier si <<vehicule>> dispose de cette voiture;
             $sql = "insert ignore into véhicule (n_plaque) values ('"
                     . $info["n_plaque"]."')";
-            $database -> query($sql); 
+            
+            $database -> query($sql);
+            
             //inserer un nouveau enregistrement.
             $cle = '';
             $valeur = '';
             unset($info["aeroport"]);
             $time_debut = $info["date_debut"];
             $time_fin = $info["date_fin"];
+//            unset($info["date_debut"]);
+//            unset($info["date_fin"]);
             foreach($info as $key=>$value){
                 $cle.=$key.',';
                 $valeur.="'".$value."',";
             }
          $sql = "INSERT INTO gare ("
                  . $cle."id_client) VALUES ("
+//                 . $time_debut."', '"
+//                 . $time_fin."',"
                  . $valeur."'".$_COOKIE["id"]."')";
                $database -> query($sql);
-               return TRUE;
+       
          }catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;
