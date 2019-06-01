@@ -1,10 +1,12 @@
 <?php
 require_once ('../model/ModelReservation.php');
+
 require_once ('../model/ModelReservationVehicule.php');
 class controllerReservation
 {
     public static function reserverParking(){
         $check = "parking";
+
         require ('../view/viewReserver_parking.php');
     }
 
@@ -34,6 +36,7 @@ class controllerReservation
             require ('../view/transition_fail.php');
         }
    }
+
    
    public static function reserverVehicule(){
         $check = "vehicule";
@@ -56,4 +59,5 @@ class controllerReservation
         $results = ModelReservationVehicule::reserver_search_vehicule($info);
         require ('../view/viewReserver_vehicule_result.php');
    }
+
 }
