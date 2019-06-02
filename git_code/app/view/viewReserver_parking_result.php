@@ -34,7 +34,8 @@ if(!empty($results)){
  $str=json_encode($info);
 
         // La liste des vins est dans une variable $results
-        foreach ($results as $mv) {    
+        foreach ($results as $mv) {
+     
 //   $info_label = array();
   $temp=(string)$mv->getLabel();
 
@@ -43,7 +44,7 @@ if(!empty($results)){
                 $mv->getAeroport(), $mv->getLabel(), $mv->getPrix(), $mv->getAdresse());
             
         }
-    
+      
 }
 else {
     echo "Désolé, il y a pas de place correspondante acuellement";

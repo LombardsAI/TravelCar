@@ -145,6 +145,7 @@ class ModelUtilisateur
             }
             else{
                 echo('true');
+                SetCookie('id',$table['id']);
             }
         }
         catch (PDOException $e) {

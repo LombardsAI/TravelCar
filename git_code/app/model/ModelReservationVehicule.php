@@ -7,7 +7,7 @@ class ModelReservationVehicule
 
     private $marque,$capacite,$prix,$aeroport, $label, $adresse;
 
-    public function __construct($marque=NULL,$capacite=NULL,$prix=NULL,$n_plaque=NULL, $label=NULL, $adresse=NULL)
+ public function __construct($marque=NULL,$capacite=NULL,$prix=NULL,$n_plaque=NULL, $label=NULL, $adresse=NULL)
     {
         if(!is_null($aeroport)){
         $this->marque = $marque;    
@@ -48,6 +48,17 @@ class ModelReservationVehicule
             return FALSE;
         }
     }
+    
+    
+public static function add_emprunte($info){
+     try {
+          $database = SModel::getInstance();
+          $sql = 
+     }catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+}
 
 
  public function getAdresse()
@@ -117,5 +128,7 @@ class ModelReservationVehicule
      public function getPlaque()
     {
         return $this->n_plaque;
-    }
+    }   
 }
+
+

@@ -32,14 +32,15 @@ if(!empty($results)){
 //      foreach($info as $key=>$value){
 //      $info_url.=$key.'='.$value.'&';
 //  }
- $str=json_encode($info);
 
         // La liste des vins est dans une variable $results
         foreach ($results as $mv) {
      
 //   $info_label = array();
   $temp=(string)$mv->getPlaque();
-
+  $cout = ceil($mv->getPrix()*((strtotime($info["date_fin"])-strtotime($info["date_debut"]))/86400));
+  $info["cout"]=$cout;
+  $str=json_encode($info);
             printf(
                 "<tr class = 'choose' id = '$temp' style='cursor:pointer' onclick='getPlaque(this,$str)' ><td>%s</td><td>%d</td><td>%s</td><td>%d</td><td>%s</td></tr>",
                 $mv->getMarque(), $mv->getCapacite(), $mv->getLabel(),$mv->getPrix(), $mv->getAdresse());
@@ -61,19 +62,18 @@ else {
 function getPlaque(t,info) {
 var str = JSON.stringify(info);
  var arr = JSON.parse(str);
-    var url =  'router.php?action=add_gare&controlleur=reservation&';
-    var n_plaque = window.prompt("veuillez entrer votre numéro de plaque","");
-    if (n_plaque !== null){
-       
+ var pay = "Vous devez payer "+arr.cout +" euros";
+ var confirm = window.confirm(pay);
+ if(confirm){
+    var url =  'router.php?action=add_emprunte&controlleur=reservation&';
  for(var key in arr){
      url+=key+'='+arr[key]+'&';
  }
-    url+='label_du_parking='+t.id+'&n_plaque='+n_plaque;
+    url+='n_plaque='+t.id;
     
     window.location.href = url;
     }
-
-            
 }
+            
 
 </script>
