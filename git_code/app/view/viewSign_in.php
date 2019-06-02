@@ -36,8 +36,8 @@ include 'fragmentHeader.html';
             <div class='panel-body'>
 
                 <form name="login" id="login" action="../controller/router.php" method="post" ng-app="" onsubmit="return return_Info(); " >
-                    <input class="hidden" name="action" value="accueil">
-                    <input class="hidden" name="controlleur" value="utilisateur">
+                    <input class="hidden" id="action" name="action" value="accueil">
+                    <input class="hidden" id="controlleur" name="controlleur" value="utilisateur">
                     <label for='User_name'>ID</label>
                     <br>
                     <input name="ID" ng-model="ID" required>
@@ -60,7 +60,8 @@ include 'fragmentHeader.html';
                   <button onmouseover="set_check()" onkeyup="set_check()" class="mdc-button__label">Connecter</button>
                     <br>
                     <a href="../view/viewSign_up.php">Pas un utilisateur ?</a>
-
+                    <br>
+                    <a href="../view/viewAdmin_signup.php">Administrateur ?</a>
             </div>
         </div>
 

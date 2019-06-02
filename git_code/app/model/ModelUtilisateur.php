@@ -134,17 +134,24 @@ class ModelUtilisateur
 
             $database = SModel::getInstance();
 //            $query="SELECT * FROM utilisateur WHERE id = '$id' and password = '$pw'";
-             $query="SELECT * FROM utilisateur WHERE ";
-             foreach($table as $key=>$value){
+            $query = "SELECT * FROM utilisateur WHERE ";
+            foreach($table as $key=>$value){
                 $query.=$key."='".$value."' AND "; 
              }
              $query = substr($query,0,strlen($query)-4);
             $result = $database->query($query);
             if($result->rowCount() === 0){
-                echo('false');
+                $query = str_replace('utilisateur','administrateur',$query);
+                $resultAdmin = $database->query($query);
+                if($resultAdmin->rowCount() === 0) {
+                    echo('false');
+                }
+                else{
+                    echo('trueadministrateur');
+                }
             }
             else{
-                echo('true');
+                echo('trueutilisateur');
             }
         }
         catch (PDOException $e) {

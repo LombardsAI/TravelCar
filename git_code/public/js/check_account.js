@@ -35,17 +35,23 @@ function checkAccount(map,$msg) {
                           $("#error_msg").show();
                      
                       }
-                        else if(xmlHttp.responseText === "true"){
+                        else if(xmlHttp.responseText === "trueutilisateur"){
                             
                           
                           returnInfo=true;
                           $("#error_msg").hide();
                       }
+                          else if(xmlHttp.responseText === "trueadministrateur"){
 
+                              $("#action").val("accueilAdmin");
+                              $("#controlleur").val("administrateur");
+                              returnInfo=true;
+                              $("#error_msg").hide();
+                          }
                         
                         else{
                             alert(xmlHttp.responseText);
-                        }  
+                        }
                     }
     };
     xmlHttp.open("POST",url,true);

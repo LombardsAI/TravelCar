@@ -3,7 +3,7 @@
 include '../model/config.php';
 require_once 'controllerUtilisateur.php';
 require_once 'controllerReservation.php';
-//require_once 'ControllerProducteur.php';
+require_once 'ControllerAdmin.php';
 
 $parametres = "";
 // récupération de l'action passée dans l'URL
@@ -31,9 +31,13 @@ if($controlleur == 'utilisateur'){
 else if($controlleur == 'reservation'){
     $controlleurchoisi = controllerReservation::class;
 }
+else if($controlleur == 'administrateur'){
+    $controlleurchoisi = controllerAdmin::class;
+}
 
 switch ($action) {
     case "accueil" :
+    case "accueilAdmin" :
     case "signUp" :
     case "signUpDone" :
     case "checkExistance" :
@@ -44,7 +48,6 @@ switch ($action) {
     case "reserverParking" :
     case "reserverParkingDetail" :
     case "add_gare":
-          case "add_gare":
     case "reserverVehicule":
     case "reserverVehiculeDetail":
 
