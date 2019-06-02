@@ -3,19 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/public/js/bootstrap.js</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/controller/controllerUtilisateur.php</file>
-            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/public/css/pattern.css</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/fragmentMenu.html</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/transition.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/public/js/check_account.js</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/model/ModelReservationVehicule.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/model/ModelUtilisateur.php</file>
-            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/check_account.php</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/viewReserver_vehicule_result.php</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/model/ModelReservation.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/controller/router.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/viewSign_in.php</file>
-            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/library_form.php</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/transition_fail.php</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/viewSign_upResult.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/viewReserver_parking.php</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/reserve_search_action.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/viewReserver_parking_result.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/model/config.php</file>
-            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/controller/controllerReservation.php</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/transition_success.php</file>
         </group>
     </open-files>
 </project-private>

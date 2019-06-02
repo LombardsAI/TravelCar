@@ -7,15 +7,15 @@ class ModelReservationVehicule
 
     private $marque,$capacite,$prix,$aeroport, $label, $adresse;
 
-    public function __construct($marque=NULL,$capacite=NULL,$prix=NULL,$aeroport=NULL, $label=NULL, $adresse=NULL)
+    public function __construct($marque=NULL,$capacite=NULL,$prix=NULL,$n_plaque=NULL, $label=NULL, $adresse=NULL)
     {
         if(!is_null($aeroport)){
         $this->marque = $marque;    
         $this->capacite = $capacite;
         $this->prix = $prix;
-        $this->aeroport = $aeroport;
         $this->label = $label;
         $this->adresse = $adresse;
+        $this->n_plaque = $n_plaque;
     }
 
     }
@@ -24,7 +24,7 @@ class ModelReservationVehicule
         
           try {
           $database = SModel::getInstance();
-          $sql = "SELECT aeroport, p.label, adresse,v.marque,v.capacité as capacite, v.prix_emprunte as prix FROM parking p,véhicule v, "
+          $sql = "SELECT  p.label, adresse,v.marque,v.capacité as capacite, v.prix_emprunte as prix,v.n_plaque FROM parking p,véhicule v, "
         . "(SELECT label_du_parking as label,n_plaque FROM gare g WHERE "
        . "unix_timestamp(g.date_debut) < unix_timestamp('" .$info["date_debut"] ."') AND "
 //       . "unix_timestamp(g.date_debut)< unix_timestamp('05/08/2019 00:00:00') OR "
@@ -48,6 +48,74 @@ class ModelReservationVehicule
             return FALSE;
         }
     }
+
+
+ public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * @param mixed $adresse
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * @param mixed $prix
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+    /**
+     * @param mixed $label
+     */
+    public function setLabel($label)
+    {
+        $this->label = $label;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCapacite()
+    {
+        return $this->capacite;
+    }
+
+    /**
+     * @param mixed $aeroport
+     */
+    public function setCapacite($capacite)
+    {
+        $this->aeroport = $capacite;
+    }
+     public function getMarque()
+    {
+        return $this->marque;
+    }
+     public function getPlaque()
+    {
+        return $this->n_plaque;
+    }
 }
-
-
