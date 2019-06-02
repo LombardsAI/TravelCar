@@ -59,5 +59,14 @@ class controllerReservation
         $results = ModelReservationVehicule::reserver_search_vehicule($info);
         require ('../view/viewReserver_vehicule_result.php');
    }
+   public static function add_emprunte($info){
+     if(ModelReservationVehicule::add_emprunte($info))
+     {
+     require("../view/transition_success");
+     }
+     else{
+         require("../view/transition_fail");
+     }
+}
 
 }

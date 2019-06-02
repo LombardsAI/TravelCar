@@ -2,17 +2,6 @@
 include('library_form.php');
 include 'fragmentHeader.html';
 ?>
-    <script>
-        function set_check(){
-            var id = document.login.ID.value;
-            var pw = document.login.password.value;
-            var myMap = new Map();
-            myMap.set("id",id);
-            myMap.set("password",pw);
-            checkAccount(myMap,'sign_in');
-            document.cookie = "id=" + id;
-        }
-    </script>
         <body>
         <div class="signContainer">
             <!-- Jumbotrom -->
@@ -72,3 +61,14 @@ include 'fragmentHeader.html';
 </div>
 <?php
 include 'fragmentFooter.html';?>
+ <script>
+        function set_check(){
+            var id = document.login.ID.value;
+            var pw = document.login.password.value;
+            var myMap = new Map();
+            myMap.set("id",id);
+            myMap.set("password",pw);
+            checkAccount(myMap,'sign_in');
+//            document.cookie='id='+id;
+        }
+    </script>

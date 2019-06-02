@@ -50,6 +50,7 @@ switch ($action) {
     case "add_gare":
     case "reserverVehicule":
     case "reserverVehiculeDetail":
+        case "add_emprunte":
 
         break;
 
