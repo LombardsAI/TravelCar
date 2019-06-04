@@ -141,11 +141,14 @@ class ModelUtilisateur
              $query = substr($query,0,strlen($query)-4);
             $result = $database->query($query);
             if($result->rowCount() === 0){
-                echo('false');
+              
+               echo('false');
+               
             }
             else{
+                $_SESSION["id"] = $table["id"];
                 echo('true');
-                SetCookie('id',$table['id']);
+//               echo $_SESSION["id"];
             }
         }
         catch (PDOException $e) {
@@ -181,7 +184,7 @@ class ModelUtilisateur
 
     public static function chercherUtilisateur(){
         try{
-            $id = $_COOKIE['id'];
+            $id = $_SESSION['id'];
             $database = SModel::getInstance();
             $query="SELECT * FROM utilisateur WHERE id = '$id'";
             $result = $database->query($query);
@@ -199,7 +202,7 @@ class ModelUtilisateur
             $database = SModel::getInstance();
             $query="UPDATE `utilisateur` SET `nom` = :nom, `prenom` = :prenom, `telephone` = :telephone, `password` = :password, `ad_mail` = :ad_mail WHERE `utilisateur`.`id` = :id;";
             $result = $database->prepare($query);
-            $result ->execute(['nom' => $table['nom'], 'prenom' => $table['prenom'], 'telephone' => $table['telephone'], 'password' => $table['password'], 'ad_mail' => $table['ad_mail'], 'id' => $_COOKIE['id']]);
+            $result ->execute(['nom' => $table['nom'], 'prenom' => $table['prenom'], 'telephone' => $table['telephone'], 'password' => $table['password'], 'ad_mail' => $table['ad_mail'], 'id' => $_SESSION['id']]);
             return True;
         }
         catch (PDOException $e) {

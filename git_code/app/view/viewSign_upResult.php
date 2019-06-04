@@ -23,7 +23,7 @@ include 'fragmentHeader.html';
     <?php
     if ($results) {
         echo ("<h2>Inscription est fait !</h2>");
-        setcookie('id',$_POST['id']);
+//        $_SESSION['id'] = 
 //        echo ("<h3>id = " . $_COOKIE['id'] . "</h3>");
     } else {
         echo ("<h2>Il y a  un problème pour l'inscription</h2>");

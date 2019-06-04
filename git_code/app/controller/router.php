@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include '../model/config.php';
 require_once 'controllerUtilisateur.php';
 require_once 'controllerReservation.php';

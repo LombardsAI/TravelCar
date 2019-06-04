@@ -68,9 +68,7 @@ class ModelReservation
          $sql = "INSERT INTO gare ("
                  . $cle."id_client) VALUES ("
                  . $valeur."'".$_COOKIE["id"]."')";
-//               $database -> query($sql);
-//               return true;
-               return $sql;
+               $database -> query($sql);
          }catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;

@@ -12,7 +12,7 @@ include 'fragmentHeader.html';
         </div>
     </div>
     <div class="jumbotron">
-        <h1>Welcome <?php echo($_COOKIE['id']);?> !</h1>
+        <h1>Welcome <?php echo($_SESSION['id']);?> !</h1>
         <p>Maximaliser le valeur de vos voitures ....</p>
     </div>
 <?php
@@ -38,8 +38,11 @@ if(!empty($results)){
      
 //   $info_label = array();
   $temp=(string)$mv->getPlaque();
+    $info["label_du_parking"] = $mv->getLabel();
   $cout = ceil($mv->getPrix()*((strtotime($info["date_fin"])-strtotime($info["date_debut"]))/86400));
   $info["cout"]=$cout;
+  unset($info["marque"]);
+  unset($info["capacite"]);
   $str=json_encode($info);
             printf(
                 "<tr class = 'choose' id = '$temp' style='cursor:pointer' onclick='getPlaque(this,$str)' ><td>%s</td><td>%d</td><td>%s</td><td>%d</td><td>%s</td></tr>",

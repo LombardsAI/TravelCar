@@ -11,7 +11,7 @@ include 'fragmentHeader.html';
                 </div>
             </div>
             <div class="jumbotron">
-                <h1>  Welcome ! </h1>
+                <h1>  Welcome, Madame/Monsieur! </h1>
                 <p>  Maximaliser le valeur de vos voitures ....</p>
             </div>
 
