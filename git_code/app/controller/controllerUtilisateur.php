@@ -43,4 +43,5 @@ class controllerUtilisateur
         require '../view/viewSign_upResult.php';
     }
 
+
 }
