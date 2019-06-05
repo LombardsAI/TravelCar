@@ -39,7 +39,6 @@ class controllerUtilisateur
 
     public static function modifierDone($table){
         $results = ModelUtilisateur::modifyUtilisateur($table);
-        $type = 'modify';
         require '../view/viewSign_upResult.php';
     }
 

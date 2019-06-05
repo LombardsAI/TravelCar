@@ -12,10 +12,17 @@ include 'fragmentHeader.html';
         </div>
     </div>
     <div class="jumbotron">
-        <h1>Welcome <?php echo($_SESSION['id']);?> !</h1>
+          <h1>Welcome,
+       <?php     
+       require_once 'check_session.php';
+        ?>
+                !</h1>
         <p>Maximaliser le valeur de vos voitures ....</p>
     </div>
 <?php
+if(!isset($_SESSION["id"])){
+    $_SESSION["url_reservation"] = $_SERVER['REQUEST_URI'];
+}
 if(!empty($results)){
    echo "<table class = 'table table-striped table-bordered'>"
     . "<thead>

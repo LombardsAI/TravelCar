@@ -3,7 +3,8 @@ include('library_form.php');
 include 'fragmentHeader.html';
 ?>
         <body>
-        <div class="signContainer">
+        <div class="container">
+            <?php include 'fragmentMenu.html'; ?>
             <!-- Jumbotrom -->
             <div class="panel panel-success">
                 <div class="panel-heading">

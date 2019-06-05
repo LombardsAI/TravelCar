@@ -35,11 +35,22 @@ else if($controlleur == 'administrateur'){
     $controlleurchoisi = controllerAdmin::class;
 }
 
+//check if has log in
+if(isset($_SESSION["id"])){
+    if($action=="accueil"&&isset($_SESSION["url_reservation"])){
+            $URL =  $_SESSION["url_reservation"];
+//            echo $URL;
+            header("Location:$URL");
+        
+    }
 switch ($action) {
+    case "signUpDone" :
+      $_SESSION["id"] = $parametres["id"];
+        break;
     case "accueil" :
     case "accueilAdmin" :
     case "signUp" :
-    case "signUpDone" :
+   
     case "checkExistance" :
     case "checkAccount" :
 
@@ -58,6 +69,15 @@ switch ($action) {
         $action = "signIn";
         $controlleurchoisi = controllerUtilisateur::class;
 }
+
+}
+else{
+    if($action == "modifierUtilisateur"||$action == "add_gare"||$action == "add_emprunte"){
+        $action = "signIn";
+         $controlleurchoisi = controllerUtilisateur::class;
+    }
+}
+
 
 
 //echo ("Router : nom = $nom");
