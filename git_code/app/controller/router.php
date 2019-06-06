@@ -43,39 +43,28 @@ if(isset($_SESSION["id"])){
             header("Location:$URL");
         
     }
-switch ($action) {
-    case "signUpDone" :
-      $_SESSION["id"] = $parametres["id"];
-        break;
-    case "accueil" :
-    case "accueilAdmin" :
-    case "signUp" :
-   
-    case "checkExistance" :
-    case "checkAccount" :
 
-    case "modifierUtilisateur" :
-    case "modifierDone" :
-    case "reserverParking" :
-    case "reserverParkingDetail" :
-    case "add_gare":
-    case "reserverVehicule":
-    case "reserverVehiculeDetail":
-        case "add_emprunte":
-
-        break;
-
-    default:
-        $action = "signIn";
-        $controlleurchoisi = controllerUtilisateur::class;
-}
 
 }
 else{
-    if($action == "modifierUtilisateur"||$action == "add_gare"||$action == "add_emprunte"){
-        $action = "signIn";
-         $controlleurchoisi = controllerUtilisateur::class;
-    }
+    switch ($action) {
+       case "signUpDone" :
+             $_SESSION["id"] = $parametres["id"];
+        break;
+       case "modifierUtilisateur" :
+       case "add_gare":
+       case "add_emprunte":
+       case "histoireParking":
+       case "histoireEmprunte":
+       case "histoirePret":
+             $action = "signIn";
+             $controlleurchoisi = controllerUtilisateur::class;
+         break;
+
+    default:
+        break;
+}
+  
 }
 
 

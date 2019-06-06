@@ -36,7 +36,7 @@ class ModelReservationVehicule
         . "WHERE (unix_timestamp(e.date_debut) > unix_timestamp('" .$info["date_debut"] ."') AND  "
         . "unix_timestamp(e.date_debut) < unix_timestamp('" .$info["date_fin"] ."')) OR "
           . " (unix_timestamp(e.date_fin) > unix_timestamp('" .$info["date_debut"] ."') AND  "
-        . "unix_timestamp(e.date_fin) < unix_timestamp('" .$info["date_fin"] ."')) AND e.TYPE = 1"
+        . "unix_timestamp(e.date_fin) < unix_timestamp('" .$info["date_fin"] ."')) AND (e.TYPE = 1 OR e.TYPE = 0)"
          . ")";
 //          echo $sql;
            $result = $database -> query($sql);
@@ -65,7 +65,7 @@ public static function add_emprunte($info){
             }
           $sql = "INSERT INTO emprunte ("
                   . $cle."emprunteur) VALUES ("
-                  . $valeur."'".$_COOKIE["id"]."')";
+                  . $valeur."'".$_SESSION["id"]."')";
            $database -> query($sql);
            return true;
      }catch (PDOException $e) {

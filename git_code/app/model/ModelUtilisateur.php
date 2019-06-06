@@ -216,6 +216,54 @@ class ModelUtilisateur
             return FALSE;
         }
     }
-
+    
+    public static function histoireParking(){
+        try{
+            $id = $_SESSION['id'];
+            $database = SModel::getInstance();
+            $sql = "SELECT * FROM gare WHERE id_client='".$id."' ORDER BY TYPE,date_debut";
+            $query = $database->prepare($sql);
+            $query->execute();
+            $results = $query->fetchALL(PDO::FETCH_ASSOC);
+            return $results;
+        }catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+        
+    }
+    
+        public static function histoireEmprunte(){
+        try{
+            $id = $_SESSION['id'];
+            $database = SModel::getInstance();
+            $sql = "SELECT * FROM emprunte WHERE emprunteur='".$id."' ORDER BY TYPE,date_debut";
+            $query = $database->prepare($sql);
+            $query->execute();
+            $results = $query->fetchALL(PDO::FETCH_ASSOC);
+            return $results;
+        }catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+        
+    }
+    
+    public static function histoirePret(){
+        try{
+            $id = $_SESSION['id'];
+            $database = SModel::getInstance();
+            $sql = "SELECT e.* FROM emprunte e,gare g WHERE g.id_client='".$id."' AND "
+                    . "g.TYPE=1 AND g.n_plaque=e.n_plaque ORDER BY e.TYPE,e.date_debut";
+            $query = $database->prepare($sql);
+            $query->execute();
+            $results = $query->fetchALL(PDO::FETCH_ASSOC);
+            return $results;
+        }catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+        
+    }
 }
 

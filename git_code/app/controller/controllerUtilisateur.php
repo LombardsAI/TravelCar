@@ -41,6 +41,18 @@ class controllerUtilisateur
         $results = ModelUtilisateur::modifyUtilisateur($table);
         require '../view/viewSign_upResult.php';
     }
-
+   public static function histoireParking(){
+       $results = ModelUtilisateur::histoireParking();
+       require '../view/viewHisoireParking.php';
+   }
+   
+    public static function histoireEmprunte(){
+       $results = ModelUtilisateur::histoireEmprunte();
+       require '../view/viewHistoireEmprunte.php';
+   }
+   public static function histoirePret(){
+       $results = ModelUtilisateur::histoirePret();
+       require '../view/viewHistoirePret.php';
+   }
 
 }
