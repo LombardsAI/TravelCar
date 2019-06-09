@@ -12,10 +12,24 @@ include 'fragmentHeader.html';
         </div>
     </div>
     <div class="jumbotron">
-        <h1>Welcome <?php echo($_COOKIE['id']);?> !</h1>
+          <h1>Welcome,
+       <?php     
+       require_once 'check_session.php';
+        ?>
+                !</h1>
         <p>Maximaliser le valeur de vos voitures ....</p>
     </div>
 <?php
+if(!isset($_SESSION["id"])){
+    $_SESSION["url_reservation"] = $_SERVER['REQUEST_URI'];
+}
+else{
+    if(isset($_SESSION["url_reservation"]))
+    {
+    unset( $_SESSION["url_reservation"]);
+    
+    }
+}
 if(!empty($results)){
    echo "<table class = 'table table-striped table-bordered'>"
     . "<thead>
@@ -37,8 +51,9 @@ if(!empty($results)){
         foreach ($results as $mv) {
      
 //   $info_label = array();
-  $temp=(string)$mv->getLabel();
-
+  $temp="label_du_parking=". $mv->getLabel();
+  $cout = ceil($mv->getPrix()*((strtotime($info["date_fin"])-strtotime($info["date_debut"]))/86400));
+  $temp.="&cout=".$cout;
             printf(
                 "<tr class = 'choose' id = '$temp' style='cursor:pointer' onclick='getPlaque(this,$str)' ><td>%s</td><td>%s</td><td>%d</td><td>%s</td></tr>",
                 $mv->getAeroport(), $mv->getLabel(), $mv->getPrix(), $mv->getAdresse());
@@ -67,8 +82,8 @@ var str = JSON.stringify(info);
  for(var key in arr){
      url+=key+'='+arr[key]+'&';
  }
-    url+='label_du_parking='+t.id+'&n_plaque='+n_plaque;
-    
+    url+=t.id+'&n_plaque='+n_plaque;
+//    alert(url);
     window.location.href = url;
     }
 

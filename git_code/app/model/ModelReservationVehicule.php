@@ -53,7 +53,21 @@ class ModelReservationVehicule
 public static function add_emprunte($info){
      try {
           $database = SModel::getInstance();
-          $sql ;
+           //inserer un nouveau enregistrement.
+            $cle = '';
+            $valeur = '';
+            unset($info["aeroport"]);
+            $time_debut = $info["date_debut"];
+            $time_fin = $info["date_fin"];
+            foreach($info as $key=>$value){
+                $cle.=$key.',';
+                $valeur.="'".$value."',";
+            }
+          $sql = "INSERT INTO emprunte ("
+                  . $cle."emprunteur) VALUES ("
+                  . $valeur."'".$_SESSION["id"]."')";
+           $database -> query($sql);
+           return true;
      }catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;

@@ -148,12 +148,12 @@ class ModelUtilisateur
                 }
                 else{
                     echo('trueadministrateur');
-                    SetCookie('id',$table['id']);
                 }
             }
             else{
+                $_SESSION["id"] = $table["id"];
                 echo('trueutilisateur');
-                SetCookie('id',$table['id']);
+
             }
         }
         catch (PDOException $e) {
@@ -190,7 +190,7 @@ class ModelUtilisateur
     public static function chercherUtilisateur($id){
         try{
             if($id == NULL) {
-                $id = $_COOKIE['id'];
+                $id = $_SESSION['id'];
             }
             $database = SModel::getInstance();
             $query="SELECT * FROM utilisateur WHERE id = '$id'";
@@ -209,7 +209,7 @@ class ModelUtilisateur
             $database = SModel::getInstance();
             $query="UPDATE `utilisateur` SET `nom` = :nom, `prenom` = :prenom, `telephone` = :telephone, `password` = :password, `ad_mail` = :ad_mail WHERE `utilisateur`.`id` = :id;";
             $result = $database->prepare($query);
-            $result ->execute(['nom' => $table['nom'], 'prenom' => $table['prenom'], 'telephone' => $table['telephone'], 'password' => $table['password'], 'ad_mail' => $table['ad_mail'], 'id' => $_COOKIE['id']]);
+            $result ->execute(['nom' => $table['nom'], 'prenom' => $table['prenom'], 'telephone' => $table['telephone'], 'password' => $table['password'], 'ad_mail' => $table['ad_mail'], 'id' => $_SESSION['id']]);
             return True;
         }
         catch (PDOException $e) {
@@ -218,5 +218,53 @@ class ModelUtilisateur
         }
     }
 
+    public static function histoireParking(){
+        try{
+            $id = $_SESSION['id'];
+            $database = SModel::getInstance();
+            $sql = "SELECT * FROM gare WHERE id_client='".$id."' ORDER BY TYPE,date_debut";
+            $query = $database->prepare($sql);
+            $query->execute();
+            $results = $query->fetchALL(PDO::FETCH_ASSOC);
+            return $results;
+        }catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+
+    }
+
+        public static function histoireEmprunte(){
+        try{
+            $id = $_SESSION['id'];
+            $database = SModel::getInstance();
+            $sql = "SELECT * FROM emprunte WHERE emprunteur='".$id."' ORDER BY TYPE,date_debut";
+            $query = $database->prepare($sql);
+            $query->execute();
+            $results = $query->fetchALL(PDO::FETCH_ASSOC);
+            return $results;
+        }catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+
+    }
+
+    public static function histoirePret(){
+        try{
+            $id = $_SESSION['id'];
+            $database = SModel::getInstance();
+            $sql = "SELECT e.* FROM emprunte e,gare g WHERE g.id_client='".$id."' AND "
+                    . "g.TYPE=1 AND e.TYPE=1 AND g.n_plaque=e.n_plaque ORDER BY e.TYPE,e.date_debut";
+            $query = $database->prepare($sql);
+            $query->execute();
+            $results = $query->fetchALL(PDO::FETCH_ASSOC);
+            return $results;
+        }catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+
+    }
 }
 

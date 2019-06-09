@@ -60,12 +60,14 @@ class controllerReservation
         require ('../view/viewReserver_vehicule_result.php');
    }
    public static function add_emprunte($info){
-     if(ModelReservationVehicule::add_emprunte($info))
-     {
-     require("../view/transition_success");
+       $result = ModelReservationVehicule::add_emprunte($info);
+      
+     if($result)
+     { 
+     require("../view/transition_success.php");
      }
      else{
-         require("../view/transition_fail");
+         require("../view/transition_fail.php");
      }
 }
 

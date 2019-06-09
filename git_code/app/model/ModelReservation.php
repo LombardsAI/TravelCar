@@ -59,18 +59,17 @@ class ModelReservation
             $cle = '';
             $valeur = '';
             unset($info["aeroport"]);
-            $time_debut = $info["date_debut"];
-            $time_fin = $info["date_fin"];
+//            $time_debut = $info["date_debut"];
+//            $time_fin = $info["date_fin"];
             foreach($info as $key=>$value){
                 $cle.=$key.',';
                 $valeur.="'".$value."',";
             }
          $sql = "INSERT INTO gare ("
                  . $cle."id_client) VALUES ("
-                 . $valeur."'".$_COOKIE["id"]."')";
-//               $database -> query($sql);
-//               return true;
-               return $sql;
+                 . $valeur."'".$_SESSION["id"]."')";
+               $database -> query($sql);
+         return true;
          }catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;

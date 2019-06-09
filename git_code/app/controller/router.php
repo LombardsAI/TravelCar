@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include '../model/config.php';
 require_once 'controllerUtilisateur.php';
 require_once 'controllerReservation.php';
@@ -35,36 +35,44 @@ else if($controlleur == 'administrateur'){
     $controlleurchoisi = controllerAdmin::class;
 }
 
-switch ($action) {
-    case "accueil" :
-    case "accueilAdmin" :
-    case "signUp" :
-    case "signUpDone" :
-    case "checkExistance" :
-    case "checkAccount" :
+//check if has log in
+if(isset($_SESSION["id"])){
+    if($action=="accueil"&&isset($_SESSION["url_reservation"])){
+            $URL =  $_SESSION["url_reservation"];
+//            echo $URL;
+            header("Location:$URL");
 
-    case "modifierUtilisateur" :
-    case "modifierDone" :
-    case "reserverParking" :
-    case "reserverParkingDetail" :
-    case "add_gare":
-    case "reserverVehicule":
-    case "reserverVehiculeDetail":
-    case "add_emprunte":
+    }
 
-    case "voirReservation":
-    case "infoUtilisateur":
-    case "changeCondition":
-    case "conditionChanged":
-    case "daliyCheck":
-    case "ajouteParking":
 
+}
+else{
+    switch ($action) {
+       case "signUpDone" :
+             $_SESSION["id"] = $parametres["id"];
         break;
+       case "modifierUtilisateur" :
+       case "add_gare":
+       case "add_emprunte":
+       case "histoireParking":
+       case "histoireEmprunte":
+       case "histoirePret":
+        case "voirReservation":
+        case "infoUtilisateur":
+            case "changeCondition":
+        case "conditionChanged":
+        case "daliyCheck":
+        case "ajouteParking":
+             $action = "signIn";
+             $controlleurchoisi = controllerUtilisateur::class;
+         break;
 
     default:
-        $action = "signIn";
-        $controlleurchoisi = controllerUtilisateur::class;
+        break;
 }
+
+}
+
 
 
 //echo ("Router : nom = $nom");

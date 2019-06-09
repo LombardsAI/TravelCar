@@ -12,10 +12,24 @@ include 'fragmentHeader.html';
         </div>
     </div>
     <div class="jumbotron">
-        <h1>Welcome <?php echo($_COOKIE['id']);?> !</h1>
+        <h1>Welcome,
+       <?php     
+       require_once 'check_session.php';
+        ?>
+                !</h1>
         <p>Maximaliser le valeur de vos voitures ....</p>
     </div>
 <?php
+if(!isset($_SESSION["id"])){
+    $_SESSION["url_reservation"] = $_SERVER['REQUEST_URI'];
+}
+else{
+    if(isset($_SESSION["url_reservation"]))
+    {
+    unset( $_SESSION["url_reservation"]);
+    
+    }
+}
 if(!empty($results)){
    echo "<table class = 'table table-striped table-bordered'>"
     . "<thead>
@@ -32,15 +46,19 @@ if(!empty($results)){
 //      foreach($info as $key=>$value){
 //      $info_url.=$key.'='.$value.'&';
 //  }
-
+$str=json_encode($info); 
+unset($info["marque"]);
+ unset($info["capacite"]);
         // La liste des vins est dans une variable $results
         foreach ($results as $mv) {
      
 //   $info_label = array();
-  $temp=(string)$mv->getPlaque();
+  $temp="n_plaque=".(string)$mv->getPlaque();
+  $temp.="&label_du_parking=". $mv->getLabel();
   $cout = ceil($mv->getPrix()*((strtotime($info["date_fin"])-strtotime($info["date_debut"]))/86400));
-  $info["cout"]=$cout;
-  $str=json_encode($info);
+  $temp.="&cout=".$cout;
+ 
+  
             printf(
                 "<tr class = 'choose' id = '$temp' style='cursor:pointer' onclick='getPlaque(this,$str)' ><td>%s</td><td>%d</td><td>%s</td><td>%d</td><td>%s</td></tr>",
                 $mv->getMarque(), $mv->getCapacite(), $mv->getLabel(),$mv->getPrix(), $mv->getAdresse());
@@ -62,14 +80,17 @@ else {
 function getPlaque(t,info) {
 var str = JSON.stringify(info);
  var arr = JSON.parse(str);
- var pay = "Vous devez payer "+arr.cout +" euros";
+ str = t.id;
+ var er = /(?<=cout=)\d*/;
+ var cout =str.match(er);
+ var pay = "Vous devez payer "+cout +" euros";
  var confirm = window.confirm(pay);
  if(confirm){
     var url =  'router.php?action=add_emprunte&controlleur=reservation&';
  for(var key in arr){
      url+=key+'='+arr[key]+'&';
  }
-    url+='n_plaque='+t.id;
+    url+=str;
     
     window.location.href = url;
     }

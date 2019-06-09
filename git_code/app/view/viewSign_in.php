@@ -3,7 +3,8 @@ include('library_form.php');
 include 'fragmentHeader.html';
 ?>
         <body>
-        <div class="signContainer">
+        <div class="container">
+            <?php include 'fragmentMenu.html'; ?>
             <!-- Jumbotrom -->
             <div class="panel panel-success">
                 <div class="panel-heading">
@@ -11,7 +12,7 @@ include 'fragmentHeader.html';
                 </div>
             </div>
             <div class="jumbotron">
-                <h1>  Welcome ! </h1>
+                <h1>  Welcome, Madame/Monsieur! </h1>
                 <p>  Maximaliser le valeur de vos voitures ....</p>
             </div>
 

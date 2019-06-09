@@ -35,7 +35,7 @@ function checkAccount(map,$msg) {
                           $("#error_msg").show();
                      
                       }
-                        else if(xmlHttp.responseText === "trueutilisateur"){
+                        else if(xmlHttp.responseText === "trueutilisateur" || "true"){
                             
                           
                           returnInfo=true;
