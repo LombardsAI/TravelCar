@@ -36,7 +36,7 @@ class ModelReservationVehicule
         . "WHERE (unix_timestamp(e.date_debut) > unix_timestamp('" .$info["date_debut"] ."') AND  "
         . "unix_timestamp(e.date_debut) < unix_timestamp('" .$info["date_fin"] ."')) OR "
           . " (unix_timestamp(e.date_fin) > unix_timestamp('" .$info["date_debut"] ."') AND  "
-        . "unix_timestamp(e.date_fin) < unix_timestamp('" .$info["date_fin"] ."')) AND (e.TYPE = 1 OR e.TYPE = 0)"
+        . "unix_timestamp(e.date_fin) < unix_timestamp('" .$info["date_fin"] ."')) AND e.TYPE = 1"
          . ")";
 //          echo $sql;
            $result = $database -> query($sql);

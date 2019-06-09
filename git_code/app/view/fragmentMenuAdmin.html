@@ -1,32 +1,12 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
-        <a class="navbar-brand" href="../controller/router.php?action=accueil&controlleur=utilisateur">Welcome to Travel Car</a>
+        <a class="navbar-brand" href="../controller/router.php?action=accueilAdmin&controlleur=administrateur">Welcome to Travel Car</a>
     </div>
     <ul class="nav navbar-nav">
-        <li class="dropdown">
-            <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Ma compte
-                <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="drop1">
-
-                <li><a href="../controller/router.php?action=modifierUtilisateur&controlleur=utilisateur">Modifier mes données</a></li>
-
-                <li><a href="../controller/router.php?action=readVehicule&controlleur=utilisateur">Modifier mes véhicules</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Reserver
-                <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="drop2">
-                <li><a href="../controller/router.php?action=reserverParking&controlleur=reservation">Reserver parking</a></li>
-
-                <li> <a href="../controller/router.php?action=reserverVehicule&controlleur=reservation">Reserver véhicule</a></li>
-
-                <li><a href="../controller/router.php?action=read&controlleur=reservation">Gestion de réservation</a></li>
-            </ul>
+        <li class="nav-item"><a class="nav-link" href="../controller/router.php?action=voirReservation&controlleur=administrateur">Voir reservations</a></li>
+        <li class="nav-item"><a class="nav-link" href="../controller/router.php?action=infoUtilisateur&controlleur=administrateur">Info utilisateur</a></li>
+        <li class="nav-item"><a class="nav-link" href="../controller/router.php?action=daliyCheck&controlleur=administrateur">Daliy check</a></li>
+        <li id="ajouteParking" class="nav-item disabled"><a class="nav-link" href="../controller/router.php?action=ajouteParking&controlleur=administrateur">Ajoute parking</a></li>
     </ul>
 </nav>
 

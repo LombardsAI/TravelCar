@@ -50,8 +50,7 @@ include 'fragmentHeader.html';
                   <button onmouseover="set_check()" onkeyup="set_check()" class="mdc-button__label">Connecter</button>
                     <br>
                     <a href="../view/viewSign_up.php">Pas un utilisateur ?</a>
-                    <br>
-                    <a href="../view/viewAdmin_signup.php">Administrateur ?</a>
+
             </div>
         </div>
 

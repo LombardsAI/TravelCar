@@ -3,7 +3,7 @@ session_start();
 include '../model/config.php';
 require_once 'controllerUtilisateur.php';
 require_once 'controllerReservation.php';
-require_once 'ControllerAdmin.php';
+require_once 'controllerAdmin.php';
 
 $parametres = "";
 // récupération de l'action passée dans l'URL
@@ -41,7 +41,7 @@ if(isset($_SESSION["id"])){
             $URL =  $_SESSION["url_reservation"];
 //            echo $URL;
             header("Location:$URL");
-        
+
     }
 
 
@@ -57,6 +57,12 @@ else{
        case "histoireParking":
        case "histoireEmprunte":
        case "histoirePret":
+        case "voirReservation":
+        case "infoUtilisateur":
+            case "changeCondition":
+        case "conditionChanged":
+        case "daliyCheck":
+        case "ajouteParking":
              $action = "signIn";
              $controlleurchoisi = controllerUtilisateur::class;
          break;
@@ -64,7 +70,7 @@ else{
     default:
         break;
 }
-  
+
 }
 
 

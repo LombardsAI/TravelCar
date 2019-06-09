@@ -141,7 +141,6 @@ class ModelUtilisateur
              $query = substr($query,0,strlen($query)-4);
             $result = $database->query($query);
             if($result->rowCount() === 0){
-
                 $query = str_replace('utilisateur','administrateur',$query);
                 $resultAdmin = $database->query($query);
                 if($resultAdmin->rowCount() === 0) {
@@ -154,7 +153,7 @@ class ModelUtilisateur
             else{
                 $_SESSION["id"] = $table["id"];
                 echo('trueutilisateur');
-                
+
             }
         }
         catch (PDOException $e) {
@@ -188,9 +187,11 @@ class ModelUtilisateur
     }
 
 
-    public static function chercherUtilisateur(){
+    public static function chercherUtilisateur($id){
         try{
-            $id = $_SESSION['id'];
+            if($id == NULL) {
+                $id = $_SESSION['id'];
+            }
             $database = SModel::getInstance();
             $query="SELECT * FROM utilisateur WHERE id = '$id'";
             $result = $database->query($query);
@@ -216,7 +217,7 @@ class ModelUtilisateur
             return FALSE;
         }
     }
-    
+
     public static function histoireParking(){
         try{
             $id = $_SESSION['id'];
@@ -230,9 +231,9 @@ class ModelUtilisateur
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;
         }
-        
+
     }
-    
+
         public static function histoireEmprunte(){
         try{
             $id = $_SESSION['id'];
@@ -246,9 +247,9 @@ class ModelUtilisateur
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;
         }
-        
+
     }
-    
+
     public static function histoirePret(){
         try{
             $id = $_SESSION['id'];
@@ -263,7 +264,7 @@ class ModelUtilisateur
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;
         }
-        
+
     }
 }
 
