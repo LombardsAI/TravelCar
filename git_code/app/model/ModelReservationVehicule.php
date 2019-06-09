@@ -9,7 +9,7 @@ class ModelReservationVehicule
 
  public function __construct($marque=NULL,$capacite=NULL,$prix=NULL,$n_plaque=NULL, $label=NULL, $adresse=NULL)
     {
-        if(!is_null($aeroport)){
+        if(!is_null($marque)){
         $this->marque = $marque;    
         $this->capacite = $capacite;
         $this->prix = $prix;
@@ -53,7 +53,7 @@ class ModelReservationVehicule
 public static function add_emprunte($info){
      try {
           $database = SModel::getInstance();
-          $sql = 
+          $sql ;
      }catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;

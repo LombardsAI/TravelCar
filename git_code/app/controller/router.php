@@ -3,7 +3,7 @@
 include '../model/config.php';
 require_once 'controllerUtilisateur.php';
 require_once 'controllerReservation.php';
-require_once 'ControllerAdmin.php';
+require_once 'controllerAdmin.php';
 
 $parametres = "";
 // récupération de l'action passée dans l'URL
@@ -50,7 +50,14 @@ switch ($action) {
     case "add_gare":
     case "reserverVehicule":
     case "reserverVehiculeDetail":
-        case "add_emprunte":
+    case "add_emprunte":
+
+    case "voirReservation":
+    case "infoUtilisateur":
+    case "changeCondition":
+    case "conditionChanged":
+    case "daliyCheck":
+    case "ajouteParking":
 
         break;
 

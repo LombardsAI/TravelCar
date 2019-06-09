@@ -148,6 +148,7 @@ class ModelUtilisateur
                 }
                 else{
                     echo('trueadministrateur');
+                    SetCookie('id',$table['id']);
                 }
             }
             else{
@@ -186,9 +187,11 @@ class ModelUtilisateur
     }
 
 
-    public static function chercherUtilisateur(){
+    public static function chercherUtilisateur($id){
         try{
-            $id = $_COOKIE['id'];
+            if($id == NULL) {
+                $id = $_COOKIE['id'];
+            }
             $database = SModel::getInstance();
             $query="SELECT * FROM utilisateur WHERE id = '$id'";
             $result = $database->query($query);

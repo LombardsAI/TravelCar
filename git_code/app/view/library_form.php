@@ -6,7 +6,7 @@
         <?php
  function form_begin($name, $method, $action) {
             echo ("\n<!-- ============================ -->\n");
-            printf("<form name='%s' method='%s' action='%s ng-app='myForm'>\n", $name, $method, $action);
+            printf("<form name='%s' method='%s' action='%s'myForm'>\n", $name, $method, $action);
         }
         
         
