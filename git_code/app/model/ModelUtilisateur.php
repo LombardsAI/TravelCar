@@ -254,7 +254,7 @@ class ModelUtilisateur
             $id = $_SESSION['id'];
             $database = SModel::getInstance();
             $sql = "SELECT e.* FROM emprunte e,gare g WHERE g.id_client='".$id."' AND "
-                    . "g.TYPE=1 AND g.n_plaque=e.n_plaque ORDER BY e.TYPE,e.date_debut";
+                    . "g.TYPE=1 AND e.TYPE=1 AND g.n_plaque=e.n_plaque ORDER BY e.TYPE,e.date_debut";
             $query = $database->prepare($sql);
             $query->execute();
             $results = $query->fetchALL(PDO::FETCH_ASSOC);
