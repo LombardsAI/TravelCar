@@ -4,10 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/controller/controllerUtilisateur.php</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/viewHistoirePret.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/viewHistoireEmprunte.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/model/ModelUtilisateur.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/viewHisoireParking.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/viewReserver_parking_result.php</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/controller/controllerReservation.php</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/public/index.php</file>
+            <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/model/ModelReservation.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/view/viewAccueil.php</file>
             <file>file:/F:/P19/lo07/projet/TravelCar/git_code/app/controller/router.php</file>
         </group>

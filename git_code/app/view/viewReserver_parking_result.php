@@ -52,7 +52,7 @@ if(!empty($results)){
      
 //   $info_label = array();
   $temp="label_du_parking=". $mv->getLabel();
-  $cout = ceil($mv->getPrix()*((strtotime($info["date_fin"])-strtotime($info["date_debut"]))/86400));
+  $cout = ceil($mv->getPrix()*((strtotime($info["date_fin"])-strtotime($info["date_debut"]))/3600));
   $temp.="&cout=".$cout;
             printf(
                 "<tr class = 'choose' id = '$temp' style='cursor:pointer' onclick='getPlaque(this,$str)' ><td>%s</td><td>%s</td><td>%d</td><td>%s</td></tr>",
@@ -75,6 +75,11 @@ else {
 function getPlaque(t,info) {
 var str = JSON.stringify(info);
  var arr = JSON.parse(str);
+  var er = /(?<=cout=)\d*/;
+ var cout =str.match(er);
+ var pay = "Vous devez payer "+cout +" euros";
+ var confirm = window.confirm(pay);
+ if(confirm){
     var url =  'router.php?action=add_gare&controlleur=reservation&';
     var n_plaque = window.prompt("veuillez entrer votre numéro de plaque","");
     if (n_plaque !== null){
@@ -86,7 +91,7 @@ var str = JSON.stringify(info);
 //    alert(url);
     window.location.href = url;
     }
-
+ }
             
 }
 

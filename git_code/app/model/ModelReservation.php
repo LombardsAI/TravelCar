@@ -21,7 +21,7 @@ class ModelReservation
     {
         try {
             $database = SModel::getInstance();
-                $sql = "SELECT aeroport, p.label, prix_du_jour as prix, adresse FROM parking p INNER JOIN"
+                $sql = "SELECT aeroport, p.label, prix_par_heure as prix, adresse FROM parking p LEFT JOIN"
                     . "(SELECT count(*) as num, label_du_parking as label FROM gare g WHERE "
                     . "(unix_timestamp(g.date_debut) > unix_timestamp('" . $info["date_debut"] . "') AND "
 //       . "unix_timestamp(g.date_debut)< unix_timestamp('05/08/2019 00:00:00') OR "
@@ -41,7 +41,7 @@ class ModelReservation
 //            $result -> execute();
             $list = $result->fetchAll(PDO::FETCH_CLASS,"ModelReservation");
             return $list;
-            
+
         } catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;

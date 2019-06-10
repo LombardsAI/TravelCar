@@ -26,7 +26,7 @@ include 'fragmentHeader.html';
             <p>  Maximaliser le valeur de vos voitures ....</p>
         </div>
         <div class="boite_3">
-        <form name="inscription" id="inscription" action="../controller/router.php" method="post" ng-app="" onsubmit="return return_Info(); ">
+        <form name="inscription" id="inscription" action="../controller/router.php" method="post" ng-app="" onsubmit="return return_Info_signup(); ">
             <input type="hidden" name='action' value='signUpDone'>
             <input type="hidden" name='controlleur' value='utilisateur'>
                     <label for='nom'>nom</label>
@@ -73,6 +73,14 @@ include 'fragmentHeader.html';
                        <span style="color:red" ng-show="inscription.password.$error.required && inscription.password.$dirty">Mot de passe est vide</span>
                     </div>
                     <br>
+                    <label for='confirm_password'>Confirmation de Mot de passe</label>
+                    <br>
+                    <input id = "confirm_password" name="confirm_password" type = "password" ng-model="confirm_password" required ><span style="color:red">*</span>
+                    <div>
+                       <span  style="color:red" ng-show="inscription.confirm_password.$error.required && inscription.confirm_password.$dirty" >Confirmation est vide</span>
+                      <span style="color:red" id ="pw_msg" hidden>Différent que le précédent</span>
+                    </div>
+                    <br>
                     <?php
                     form_input_submit("Valider");
                     ?>
@@ -88,7 +96,18 @@ include 'fragmentHeader.html';
                 myMap.set("id",document.inscription.id.value);
                 checkAccount(myMap,"sign_up");
              });
+            $("#confirm_password").on('input',function(){
+                $("#pw_msg").show();
+             if(document.inscription.password.value === document.inscription.confirm_password.value){
+                         $("#pw_msg").hide();
+                         difference = true;
+                      }
+                      else{
+                          $("#pw_msg").show();
+                           difference = false;
+                      }
             
+           });
            }
             
       );
