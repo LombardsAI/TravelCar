@@ -135,29 +135,20 @@ class ModelUtilisateur
         try{
 
             $database = SModel::getInstance();
-//            $query="SELECT * FROM utilisateur WHERE id = '$id' and password = '$pw'";
-            $query = "SELECT u.* FROM utilisateur u, (SELECT password FROM utilisateur WHERE id = '".$table["id"]."')u2 WHERE u.id ='".$table["id"]."' AND u2.password ="
+            $query = "SELECT u.* FROM utilisateur u WHERE u.id ='".$table["id"]."' AND u.password ="
                     . "MD5('".$table["password"]."')";
-//            foreach($table as $key=>$value){
-//                if($key=="password"){
-//                $query.=$key."='".password_hash($value,PASSWORD_DEFAULT)."' AND "; 
-//                 }
-//                 else{
-//                 $query.=$key."='".$value."' AND ";     
-//                 }
-//             }
-//            $query = substr($query,0,strlen($query)-4);
             $result = $database->query($query);
- //           echo $query;
             if($result->rowCount() === 0){
                 $query = str_replace('utilisateur','administrateur',$query);
-//               $resultAdmin = $database->query($query);
-//                if($resultAdmin->rowCount() === 0) {
-//                    echo('false');
-//                }
-//                else{
-//                    echo('trueadministrateur');
-//                }
+               $resultAdmin = $database->query($query);
+                if($resultAdmin->rowCount() === 0) {
+                    echo('false');
+                }
+                else{
+                    $_SESSION["id"] = $table["id"];
+                    echo('trueadministrateur');
+                }
+                
             }
             else{
                 $_SESSION["id"] = $table["id"];

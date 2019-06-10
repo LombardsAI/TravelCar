@@ -54,26 +54,5 @@ class controllerUtilisateur
        $results = ModelUtilisateur::histoirePret();
        require '../view/viewHistoirePret.php';
    }
-   public static function delete_gare($info){
-       $results = ModelUtilisateur::delete_gare($info);
-      
-        if($results){
-            require ('../view/transition_success.php');
-        }
-        else{
-            require ('../view/transition_fail.php');
-        }
-   }
-   
-   public static function delete_emprunte($info){
-       $results = ModelUtilisateur::delete_emprunte($info);
-      
-        if($results){
-            require ('../view/transition_success.php');
-        }
-        else{
-            require ('../view/transition_fail.php');
-        }
-   }
 
 }

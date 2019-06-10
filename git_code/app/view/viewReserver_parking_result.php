@@ -36,7 +36,7 @@ if(!empty($results)){
         <tr>
             <th scope = 'col'>aeroport</th>
             <th scope = 'col'>label</th>
-            <th scope = 'col'>prix du jour</th>
+            <th scope = 'col'>prix par heure</th>
             <th scope = 'col'>adresse</th>
         </tr>
         </thead>
@@ -76,20 +76,26 @@ function getPlaque(t,info) {
 var str = JSON.stringify(info);
  var arr = JSON.parse(str);
   var er = /(?<=cout=)\d*/;
+str = t.id;
  var cout =str.match(er);
  var pay = "Vous devez payer "+cout +" euros";
  var confirm = window.confirm(pay);
  if(confirm){
     var url =  'router.php?action=add_gare&controlleur=reservation&';
     var n_plaque = window.prompt("veuillez entrer votre numéro de plaque","");
-    if (n_plaque !== null){
-       
+    var er = RegExp('^[A-Za-z0-9]+$');
+    if (er.test(n_plaque) ){
+     n_plaque = n_plaque.toUpperCase();
+
  for(var key in arr){
      url+=key+'='+arr[key]+'&';
  }
     url+=t.id+'&n_plaque='+n_plaque;
 //    alert(url);
     window.location.href = url;
+    }
+    else{
+        alert("Veillez entrer correctement votre numéro de plaque");
     }
  }
             
