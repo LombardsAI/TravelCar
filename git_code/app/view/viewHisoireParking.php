@@ -51,7 +51,15 @@ foreach ($results as $row){
     foreach($row as $value){
         echo "<td>";
         echo $value;
+        echo "&nbsp";
+         if($value=="A TRAITER"){
+             $table["n_plaque"] = $row["n_plaque"];
+             $table["date_debut"] = $row["date_debut"];
+             $str=json_encode($table); 
+            echo "<button onclick = 'cancel($str)' style='background-color:red'>Annuler</button>";
+        }
         echo "</td>";
+        
     }
     echo "</tr>";
 }
@@ -61,3 +69,18 @@ foreach ($results as $row){
 else{
     echo "Vous avez encore parking";
 }
+?>
+<script>
+function cancel(info){
+    var confirm = window.confirm("Vous êtes sûr? Vous deverez payer 50% de prix quand même si vous annulez");
+    if(confirm){
+    var str = JSON.stringify(info);
+    var arr = JSON.parse(str);
+    var url = "router.php?action=delete_gare&controlleur=utilisateur";
+     for(var key in arr){
+     url+='&'+key+'='+arr[key];
+ }
+ window.location.href = url;
+}
+}
+</script>

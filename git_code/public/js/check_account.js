@@ -1,6 +1,7 @@
 var returnInfo = false;
-
+var difference = false;
 function checkAccount(map,$msg) {
+
     xmlHttp = GetXmlHttpObject();
     var data_url = "";
     var url = "../../app/controller/router.php";
@@ -28,24 +29,27 @@ function checkAccount(map,$msg) {
     xmlHttp.onreadystatechange = function () {
 
         if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+           
           if (xmlHttp.responseText === "false") {
-             
+
                               returnInfo=false;
                           $("#error_msg").show();
                      
                       }
-          else if(xmlHttp.responseText === "trueadministrateur"){
-              $("#action").val("accueilAdmin");
-              $("#controlleur").val("administrateur");
-              returnInfo=true;
-              $("#error_msg").hide();
-          }
-                        else if(xmlHttp.responseText === "trueutilisateur" || xmlHttp.responseText === "true"){
-
+                        else if(xmlHttp.responseText === "trueutilisateur" || xmlHttp.responseText ==="true"){
+                            
+                          
                           returnInfo=true;
                           $("#error_msg").hide();
                       }
+                          else if(xmlHttp.responseText === "trueadministrateur"){
 
+                              $("#action").val("accueilAdmin");
+                              $("#controlleur").val("administrateur");
+                              returnInfo=true;
+                              $("#error_msg").hide();
+                          }
+                        
                         else{
                             alert(xmlHttp.responseText);
                         }
@@ -79,10 +83,18 @@ function checkAccount(map,$msg) {
 }
 
 function return_Info(){
-    if(returnInfo == true){
+    if(returnInfo === true){
         return true;
     }
     else{
+        return false;
+    }
+}
+
+function return_Info_signup(){
+    if(returnInfo && difference ){
+        return true;}
+    else {
         return false;
     }
 }

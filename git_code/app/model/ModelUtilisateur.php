@@ -119,6 +119,8 @@ class ModelUtilisateur
     public static function insert($table) {
         try {
             $database = SModel::getInstance();
+            unset($table["confirm_password"]);
+            $table["password"]=md5($table["password"]);
             $query = "insert into utilisateur value (:id, :nom, :prenom, :telephone, :password, :ad_mail)";
             $statement = $database->prepare($query);
             $statement->execute($table);
@@ -133,16 +135,12 @@ class ModelUtilisateur
         try{
 
             $database = SModel::getInstance();
-//            $query="SELECT * FROM utilisateur WHERE id = '$id' and password = '$pw'";
-            $query = "SELECT * FROM utilisateur WHERE ";
-            foreach($table as $key=>$value){
-                $query.=$key."='".$value."' AND "; 
-             }
-             $query = substr($query,0,strlen($query)-4);
+            $query = "SELECT u.* FROM utilisateur u WHERE u.id ='".$table["id"]."' AND u.password ="
+                    . "MD5('".$table["password"]."')";
             $result = $database->query($query);
             if($result->rowCount() === 0){
                 $query = str_replace('utilisateur','administrateur',$query);
-                $resultAdmin = $database->query($query);
+               $resultAdmin = $database->query($query);
                 if($resultAdmin->rowCount() === 0) {
                     echo('false');
                 }
@@ -150,12 +148,14 @@ class ModelUtilisateur
                     $_SESSION["id"] = $table["id"];
                     echo('trueadministrateur');
                 }
+                
             }
             else{
                 $_SESSION["id"] = $table["id"];
                 echo('trueutilisateur');
 
             }
+       
         }
         catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
@@ -188,11 +188,11 @@ class ModelUtilisateur
     }
 
 
-    public static function chercherUtilisateur($id){
+    public static function chercherUtilisateur(){
         try{
-            if($id == NULL) {
+           
                 $id = $_SESSION['id'];
-            }
+            
             $database = SModel::getInstance();
             $query="SELECT * FROM utilisateur WHERE id = '$id'";
             $result = $database->query($query);
@@ -210,7 +210,7 @@ class ModelUtilisateur
             $database = SModel::getInstance();
             $query="UPDATE `utilisateur` SET `nom` = :nom, `prenom` = :prenom, `telephone` = :telephone, `password` = :password, `ad_mail` = :ad_mail WHERE `utilisateur`.`id` = :id;";
             $result = $database->prepare($query);
-            $result ->execute(['nom' => $table['nom'], 'prenom' => $table['prenom'], 'telephone' => $table['telephone'], 'password' => $table['password'], 'ad_mail' => $table['ad_mail'], 'id' => $_SESSION['id']]);
+            $result ->execute(['nom' => $table['nom'], 'prenom' => $table['prenom'], 'telephone' => $table['telephone'], 'password' => md5($table['password']), 'ad_mail' => $table['ad_mail'], 'id' => $_SESSION['id']]);
             return True;
         }
         catch (PDOException $e) {
@@ -269,6 +269,37 @@ class ModelUtilisateur
             return FALSE;
         }
 
+    }
+    public static function delete_gare($info){
+         try{
+            $id = $_SESSION['id'];
+            $database = SModel::getInstance();
+            $sql = "UPDATE gare SET TYPE = -1 WHERE n_plaque = '".$info["n_plaque"]."' AND "
+                    . "date_debut = '".$info["date_debut"]."' AND "
+                    . "id_client = '".$id."'";
+            $query = $database->prepare($sql);
+            $query->execute();
+            return true;
+        }catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+    }
+    
+    public static function delete_emprunte($info){
+        try{
+            $id = $_SESSION['id'];
+            $database = SModel::getInstance();
+            $sql = "UPDATE emprunte SET TYPE = -1 WHERE n_plaque = '".$info["n_plaque"]."' AND "
+                    . "date_debut = '".$info["date_debut"]."' AND "
+                    . "emprunteur = '".$id."'";
+            $query = $database->prepare($sql);
+            $query->execute();
+            return true;
+        }catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
     }
 }
 

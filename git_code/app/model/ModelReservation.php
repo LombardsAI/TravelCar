@@ -21,7 +21,7 @@ class ModelReservation
     {
         try {
             $database = SModel::getInstance();
-                $sql = "SELECT aeroport, p.label, prix_du_jour as prix, adresse FROM parking p LEFT JOIN"
+                $sql = "SELECT aeroport, p.label, prix_par_heure as prix, adresse FROM parking p LEFT JOIN"
                     . "(SELECT count(*) as num, label_du_parking as label FROM gare g WHERE "
                     . "(unix_timestamp(g.date_debut) > unix_timestamp('" . $info["date_debut"] . "') AND "
 //       . "unix_timestamp(g.date_debut)< unix_timestamp('05/08/2019 00:00:00') OR "
@@ -30,18 +30,18 @@ class ModelReservation
 //       . "unix_timestamp(g.date_debut)< unix_timestamp('05/08/2019 00:00:00') OR "
                     . "unix_timestamp(g.date_fin) < unix_timestamp('" . $info["date_fin"] . "') )"
                         . "AND g.TYPE !=-1 AND g.TYPE !=-2 "
-                        . "GROUP BY label_du_parking)a ON "
+                        . ")a ON "
 //        . "unix_timestamp(g.date_fin)> unix_timestamp('05/09/2019 00:00:00'))a WHERE"
-                    . "(p.aeroport ='" . $info["aeroport"] . "'AND"
-//        . " p.aeroport ='CDG' AND"
-                    . " p.label = a.label AND "
-                    . " p.nombre_max > a.num) OR (p.label NOT IN (a.label))";
+//                   . "(p.aeroport ='" . $info["aeroport"] . "'AND"
+//        . " (p.aeroport ='CDG' AND"
+                    . " (p.label = a.label AND "
+                    . " p.nombre_max > a.num) OR (p.label NOT IN (a.label)) WHERE p.aeroport ='" . $info["aeroport"] . "'";
 //             $sql = "SELECT aeroport, label, prix_du_jour, adresse FROM parking";
             $result = $database -> query($sql);
 //            $result -> execute();
             $list = $result->fetchAll(PDO::FETCH_CLASS,"ModelReservation");
             return $list;
-            
+
         } catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;

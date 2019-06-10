@@ -37,7 +37,7 @@ include 'fragmentHeader.html';
                     <br>
                     <label for='password'>Password</label>
                     <br>
-                    <input name="password" ng-model="passward" required >
+                    <input name="password" ng-model="passward" type = "password" required >
                     <div>
                         <span style="color:red" type="password" ng-show="login.password.$error.required && login.password.$dirty">Mot de passe est vide</span>
                     </div>

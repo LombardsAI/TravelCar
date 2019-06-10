@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jun 02, 2019 at 04:01 PM
+-- Generation Time: Jun 10, 2019 at 05:51 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.8
 
@@ -35,7 +35,9 @@ CREATE TABLE `administrateur` (
 --
 
 INSERT INTO `administrateur` (`id`, `password`, `nom`, `prenom`, `niveau`, `IATA`, `parking`) VALUES
-(10000, '222222', 'Maxime', 'Marmont', 1, 'CDG', NULL);
+(10000, '222222', 'Maxime', 'Marmont', 1, 'CDG', NULL),
+(20000, '222222', 'Maxime', 'Shangwei', 2, NULL, 'Chronopark'),
+(30000, '222222', 'Mamp', 'w', 3, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -60,6 +62,7 @@ INSERT INTO `aéroport` (`IATA`, `ville`, `nom_aeroport`) VALUES
 ('LCY', 'Londre', 'London City Airport'),
 ('LHR', 'Londre', 'Heathrow Airport'),
 ('ORY', 'Paris', 'Paris Orly Airport'),
+('PEK', 'Beijing', 'Beijing Capital International Airport'),
 ('PVG', 'Shanghai', 'Shanghai Pudong International Airport'),
 ('SHA', 'Shanghai', 'Shanghai Hongqiao Airport');
 
@@ -73,11 +76,18 @@ CREATE TABLE `emprunte` (
   `n_plaque` char(10) NOT NULL,
   `emprunteur` varchar(20) NOT NULL,
   `label_du_parking` varchar(30) NOT NULL,
-  `date_début` date NOT NULL,
-  `date_fin` date NOT NULL,
-  `TYPE` int(1) NOT NULL DEFAULT '0',
-  `cout` float NOT NULL
+  `date_debut` datetime NOT NULL,
+  `date_fin` datetime NOT NULL,
+  `cout` float NOT NULL,
+  `TYPE` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `emprunte`
+--
+
+INSERT INTO `emprunte` (`n_plaque`, `emprunteur`, `label_du_parking`, `date_debut`, `date_fin`, `cout`, `TYPE`) VALUES
+('frew', 'fang', 'Chronopark', '2019-06-18 00:00:00', '2019-06-20 00:00:00', 2323, 2);
 
 -- --------------------------------------------------------
 
@@ -92,6 +102,7 @@ CREATE TABLE `gare` (
   `date_debut` datetime NOT NULL,
   `date_fin` datetime NOT NULL,
   `n_place` varchar(10) DEFAULT NULL,
+  `cout` float NOT NULL,
   `TYPE` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -99,11 +110,8 @@ CREATE TABLE `gare` (
 -- Dumping data for table `gare`
 --
 
-INSERT INTO `gare` (`n_plaque`, `id_client`, `label_du_parking`, `date_debut`, `date_fin`, `n_place`, `TYPE`) VALUES
-('BD51SMR', 'simon', 'Chronopark', '2019-05-09 00:00:00', '2019-05-15 00:00:00', '1', 2),
-('BD51SMR', 'simon', 'Chronopark', '2019-06-01 00:00:00', '2019-06-02 00:00:00', NULL, 0),
-('BD51SMR', 'simon', 'Chronopark', '2019-06-04 00:00:00', '2019-06-07 00:00:00', NULL, 0),
-('fre15fre', 'simon', 'Chronopark', '2019-06-04 00:00:00', '2019-06-09 00:00:00', NULL, 0);
+INSERT INTO `gare` (`n_plaque`, `id_client`, `label_du_parking`, `date_debut`, `date_fin`, `n_place`, `cout`, `TYPE`) VALUES
+('frq11gte', 'fang', 'Chronopark', '2019-06-10 00:00:00', '2019-06-11 00:00:00', '65', 434, 0);
 
 -- --------------------------------------------------------
 
@@ -114,7 +122,7 @@ INSERT INTO `gare` (`n_plaque`, `id_client`, `label_du_parking`, `date_debut`, `
 CREATE TABLE `parking` (
   `label` varchar(30) NOT NULL,
   `aeroport` varchar(3) NOT NULL,
-  `prix_du_jour` int(11) NOT NULL,
+  `prix_par_heure` int(11) NOT NULL,
   `adresse` varchar(50) NOT NULL,
   `nombre_max` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -123,8 +131,9 @@ CREATE TABLE `parking` (
 -- Dumping data for table `parking`
 --
 
-INSERT INTO `parking` (`label`, `aeroport`, `prix_du_jour`, `adresse`, `nombre_max`) VALUES
+INSERT INTO `parking` (`label`, `aeroport`, `prix_par_heure`, `adresse`, `nombre_max`) VALUES
 ('Chronopark', 'CDG', 18, '3 Route de Moussy, 77230 Villeneuve-sous-Dammartin', 7000),
+('ds', 'LCY', 1000, '30 Route de Moussy', 5000),
 ('Parking Roissy', 'CDG', 39, 'Route de Choisy, 95470 Vémars', 60000);
 
 -- --------------------------------------------------------
@@ -138,7 +147,7 @@ CREATE TABLE `utilisateur` (
   `nom` varchar(30) NOT NULL,
   `prenom` varchar(30) NOT NULL,
   `telephone` int(11) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(60) NOT NULL,
   `ad_mail` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -147,9 +156,11 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `telephone`, `password`, `ad_mail`) VALUES
-('fang', 'Fa', 'Shangwei', 60393301, '22222', 'fang_david@icloud.comm'),
-('simon', 'chen', 'simon', 653954426, '111111', '865133516@qq.com'),
-('zzz', 'F', 'Shangwei', 634341, '333333', 'fang_david@icloud.com');
+('fang', 'fang', 'francois', 625963571, '222222', 'fangshang@163.com'),
+('james', 'James', 'Lebron', 65395123, '$2y$10$3qyngTXeRbXRWkIWOzcEPeyT4WfTy7J5Xucla1fV8oU/efEOvplIy', 'james@outlook.com'),
+('max', 'Maxime', 'Marmont', 12329429, '222222', 'fang_david@icloud.comm'),
+('MAX2', 'Marmont', 'MAxime', 142467585, '222222', 'fang_david@icloud.comm'),
+('simon', 'simon', 'chen', 2689245, '$2y$10$NAgRFzSlHgsB1m/zAX9GKOxd1hGmU6sXZUATWy0iVoiWRJecxlUyK', 'simonchen@163.com');
 
 -- --------------------------------------------------------
 
@@ -161,16 +172,22 @@ CREATE TABLE `véhicule` (
   `n_plaque` char(10) NOT NULL,
   `marque` char(15) DEFAULT NULL,
   `capacité` int(2) DEFAULT NULL,
-  `prix_du_jour` float DEFAULT NULL
+  `prix_emprunte` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `véhicule`
 --
 
-INSERT INTO `véhicule` (`n_plaque`, `marque`, `capacité`, `prix_du_jour`) VALUES
-('BD51SMR', 'renault', 5, 0),
-('fre15fre', NULL, NULL, 0);
+INSERT INTO `véhicule` (`n_plaque`, `marque`, `capacité`, `prix_emprunte`) VALUES
+('frew', 'renault', 5, 100),
+('frq11gte', NULL, NULL, NULL),
+('gfsd12sf', NULL, NULL, NULL),
+('gre12rg', NULL, NULL, NULL),
+('grew', NULL, NULL, NULL),
+('gt22rgr', NULL, NULL, NULL),
+('gteg', NULL, NULL, NULL),
+('REW25GT', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -194,7 +211,7 @@ ALTER TABLE `aéroport`
 -- Indexes for table `emprunte`
 --
 ALTER TABLE `emprunte`
-  ADD PRIMARY KEY (`n_plaque`,`emprunteur`,`date_début`),
+  ADD PRIMARY KEY (`n_plaque`,`emprunteur`,`date_debut`),
   ADD KEY `clé_étranger_enprunteur` (`emprunteur`),
   ADD KEY `clé_étranger_parking_2` (`label_du_parking`);
 

@@ -55,7 +55,7 @@ unset($info["marque"]);
 //   $info_label = array();
   $temp="n_plaque=".(string)$mv->getPlaque();
   $temp.="&label_du_parking=". $mv->getLabel();
-  $cout = ceil($mv->getPrix()*((strtotime($info["date_fin"])-strtotime($info["date_debut"]))/86400));
+  $cout = ceil($mv->getPrix()*((strtotime($info["date_fin"])-strtotime($info["date_debut"]))/3600));
   $temp.="&cout=".$cout;
  
   
