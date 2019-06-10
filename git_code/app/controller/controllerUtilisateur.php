@@ -33,7 +33,7 @@ class controllerUtilisateur
 
 
     public static function modifierUtilisateur(){
-        $results = ModelUtilisateur::chercherUtilisateur();
+        $results = ModelUtilisateur::chercherUtilisateur(NULL);
         require '../view/viewModify_utilisateur.php';
     }
 
@@ -42,16 +42,16 @@ class controllerUtilisateur
         require '../view/viewSign_upResult.php';
     }
    public static function histoireParking(){
-       $results = ModelUtilisateur::histoireParking();
+       $results = ModelUtilisateur::histoireParking(NULL);
        require '../view/viewHisoireParking.php';
    }
    
     public static function histoireEmprunte(){
-       $results = ModelUtilisateur::histoireEmprunte();
+       $results = ModelUtilisateur::histoireEmprunte(NULL);
        require '../view/viewHistoireEmprunte.php';
    }
    public static function histoirePret(){
-       $results = ModelUtilisateur::histoirePret();
+       $results = ModelUtilisateur::histoirePret(NULL);
        require '../view/viewHistoirePret.php';
    }
 

@@ -12,7 +12,7 @@ include 'fragmentHeader.html';
         </div>
     </div>
     <div class="jumbotron">
-        <h1>Welcome <?php echo($_COOKIE['id']);?> !</h1>
+        <h1>Welcome <?php echo($_SESSION['id']);?> !</h1>
         <p>Maximaliser le valeur de vos voitures ....</p>
     </div>
     <?php

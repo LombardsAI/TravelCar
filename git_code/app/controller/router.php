@@ -59,6 +59,8 @@ else{
        case "histoirePret":
         case "voirReservation":
         case "infoUtilisateur":
+        case "find":
+        case "findResult":
             case "changeCondition":
         case "conditionChanged":
         case "daliyCheck":

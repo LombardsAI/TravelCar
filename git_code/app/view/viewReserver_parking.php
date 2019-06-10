@@ -1,6 +1,7 @@
 <?php
 require ('fragmentHeader.html');
 include('library_form.php');
+require_once ('../model/ModelReservation.php')
 //include ('../model/ModelReservation.php');
 ?>
 
@@ -54,7 +55,11 @@ include('library_form.php');
             <div class='panel-body'>
         <div class="boite_size2 center boite_border">
             <?php
-            $lieu = array("CDG","FRA","HEL","LCY","LHR","ORY","PVG","SHA");
+//            $lieu = array("CDG","FRA","HEL","LCY","LHR","ORY","PVG","SHA");
+            $lieu = array();
+            foreach (ModelReservation::getTousAeroport() as $mv){
+                array_push($lieu,$mv['IATA']);
+            }
             $time = array();
             $tmp = 0;
             while($tmp < 24){

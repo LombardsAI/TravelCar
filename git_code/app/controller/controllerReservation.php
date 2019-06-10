@@ -29,12 +29,12 @@ class controllerReservation
     public static function add_gare($table){
         $results = ModelReservation::add_gare($table);
        
-        if($results){
-            require ('../view/transition_success.php');
-        }
-        else{
-            require ('../view/transition_fail.php');
-        }
+//        if($results){
+//            require ('../view/transition_success.php');
+//        }
+//        else{
+//            require ('../view/transition_fail.php');
+//        }
    }
 
    

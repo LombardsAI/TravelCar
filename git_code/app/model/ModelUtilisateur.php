@@ -147,6 +147,7 @@ class ModelUtilisateur
                     echo('false');
                 }
                 else{
+                    $_SESSION["id"] = $table["id"];
                     echo('trueadministrateur');
                 }
             }
@@ -218,9 +219,10 @@ class ModelUtilisateur
         }
     }
 
-    public static function histoireParking(){
+    public static function histoireParking($id){
         try{
-            $id = $_SESSION['id'];
+            if($id == NULL)
+                $id = $_SESSION['id'];
             $database = SModel::getInstance();
             $sql = "SELECT * FROM gare WHERE id_client='".$id."' ORDER BY TYPE,date_debut";
             $query = $database->prepare($sql);
@@ -234,9 +236,10 @@ class ModelUtilisateur
 
     }
 
-        public static function histoireEmprunte(){
+        public static function histoireEmprunte($id){
         try{
-            $id = $_SESSION['id'];
+            if($id == NULL)
+                $id = $_SESSION['id'];
             $database = SModel::getInstance();
             $sql = "SELECT * FROM emprunte WHERE emprunteur='".$id."' ORDER BY TYPE,date_debut";
             $query = $database->prepare($sql);
@@ -250,9 +253,10 @@ class ModelUtilisateur
 
     }
 
-    public static function histoirePret(){
+    public static function histoirePret($id){
         try{
-            $id = $_SESSION['id'];
+            if($id == NULL)
+                $id = $_SESSION['id'];
             $database = SModel::getInstance();
             $sql = "SELECT e.* FROM emprunte e,gare g WHERE g.id_client='".$id."' AND "
                     . "g.TYPE=1 AND e.TYPE=1 AND g.n_plaque=e.n_plaque ORDER BY e.TYPE,e.date_debut";

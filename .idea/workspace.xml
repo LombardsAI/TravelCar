@@ -19,13 +19,8 @@
       <change afterPath="$PROJECT_DIR$/../TP/TD11/etape1/MVC_cours/viewVinIDForm.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TP/TD11/etape1/MVC_cours/viewVinList.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TP/TD11/etape2/public/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/git_code/app/model/ModelAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/git_code/app/model/ModelEmprunte.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/git_code/app/view/viewChange_condition.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/git_code/app/view/viewChange_condition_result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/git_code/app/view/viewInfoUtilisateur.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/git_code/app/view/viewAdmin_find.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/git_code/app/view/viewAdmin_findUtilisateur.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/progressbar/.idea/deployment.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/progressbar/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/progressbar/.idea/modules.xml" afterDir="false" />
@@ -54,19 +49,25 @@
       <change beforePath="$PROJECT_DIR$/../Projet Travel_car/projet/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet Travel_car/projet/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Projet Travel_car/projet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Projet Travel_car/projet/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Projet Travel_car/projet/general_connection_sql.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/controller/controllerReservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/controller/controllerReservation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/controller/controllerUtilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/controller/controllerUtilisateur.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/app/controller/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/controller/router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/model/ModelReservationVehicule.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/model/ModelReservationVehicule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/model/ModelAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/model/ModelAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/model/ModelReservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/model/ModelReservation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/model/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/model/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/view/fragmentHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/fragmentHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/view/fragmentMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/fragmentMenu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/app/view/fragmentMenuAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/fragmentMenuAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/view/library_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/library_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewAdmin_signup.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewSign_in.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewSign_in.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/view/transition.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/transition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/view/transition_fail.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/transition_fail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/view/transition_success.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/transition_success.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewAccueil_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewAccueil_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewInfoUtilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewInfoUtilisateur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewReserver_parking.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewReserver_parking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_code/public/js/check_account.js" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/public/js/check_account.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../新生/CV UTT.pages" beforeDir="false" />
     </list>
@@ -99,35 +100,70 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+            <state relative-caret-position="756">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAdmin_findUtilisateur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-83">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewSign_upResult.php">
+        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewReserver_parking_result.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="68">
+              <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewChange_condition_result.php">
+        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewInfoUtilisateur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+            <state relative-caret-position="4053">
+              <caret line="193" column="22" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/app/view/library_form.php">
+        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewReserver_parking.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+            <state relative-caret-position="293">
+              <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAdmin_find.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAccueil_admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -135,35 +171,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3150">
-              <caret line="150" column="48" selection-start-line="150" selection-start-column="48" selection-end-line="150" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewChange_condition.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="35" column="73" lean-forward="true" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/app/controller/router.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerReservation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            <state relative-caret-position="289">
+              <caret line="169" column="25" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -171,8 +180,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/app/view/viewVoir_reservation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="44" column="268" selection-start-line="44" selection-start-column="268" selection-end-line="44" selection-end-column="318" />
+            <state relative-caret-position="210">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/git_code/app/controller/router.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -192,7 +210,11 @@
     <findStrings>
       <find>a</find>
       <find>check_username</find>
+      <find>yellow</find>
     </findStrings>
+    <replaceStrings>
+      <replace>pink</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -205,65 +227,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/git_code/sign_up.php" />
-        <option value="$PROJECT_DIR$/git_code/add_sql.php" />
-        <option value="$PROJECT_DIR$/git_code/public/js/kalendae.standalone.js" />
-        <option value="$PROJECT_DIR$/git_code/app/view/fragementhead.html" />
-        <option value="$PROJECT_DIR$/git_code/app/view/fragementmenu.html" />
         <option value="$PROJECT_DIR$/git_code/app/view/fragementfoot.html" />
         <option value="$PROJECT_DIR$/git_code/app/view/fragementFooter.html" />
         <option value="$PROJECT_DIR$/git_code/app/view/fragementHeader.html" />
         <option value="$PROJECT_DIR$/git_code/app/view/fragementMenu.html" />
         <option value="$PROJECT_DIR$/git_code/public/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/git_code/app/view/check_account.php" />
         <option value="$PROJECT_DIR$/git_code/public/js/check_ajax.js" />
         <option value="$PROJECT_DIR$/git_code/app/controller/test.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/main_page.php" />
         <option value="$PROJECT_DIR$/git_code/public/css/my_css.css" />
         <option value="$PROJECT_DIR$/git_code/public/css/pattern.css" />
         <option value="$PROJECT_DIR$/git_code/app/view/add_sql.php" />
-        <option value="$PROJECT_DIR$/git_code/app/view/transition.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/reserve_search_action.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/reorganise_parametre.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewAccueil.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewReserver_parking_result.php" />
-        <option value="$PROJECT_DIR$/git_code/app/controller/controllerReservation.php" />
-        <option value="$PROJECT_DIR$/git_code/app/model/ModelReservation.php" />
-        <option value="$PROJECT_DIR$/git_code/app/view/viewReserver_parking.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewSign_up.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewModify_utilisateur.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewSign_upResult.php" />
         <option value="$PROJECT_DIR$/git_code/public/index.php" />
         <option value="$PROJECT_DIR$/eee.php" />
-        <option value="$PROJECT_DIR$/git_code/app/controller/controllerUtilisateur.php" />
-        <option value="$PROJECT_DIR$/git_code/public/js/check_account.js" />
-        <option value="$PROJECT_DIR$/git_code/app/view/viewAccueil_admin.php" />
         <option value="$PROJECT_DIR$/git_code/Travelcar.sql" />
-        <option value="$PROJECT_DIR$/git_code/app/view/fragmentMenu.html" />
         <option value="$PROJECT_DIR$/git_code/app/model/config.php" />
-        <option value="$PROJECT_DIR$/git_code/app/view/fragmentMenuAdmin.html" />
         <option value="$PROJECT_DIR$/git_code/app/model/ModelReservationVehicule.php" />
         <option value="$PROJECT_DIR$/git_code/app/model/ModelEmprunte.php" />
         <option value="$PROJECT_DIR$/git_code/public/css/style.css" />
-        <option value="$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewSign_in.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/fragmentHeader.html" />
-        <option value="$PROJECT_DIR$/git_code/app/view/viewInfoUtilisateur.php" />
-        <option value="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation.php" />
-        <option value="$PROJECT_DIR$/git_code/app/controller/router.php" />
-        <option value="$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewChange_condition_result.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/library_form.php" />
-        <option value="$PROJECT_DIR$/git_code/app/model/ModelAdmin.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewChange_condition.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/transition.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/transition_fail.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/transition_success.php" />
+        <option value="$PROJECT_DIR$/git_code/app/controller/controllerReservation.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/viewReserver_parking.php" />
+        <option value="$PROJECT_DIR$/git_code/app/model/ModelReservation.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/viewAccueil_admin.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/check_account.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation.php" />
+        <option value="$PROJECT_DIR$/git_code/public/js/check_account.js" />
+        <option value="$PROJECT_DIR$/git_code/app/controller/controllerUtilisateur.php" />
+        <option value="$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/fragmentMenu.html" />
+        <option value="$PROJECT_DIR$/git_code/app/view/viewHisoireParking.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/viewInfoUtilisateur.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/fragmentMenuAdmin.html" />
+        <option value="$PROJECT_DIR$/git_code/app/controller/router.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/viewAdmin_find.php" />
+        <option value="$PROJECT_DIR$/git_code/app/model/ModelAdmin.php" />
+        <option value="$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/viewAdmin_findUtilisateur.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="61" />
+    <option name="y" value="121" />
     <option name="width" value="1280" />
-    <option name="height" value="696" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -324,52 +346,7 @@
               <item name="TravelCar" type="462c0819:PsiDirectoryNode" />
               <item name="git_code" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TravelCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TravelCar" type="462c0819:PsiDirectoryNode" />
-              <item name="git_code" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TravelCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TravelCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP" type="462c0819:PsiDirectoryNode" />
-              <item name="TD11" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TravelCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP" type="462c0819:PsiDirectoryNode" />
-              <item name="TD11" type="462c0819:PsiDirectoryNode" />
-              <item name="etape2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TravelCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP" type="462c0819:PsiDirectoryNode" />
-              <item name="TD11" type="462c0819:PsiDirectoryNode" />
-              <item name="etape2" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TravelCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP" type="462c0819:PsiDirectoryNode" />
-              <item name="TD11" type="462c0819:PsiDirectoryNode" />
-              <item name="etape2" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TravelCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TP" type="462c0819:PsiDirectoryNode" />
-              <item name="TD11" type="462c0819:PsiDirectoryNode" />
-              <item name="etape2" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -452,7 +429,7 @@
       <workItem from="1558791049077" duration="246000" />
       <workItem from="1558791426398" duration="62058000" />
       <workItem from="1559561499236" duration="31205000" />
-      <workItem from="1560091570483" duration="273000" />
+      <workItem from="1560091570483" duration="16158000" />
     </task>
     <task id="LOCAL-00001" summary="add general connection to sql">
       <created>1556812395736</created>
@@ -608,16 +585,23 @@
       <option name="project" value="LOCAL" />
       <updated>1559491461334</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="admin">
+      <created>1560091899078</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1560091899078</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120916000" />
+    <option name="totallyTimeSpent" value="136801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="735" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20145631" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26132685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -628,7 +612,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.05102041" />
+      <window_info anchor="bottom" id="File Transfer" order="8" visible="true" weight="0.049441785" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49919093" weight="0.14217253" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5008091" side_tool="true" weight="0.14217253" />
@@ -741,147 +725,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="admin" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/fragmentMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/model/SModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/model/general_connection_sql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/public/js/check_ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/public/js/check_account.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/fragmentMenuAdmin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/model/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelReservation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelReservationVehicule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/fragmentFooter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/check_account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/insert_sql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1002">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Animated Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Web_page.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/public/css/avgrund.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/public/js/jquery.avgrund.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1821">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TP/TD7/analyse_superglobales.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-912" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TP/TD7/tp07_cookie_session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="63" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="4" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelEmprunte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="119" column="29" lean-forward="true" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAdmin_signup.php" />
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewSign_in.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TP/TD6/tp06_biblio_planning.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-170" />
@@ -918,85 +762,6 @@
         <state relative-caret-position="-284" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerUtilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="35" column="59" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewInfoUtilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-635">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/transition.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/reserver_place.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-874" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewReserver_parking_result.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="189" column="27" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/transition_success.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAccueil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAccueil_admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewReserver_vehicule_result.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewReserver_parking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TP/TD10/pdo_tests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-957" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TP/TD11/etape2/app/model/ModelProducteur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1004,17 +769,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/git_code/app/view/viewSign_upResult.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="168">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1025,45 +783,287 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/transition.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/transition_fail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/transition_success.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP/TD11/etape2/public/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TP/TD10/pdo_tests.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelEmprunte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1859">
+          <caret line="136" column="37" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelReservationVehicule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewSign_up.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1540" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAccueil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/reserver_place.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/submit_require.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/model/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewSign_in.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/check_account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/check_session.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/public/js/check_ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-916" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/public/js/check_account.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/Travelcar.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-147">
+          <caret line="235" selection-start-line="235" selection-end-line="237" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelReservation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerUtilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewHisoireParking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewHistoireEmprunte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="60" column="1" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="60" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewHistoirePret.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="60" column="1" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="60" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/fragmentMenuAdmin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="124" selection-start-line="6" selection-start-column="124" selection-end-line="6" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/git_code/app/view/library_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="-33">
           <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3150">
-          <caret line="150" column="48" selection-start-line="150" selection-start-column="48" selection-end-line="150" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/controller/router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerReservation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewVoir_reservation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="268" selection-start-line="44" selection-start-column="268" selection-end-line="44" selection-end-column="318" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/git_code/app/view/viewChange_condition.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="35" column="73" lean-forward="true" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+        <state relative-caret-position="180">
+          <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerReservation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="229" column="56" lean-forward="true" selection-start-line="229" selection-start-column="40" selection-end-line="229" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/controller/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/fragmentMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="15" column="101" selection-start-line="15" selection-start-column="101" selection-end-line="15" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="169" column="25" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewReserver_vehicule_result.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewReserver_parking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewVoir_reservation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAdmin_find.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAccueil_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewInfoUtilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4053">
+          <caret line="193" column="22" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewReserver_parking_result.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="57" column="8" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAdmin_findUtilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>

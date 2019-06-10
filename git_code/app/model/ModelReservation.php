@@ -76,6 +76,14 @@ class ModelReservation
         }
     }
 
+    public static function getTousAeroport(){
+        $database = SModel::getInstance();
+        $sql = "SELECT IATA FROM aéroport";
+        $result = $database -> query($sql);
+        $list = $result->fetchAll(PDO::FETCH_ASSOC);
+        return $list;
+    }
+
     /**
      * @return mixed
      */

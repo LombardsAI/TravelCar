@@ -29,6 +29,9 @@ class controllerAdmin
 
     public static function infoUtilisateur($table){
         $results = ModelUtilisateur::chercherUtilisateur($table['utilisateur']);
+        $resultsParking = ModelUtilisateur::histoireParking($table['utilisateur']);
+        $resultsEmprunte = ModelUtilisateur::histoireEmprunte($table['utilisateur']);
+        $resultsPret = ModelUtilisateur::histoirePret($table['utilisateur']);
         require_once '../view/viewInfoUtilisateur.php';
     }
 
@@ -40,5 +43,16 @@ class controllerAdmin
     public static function conditionChanged($table){
         $results = ModelAdmin::changeCondition($table);
         require_once('../view/viewChange_condition_result.php');
+    }
+
+    public static function find(){
+        require_once ('../view/viewAdmin_find.php');
+    }
+
+    public static function findResult($table){
+        if($table['type'] == 'utilisateur'){
+            $results = ModelAdmin::findUtilisateur($table['contenu']);
+            require_once ('../view/viewAdmin_findUtilisateur.php');
+        }
     }
 }

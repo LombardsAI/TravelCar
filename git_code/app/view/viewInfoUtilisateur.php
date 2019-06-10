@@ -12,7 +12,7 @@ include 'fragmentHeader.html';
         </div>
     </div>
     <div class="jumbotron">
-        <h1>Welcome <?php echo($_COOKIE['id']);?> !</h1>
+        <h1>Welcome <?php require_once 'check_session.php';?> !</h1>
         <p>Maximaliser le valeur de vos voitures ....</p>
     </div>
     <?php
@@ -53,5 +53,181 @@ include 'fragmentHeader.html';
     ?>
     </tbody>
     </table>
+
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Histoire de Parking</h3>
+        </div>
+    </div>
+<?php
+if(!empty($resultsParking)){
+   echo "<table class = 'table table-striped table-bordered'>"
+    . "<thead>
+        <tr>
+            <th scope = 'col'>Plaque</th>
+            <th scope = 'col'>Label</th>
+            <th scope = 'col'>Date début</th>
+            <th scope = 'col'>Date fin</th>
+             <th scope = 'col'>Place</th>
+            <th scope = 'col'>Coût</th>
+            <th scope = 'col'>Etat</th>
+        </thead>
+        <tbody>";
+foreach ($resultsParking as $row){
+
+      unset($row['id_client']);
+    if($row['TYPE']==0){
+        $color = "pink";
+         $row['TYPE']="A TRAITER";
+    }
+    else if($row['TYPE']==1){
+        $color = "blue";
+        $row['TYPE']="AU COURANT";
+    }
+     else if($row['TYPE']==2){
+        $color = "green";
+        $row['TYPE']="FINI";
+    }
+     else if($row['TYPE']==-1){
+        $color = "red";
+        $row['TYPE']="ANNULLE";
+    }
+    else if($row['TYPE']==-2){
+        $color = "red";
+        $row['TYPE']="A PROLOGER";
+    }
+    echo "<tr style='color:$color'>";
+
+    foreach($row as $value){
+        echo "<td>";
+        echo $value;
+        echo "</td>";
+    }
+    echo "</tr>";
+}
+    echo "</tbody></table>";
+
+}
+else{
+    echo "Il n'a pas encore parking";
+}
+?>
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Histoire d'emprunte</h3>
+        </div>
+    </div>
+    <?php
+if(!empty($resultsEmprunte)){
+   echo "<table class = 'table table-striped table-bordered'>"
+    . "<thead>
+        <tr>
+            <th scope = 'col'>Plaque</th>
+            <th scope = 'col'>Label</th>
+            <th scope = 'col'>Date début</th>
+            <th scope = 'col'>Date fin</th>
+            <th scope = 'col'>Coût</th>
+            <th scope = 'col'>Etat</th>
+        </thead>
+        <tbody>";
+foreach ($resultsEmprunte as $row){
+    unset($row['emprunteur']);
+    if($row['TYPE']==0){
+        $color = "pink";
+         $row['TYPE']="A TRAITER";
+    }
+    else if($row['TYPE']==1){
+        $color = "blue";
+        $row['TYPE']="AU COURANT";
+    }
+     else if($row['TYPE']==2){
+        $color = "green";
+        $row['TYPE']="FINI";
+    }
+     else if($row['TYPE']==-1){
+        $color = "red";
+        $row['TYPE']="ANNULLE";
+    }
+    else if($row['TYPE']==-2){
+        $color = "red";
+        $row['TYPE']="A PROLOGER";
+    }
+    echo "<tr style='color:$color'>";
+
+    foreach($row as $value){
+        echo "<td>";
+        echo $value;
+        echo "</td>";
+    }
+    echo "</tr>";
+}
+    echo "</tbody></table>";
+
+}
+else{
+    echo "IL n'a pas emprunté";
+}
+?>
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Histoire de Pret</h3>
+        </div>
+    </div>
+    <?php
+if(!empty($resultsPret)){
+   echo "<table class = 'table table-striped table-bordered'>"
+    . "<thead>
+        <tr>
+            <th scope = 'col'>Plaque</th>
+            <th scope = 'col'>Emprunteur</th>
+            <th scope = 'col'>Label</th>
+            <th scope = 'col'>Date début</th>
+            <th scope = 'col'>Date fin</th>
+            <th scope = 'col'>Coût</th>
+            <th scope = 'col'>Etat</th>
+        </thead>
+        <tbody>";
+foreach ($resultsPret as $row){
+    if($row['TYPE']==0){
+        $color = "pink";
+         $row['TYPE']="A TRAITER";
+    }
+    else if($row['TYPE']==1){
+        $color = "blue";
+        $row['TYPE']="AU COURANT";
+    }
+     else if($row['TYPE']==2){
+        $color = "green";
+        $row['TYPE']="FINI";
+    }
+     else if($row['TYPE']==-1){
+        $color = "red";
+        $row['TYPE']="ANNULLE";
+    }
+    else if($row['TYPE']==-2){
+        $color = "red";
+        $row['TYPE']="A PROLOGER";
+    }
+    echo "<tr style='color:$color'>";
+
+    foreach($row as $value){
+        echo "<td>";
+        echo $value;
+        echo "</td>";
+    }
+    echo "</tr>";
+}
+    echo "</tbody></table>";
+
+}
+else{
+    echo "  Pas d'hisoire";
+}
+?>
+
 </div>
-<?php include 'fragmentFooter.html'; ?>
+
+<?php
+include 'fragmentFooter.html'; ?>

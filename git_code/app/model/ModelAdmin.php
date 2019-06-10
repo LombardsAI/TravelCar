@@ -129,7 +129,7 @@ class ModelAdmin
 
     public static function chercherAdministrateur(){
         try{
-            $id = $_COOKIE['id'];
+            $id = $_SESSION['id'];
             $database = SModel::getInstance();
             $query="SELECT * FROM administrateur WHERE id = '$id'";
             $result = $database->query($query);
@@ -154,6 +154,20 @@ class ModelAdmin
                 'date_debut' => $table['date_debut']
             ]);
             return TRUE;
+        }
+        catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+    }
+
+    public static function findUtilisateur($nom){
+        try{
+            $database = SModel::getInstance();
+            $query="SELECT id,nom,prenom FROM utilisateur WHERE nom = '$nom' or prenom = '$nom'";
+            $result = $database->query($query);
+            $list = $result->fetchAll(PDO::FETCH_ASSOC);
+            return $list;
         }
         catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
