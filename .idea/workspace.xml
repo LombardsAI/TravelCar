@@ -26,30 +26,6 @@
       <change afterPath="$PROJECT_DIR$/../test/progressbar/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/progressbar/main.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/progressbar/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/.idea/dictionaries/David_Fang.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/.idea/majane (上海）.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Animated Menu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/Popup/avgrund.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/Popup/jquery.avgrund.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/Popup/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/form_action.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/general_connection_sql.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/get_info.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/jquery-3.3.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/myCSS.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/my_biblio_formulaire.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Source/pourAJAX.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/Web_page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/database.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../STAGE/défis acceptés/majane (上海）/insert_sql.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../A18/GL02/plan_GL02_A18_v1.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../A18/HT03/UTT - HT03 - Cours 2018-2019.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../A18/HT03/semaine 1/Antiquité classique.pptx" beforeDir="false" />
@@ -63,13 +39,7 @@
       <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/controller/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/controller/router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/model/ModelVehicule.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/model/ModelVehicule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/model/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/model/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewChange_condition_result.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewChange_condition_result.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewInfoVehicule.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewInfoVehicule.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_emprunte.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_emprunte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_parking.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_parking.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../新生/CV UTT.pages" beforeDir="false" />
     </list>
@@ -102,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="100" column="63" lean-forward="true" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
+            <state relative-caret-position="259">
+              <caret line="78" column="3" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -112,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelVehicule.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="97" column="84" selection-start-line="97" selection-start-column="84" selection-end-line="97" selection-end-column="84" />
+              <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -120,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/app/view/viewInfoVehicule.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="-219">
+              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -156,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_parking.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="128" />
+            <state relative-caret-position="343">
+              <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="121" />
             </state>
           </provider>
         </entry>
@@ -183,8 +153,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_emprunte.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+            <state relative-caret-position="495">
+              <caret line="58" column="10" lean-forward="true" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -266,12 +236,12 @@
         <option value="$PROJECT_DIR$/git_code/app/model/config.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewModify_utilisateur.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_parking.php" />
-        <option value="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_emprunte.php" />
         <option value="$PROJECT_DIR$/git_code/app/controller/router.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewChange_condition_result.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewInfoVehicule.php" />
         <option value="$PROJECT_DIR$/git_code/app/model/ModelVehicule.php" />
         <option value="$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php" />
+        <option value="$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_emprunte.php" />
       </list>
     </option>
   </component>
@@ -290,7 +260,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -334,6 +303,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -412,7 +382,7 @@
       <workItem from="1558791049077" duration="246000" />
       <workItem from="1558791426398" duration="62058000" />
       <workItem from="1559561499236" duration="31205000" />
-      <workItem from="1560091570483" duration="31533000" />
+      <workItem from="1560091570483" duration="32934000" />
     </task>
     <task id="LOCAL-00001" summary="add general connection to sql">
       <created>1556812395736</created>
@@ -603,16 +573,23 @@
       <option name="project" value="LOCAL" />
       <updated>1560270973348</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="modify vehicule">
+      <created>1560283536437</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1560283536437</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152176000" />
+    <option name="totallyTimeSpent" value="153577000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="735" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25323623" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25323623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -627,7 +604,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49919093" weight="0.27113238" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5008091" side_tool="true" weight="0.14217253" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.16746412" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.36204147" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3290735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -733,7 +710,8 @@
     <MESSAGE value="modify utilisateur complete" />
     <MESSAGE value="玄学" />
     <MESSAGE value="admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin" />
+    <MESSAGE value="modify vehicule" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify vehicule" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/git_code/app/view/viewSign_upResult.php">
@@ -1054,38 +1032,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_parking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_emprunte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/git_code/app/view/viewInfoVehicule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="-219">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelVehicule.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="97" column="84" selection-start-line="97" selection-start-column="84" selection-end-line="97" selection-end-column="84" />
+          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_parking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/view/viewVoir_reservation_emprunte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="58" column="10" lean-forward="true" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="100" column="63" lean-forward="true" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
+        <state relative-caret-position="259">
+          <caret line="78" column="3" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
         </state>
       </provider>
     </entry>

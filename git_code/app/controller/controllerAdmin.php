@@ -61,20 +61,20 @@ class controllerAdmin
        
     }
     
-    public static function modifierDone_vehicule($table){
-        $results = ModelAdmin:: modifierDone_vehicule($table);
-        if($results){
-          echo "<script type='text/javascript'>alert('success')</script>";
-            
-        }
-        else{
-            echo "<script type='text/javascript'>alert('fail')</script>";
-
-        }
-      echo "<script type='text/javascript'>";
-      echo "window.location.href = 'router.php?action=voirReservationParking&controlleur=administrateur'";
-      echo"</script>";
-    }
+//    public static function modifierDone_vehicule($table){
+//        $results = ModelAdmin:: modifierDone_vehicule($table);
+//        if($results){
+//          echo "<script type='text/javascript'>alert('success')</script>";
+//
+//        }
+//        else{
+//            echo "<script type='text/javascript'>alert('fail')</script>";
+//
+//        }
+//      echo "<script type='text/javascript'>";
+//      echo "window.location.href = 'router.php?action=voirReservationParking&controlleur=administrateur'";
+//      echo"</script>";
+//    }
     
     public static function changeCondition($table){
         $param = $table;
