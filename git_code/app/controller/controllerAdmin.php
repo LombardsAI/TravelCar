@@ -8,7 +8,7 @@ class controllerAdmin
         require '../view/viewAccueil_admin.php';
     }
 
-    public static function voirReservation(){
+    public static function voirReservationEmprunte(){
         $results = ModelAdmin::chercherAdministrateur();
         foreach($results as $mv){
             if($mv->getNiveau()==1){
@@ -24,8 +24,28 @@ class controllerAdmin
             }
         }
         $reservation = ModelEmprunte::chercherReservation($query);
-        require '../view/viewVoir_reservation.php';
+        require '../view/viewVoir_reservation_emprunte.php';
     }
+    
+     public static function voirReservationParking(){
+        $results = ModelAdmin::chercherAdministrateur();
+        foreach($results as $mv){
+            if($mv->getNiveau()==1){
+                $parking = $mv->getParking();
+                $query="SELECT * FROM gare where label_du_parking = '$parking' ORDER BY date_debut";
+         }
+            else if($mv->getNiveau()==2){
+                $IATA = $mv->getIATA();
+                $query="SELECT * FROM gare where EXISTS (SELECT label from parking where parking.aeroport = '$IATA' and emprunte.label_du_parking = parking.label) ORDER BY date_debut";
+            }
+            else if($mv->getNiveau()==3){
+                $query="SELECT * FROM gare ORDER BY date_debut";
+            }
+        }
+        $reservation = ModelEmprunte::chercherReservationParking($query);
+        require '../view/viewVoir_reservation_parking.php';
+    }
+    
 
     public static function infoUtilisateur($table){
         $results = ModelUtilisateur::chercherUtilisateur($table['utilisateur']);
@@ -34,7 +54,11 @@ class controllerAdmin
         $resultsPret = ModelUtilisateur::histoirePret($table['utilisateur']);
         require_once '../view/viewInfoUtilisateur.php';
     }
-
+    public static function infoVehicule($table){
+       $results = ModelVehicule::chercherVehicule($table["n_plaque"]); 
+       require_once '../view/viewInfoVehicule.php';
+    }
+    
     public static function changeCondition($table){
         $param = $table;
         require_once('../view/viewChange_condition.php');
