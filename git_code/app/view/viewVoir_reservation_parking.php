@@ -41,7 +41,7 @@ include 'fragmentHeader.html';
         foreach ($reservation as $mv) {
 
 //   $info_label = array();
-           $id = $mv->getNPlaque()."&".$mv->getEmprunteur();
+           $id = $mv->getNPlaque()."&".$mv->getClient();
             printf(
                 "<tr id='$id'>"
                     . "<td><a href='../controller/router.php?action=infoVehicule&controlleur=administrateur&n_plaque=%s'>%s</td>"
