@@ -188,11 +188,10 @@ class ModelUtilisateur
     }
 
 
-    public static function chercherUtilisateur(){
+    public static function chercherUtilisateur($id){
         try{
-           
+            if($id == NULL)
                 $id = $_SESSION['id'];
-            
             $database = SModel::getInstance();
             $query="SELECT * FROM utilisateur WHERE id = '$id'";
             $result = $database->query($query);
@@ -219,12 +218,15 @@ class ModelUtilisateur
         }
     }
 
-    public static function histoireParking($id){
+    public static function histoireParking($id,$type){
         try{
             if($id == NULL)
                 $id = $_SESSION['id'];
             $database = SModel::getInstance();
-            $sql = "SELECT * FROM gare WHERE id_client='".$id."' ORDER BY TYPE,date_debut";
+            if($type == 'emprunteur')
+                $sql = "SELECT * FROM gare WHERE id_client='".$id."' ORDER BY TYPE,date_debut";
+            else
+                $sql = "SELECT * FROM gare WHERE n_plaque='".$id."' ORDER BY TYPE,date_debut";
             $query = $database->prepare($sql);
             $query->execute();
             $results = $query->fetchALL(PDO::FETCH_ASSOC);
@@ -236,12 +238,15 @@ class ModelUtilisateur
 
     }
 
-        public static function histoireEmprunte($id){
+        public static function histoireEmprunte($id,$type){
         try{
             if($id == NULL)
                 $id = $_SESSION['id'];
             $database = SModel::getInstance();
-            $sql = "SELECT * FROM emprunte WHERE emprunteur='".$id."' ORDER BY TYPE,date_debut";
+            if($type == 'emprunteur')
+                $sql = "SELECT * FROM emprunte WHERE emprunteur='".$id."' ORDER BY TYPE,date_debut";
+            else
+                $sql = "SELECT * FROM emprunte WHERE n_plaque='".$id."' ORDER BY TYPE,date_debut";
             $query = $database->prepare($sql);
             $query->execute();
             $results = $query->fetchALL(PDO::FETCH_ASSOC);

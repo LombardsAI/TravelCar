@@ -2,6 +2,7 @@
 require_once 'SModel.php';
 require_once 'ModelUtilisateur.php';
 
+
 class ModelAdmin
 {
     private $id, $password, $nom, $prenom, $niveau, $IATA, $parking;
@@ -153,11 +154,11 @@ class ModelAdmin
                 'emprunteur' => $table['emprunteur'],
                 'date_debut' => $table['date_debut']
             ]);
-            return TRUE;
+            return 'changedone';
         }
         catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
-            return FALSE;
+            return 'changeerror';
         }
     }
 
@@ -172,6 +173,40 @@ class ModelAdmin
         catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return FALSE;
+        }
+    }
+
+    public static function findVoiture($plaque){
+        try{
+            $database = SModel::getInstance();
+            $query="SELECT * FROM véhicule WHERE n_plaque = '$plaque'";
+            $result = $database->query($query);
+            $list = $result->fetchAll(PDO::FETCH_ASSOC);
+            return $list;
+        }
+        catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+    }
+
+    public static function addVoiture($table)
+    {
+        try {
+            $database = SModel::getInstance();
+            $query = "INSERT INTO `parking` (`label`, `aeroport`, `prix_par_heure`, `adresse`, `nombre_max`) VALUES (:label, :aeroport, :prix_par_heure, :adresse, :nombre_max)";
+            $statement = $database->prepare($query);
+            $statement->execute([
+                'label' => $table['Label'],
+                'aeroport' => $table['Aeroport'],
+                'prix_par_heure' => $table['Prix'],
+                'adresse' => $table['Adresse'],
+                'nombre_max' => $table['Nombre']
+            ]);
+            return 'adddone';
+        } catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return 'adderror';
         }
     }
 }

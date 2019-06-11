@@ -36,12 +36,12 @@ include 'fragmentHeader.html';
         foreach ($results as $row) {
 //   $info_label = array();
             echo'<tr>';
-            foreach ($row as $element){
-                if($element.get){
-
+            foreach ($row as $key => $value){
+                if($key == 'id'){
+                    echo"<td><a href='../controller/router.php?action=infoUtilisateur&controlleur=administrateur&utilisateur=$value'". '>'.$value.'</a></td>';
                 }
                     else{
-                        echo'<td>'.$element.'</td>';
+                        echo'<td>'.$value.'</td>';
                     }
             }
             echo'</tr>';

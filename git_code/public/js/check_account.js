@@ -92,8 +92,9 @@ function return_Info(){
 }
 
 function return_Info_signup(){
-    if(returnInfo && difference ){
-        return true;}
+    if (returnInfo && difference ){
+        return true;
+    }
     else {
         return false;
     }

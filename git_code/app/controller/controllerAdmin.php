@@ -29,8 +29,8 @@ class controllerAdmin
 
     public static function infoUtilisateur($table){
         $results = ModelUtilisateur::chercherUtilisateur($table['utilisateur']);
-        $resultsParking = ModelUtilisateur::histoireParking($table['utilisateur']);
-        $resultsEmprunte = ModelUtilisateur::histoireEmprunte($table['utilisateur']);
+        $resultsParking = ModelUtilisateur::histoireParking($table['utilisateur'],'emprunteur');
+        $resultsEmprunte = ModelUtilisateur::histoireEmprunte($table['utilisateur'],'emprunteur');
         $resultsPret = ModelUtilisateur::histoirePret($table['utilisateur']);
         require_once '../view/viewInfoUtilisateur.php';
     }
@@ -54,5 +54,20 @@ class controllerAdmin
             $results = ModelAdmin::findUtilisateur($table['contenu']);
             require_once ('../view/viewAdmin_findUtilisateur.php');
         }
+        if($table['type'] == 'voiture'){
+            $results = ModelAdmin::findVoiture($table['contenu']);
+            $resultsParking = ModelUtilisateur::histoireParking($table['contenu'],'voiture');
+            $resultsEmprunte = ModelUtilisateur::histoireEmprunte($table['contenu'],'voitures');
+            require_once ('../view/viewAdmin_findVoiture.php');
+        }
+    }
+
+    public static function ajouteParking(){
+        require_once '../view/viewAjoute_parking.php';
+    }
+
+    public static function ajouteParkingResult($table){
+        $results = ModelAdmin::addVoiture($table);
+        require_once '../view/viewChange_condition_result.php';
     }
 }

@@ -42,12 +42,12 @@ class controllerUtilisateur
         require '../view/viewSign_upResult.php';
     }
    public static function histoireParking(){
-       $results = ModelUtilisateur::histoireParking(NULL);
+       $results = ModelUtilisateur::histoireParking(NULL,'emprunteur');
        require '../view/viewHisoireParking.php';
    }
    
     public static function histoireEmprunte(){
-       $results = ModelUtilisateur::histoireEmprunte(NULL);
+       $results = ModelUtilisateur::histoireEmprunte(NULL,'emprunteur');
        require '../view/viewHistoireEmprunte.php';
    }
    public static function histoirePret(){

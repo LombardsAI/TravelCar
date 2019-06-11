@@ -65,6 +65,7 @@ else{
         case "conditionChanged":
         case "daliyCheck":
         case "ajouteParking":
+        case"ajouteParkingResult":
              $action = "signIn";
              $controlleurchoisi = controllerUtilisateur::class;
          break;

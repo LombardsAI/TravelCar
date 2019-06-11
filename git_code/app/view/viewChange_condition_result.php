@@ -13,15 +13,18 @@ include 'fragmentHeader.html';
         </div>
     </div>
     <div class="jumbotron">
-        <h1>  Welcome <?php echo($_COOKIE['id']);?> !</h1>
+        <h1>  Welcome <?php echo($_SESSION['id']);?> !</h1>
         <p>  Maximaliser le valeur de vos voitures ....</p>
     </div>
     <?php
-    if ($results) {
+    if ($results == 'changedone') {
         echo ("<h2>Condition est était modifié !</h2>");
-//        echo ("<h3>id = " . $_COOKIE['id'] . "</h3>");
-    } else {
-        echo ("<h2>Il y a  un problème pour la modification</h2>");
+    } else if($results == 'changeerror'){
+        echo ("<h2>Il y a un problème pour la modification</h2>");
+    }else if($results == 'adddone'){
+        echo ("<h2>Parking est bien ajouté</h2>");
+    }else if($results == 'adderror'){
+        echo ("<h2>Il y a un problème pour l'ajout</h2>");
     }
     include('fragmentFooter.html');
     ?>
