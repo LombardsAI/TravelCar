@@ -3,9 +3,9 @@ require_once 'SModel.php';
 
 class ModelEmprunte
 {
-    private $n_plaque, $emprunteur, $label_du_parking, $date_debut, $date_fin, $TYPE, $cout;
+    private $n_plaque, $emprunteur, $label_du_parking, $date_debut, $date_fin, $TYPE, $cout,$n_place;
 
-    public function __construct($n_plaque = NULL, $emprunteur = NULL, $label_du_parking = NULL, $date_debut = NULL, $date_fin = NULL, $TYPE = NULL, $cout = NULL)
+    public function __construct($n_plaque = NULL, $emprunteur = NULL, $label_du_parking = NULL, $date_debut = NULL, $date_fin = NULL, $TYPE = NULL, $cout = NULL,$n_place=NULL)
     {
         if (!is_null($n_plaque)) {
             $this->n_plaque = $n_plaque;
@@ -16,7 +16,9 @@ class ModelEmprunte
             $this->TYPE = $TYPE;
             $this->cout = $cout;
         }
-
+        if(!is_null($n_place)){
+            $this->n_place= $n_place;
+        }
     }
     /**
      * @return mixed
@@ -34,6 +36,19 @@ class ModelEmprunte
         $this->n_plaque = $n_plaque;
     }
 
+    
+     public function getNPlace()
+    {
+        return $this->n_place;
+    }
+
+    /**
+     * @param mixed $n_plaque
+     */
+    public function setNPlace($n_place)
+    {
+        $this->n_place = $n_place;
+    }
     /**
      * @return mixed
      */
@@ -135,6 +150,19 @@ class ModelEmprunte
             $database = SModel::getInstance();
             $result = $database->query($query);
             $list = $result->fetchAll(PDO::FETCH_CLASS,"ModelEmprunte");
+            return $list;
+        }
+        catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+    }
+    
+    public static function chercherReservationParking($query){
+         try{
+            $database = SModel::getInstance();
+            $result = $database->query($query);
+            $list = $result->fetchAll(PDO::FETCH_CLASS,"ModelReservation");
             return $list;
         }
         catch (PDOException $e) {
