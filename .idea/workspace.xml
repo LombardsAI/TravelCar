@@ -19,8 +19,7 @@
       <change afterPath="$PROJECT_DIR$/../TP/TD11/etape1/MVC_cours/viewVinIDForm.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TP/TD11/etape1/MVC_cours/viewVinList.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../TP/TD11/etape2/public/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/git_code/app/view/viewAdmin_findVoiture.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/git_code/app/view/viewAjoute_parking.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/git_code/app/model/ModelVehicule.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/progressbar/.idea/deployment.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/progressbar/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/progressbar/.idea/modules.xml" afterDir="false" />
@@ -51,16 +50,6 @@
       <change beforePath="$PROJECT_DIR$/../Projet Travel_car/projet/general_connection_sql.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/controller/controllerAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/controller/controllerUtilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/controller/controllerUtilisateur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/controller/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/controller/router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/model/ModelAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/model/ModelAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/model/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/model/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/view/fragmentMenuAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/fragmentMenuAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewAdmin_findUtilisateur.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewAdmin_findUtilisateur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/app/view/viewChange_condition_result.php" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/app/view/viewChange_condition_result.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_code/public/js/check_account.js" beforeDir="false" afterPath="$PROJECT_DIR$/git_code/public/js/check_account.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../新生/CV UTT.pages" beforeDir="false" />
     </list>
@@ -99,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git_code/app/view/viewChange_condition_result.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="546">
@@ -108,11 +97,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewAdmin_find.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelVehicule.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="29" lean-forward="true" selection-end-line="29" selection-end-column="39" />
+            <state relative-caret-position="574">
+              <caret line="89" column="42" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelReservation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="47" column="9" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="47" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="20" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -122,24 +129,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="229">
               <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/app/view/viewReserver_parking.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="61" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelReservation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -212,7 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/git_code/app/view/fragementHeader.html" />
         <option value="$PROJECT_DIR$/git_code/app/view/fragementMenu.html" />
         <option value="$PROJECT_DIR$/git_code/public/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/git_code/public/js/check_ajax.js" />
@@ -263,13 +251,13 @@
         <option value="$PROJECT_DIR$/git_code/app/view/viewAjoute_parking.php" />
         <option value="$PROJECT_DIR$/git_code/app/model/ModelAdmin.php" />
         <option value="$PROJECT_DIR$/git_code/app/view/viewChange_condition_result.php" />
+        <option value="$PROJECT_DIR$/git_code/app/model/ModelVehicule.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="198" />
+    <option name="y" value="93" />
     <option name="width" value="1280" />
     <option name="height" value="735" />
   </component>
@@ -341,6 +329,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -415,7 +404,7 @@
       <workItem from="1558791049077" duration="246000" />
       <workItem from="1558791426398" duration="62058000" />
       <workItem from="1559561499236" duration="31205000" />
-      <workItem from="1560091570483" duration="22977000" />
+      <workItem from="1560091570483" duration="24522000" />
     </task>
     <task id="LOCAL-00001" summary="add general connection to sql">
       <created>1556812395736</created>
@@ -585,20 +574,27 @@
       <option name="project" value="LOCAL" />
       <updated>1560195780884</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="admin">
+      <created>1560241198333</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1560241198334</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143620000" />
+    <option name="totallyTimeSpent" value="145165000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="735" extended-state="6" />
+    <frame x="1" y="23" width="1280" height="735" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26132685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.27751195" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.27751195" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.18690096" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -718,13 +714,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="admin" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../TP/TD2/tp02_cv.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/git_code/app/view/fragmentHeader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -936,13 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="260" column="43" lean-forward="true" selection-start-line="260" selection-start-column="43" selection-end-line="260" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/git_code/app/controller/controllerUtilisateur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -998,13 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
           <caret line="29" lean-forward="true" selection-end-line="29" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelReservation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1064,6 +1039,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
           <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelUtilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelReservation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="47" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git_code/app/model/ModelVehicule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="89" column="42" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
         </state>
       </provider>
     </entry>
