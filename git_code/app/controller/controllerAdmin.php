@@ -63,17 +63,18 @@ class controllerAdmin
     
     public static function modifierDone_vehicule($table){
         $results = ModelAdmin:: modifierDone_vehicule($table);
-        if($results){
-          echo "<script type='text/javascript'>alert('success')</script>";
-            
-        }
-        else{
-            echo "<script type='text/javascript'>alert('fail')</script>";
-
-        }
-      echo "<script type='text/javascript'>";
-      echo "window.location.href = 'router.php?action=voirReservationParking&controlleur=administrateur'";
-      echo"</script>";
+//        if($results){
+//          echo "<script type='text/javascript'>alert('success')</script>";
+//            
+//        }
+//        else{
+//            echo "<script type='text/javascript'>alert('fail')</script>";
+//
+//        }
+//      echo "<script type='text/javascript'>";
+//      echo "window.location.href = 'router.php?action=voirReservationParking&controlleur=administrateur'";
+//      echo"</script>";
+        require_once('../view/viewChange_condition_result.php');
     }
     
     public static function changeCondition($table){
@@ -86,6 +87,17 @@ class controllerAdmin
         require_once('../view/viewChange_condition_result.php');
     }
 
+    public static function changePlace($table){
+        require_once('../view/viewChange_place.php');
+       
+       
+    }
+    
+     public static function placeChanged($table){
+         $results = ModelAdmin::changePlace($table);
+          require_once('../view/viewChange_condition_result.php');
+     }
+     
     public static function find(){
         require_once ('../view/viewAdmin_find.php');
     }
