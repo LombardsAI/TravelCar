@@ -41,11 +41,11 @@ include 'fragmentHeader.html';
         foreach ($reservation as $mv) {
 
 //   $info_label = array();
-           $id = $mv->getNPlaque()."&".$mv->getEmprunteur();
+           $id = $mv->getNPlaque()."&".$mv->getClient();
             printf(
                 "<tr id='$id'>"
                     . "<td><a href='../controller/router.php?action=infoVehicule&controlleur=administrateur&n_plaque=%s'>%s</td>"
-                    . "<td><a href='../controller/router.php?action=changeCondition&controlleur=administrateur&nplaque=%s&emprunteur=%s&datedebut=%s&n_place=%d'>%d</td>"
+                    . "<td><a href='../controller/router.php?action=changePlace&controlleur=administrateur&nplaque=%s&emprunteur=%s&datedebut=%s&n_place=%d'>%d</td>"
                     . "<td><a href='../controller/router.php?action=infoUtilisateur&controlleur=administrateur&utilisateur=%s'>%s</a></td>"
                     . "<td>%s</td>"
                     . "<td>%s</td>"

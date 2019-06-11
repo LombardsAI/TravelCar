@@ -86,6 +86,17 @@ class controllerAdmin
         require_once('../view/viewChange_condition_result.php');
     }
 
+    public static function changePlace($table){
+        require_once('../view/viewChange_place.php');
+
+
+    }
+
+     public static function placeChanged($table){
+         $results = ModelAdmin::changePlace($table);
+          require_once('../view/viewChange_condition_result.php');
+     }
+
     public static function find(){
         require_once ('../view/viewAdmin_find.php');
     }

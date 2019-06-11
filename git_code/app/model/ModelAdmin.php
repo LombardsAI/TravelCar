@@ -138,11 +138,11 @@ class ModelAdmin
        $result = $database->prepare($query);
         $result ->execute($table);
          
-       return true;
+       return 'changedone';
        
        }catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
-            return FALSE;
+            return 'changeerror';
         }
        
    }
@@ -193,6 +193,25 @@ class ModelAdmin
             return 'changedone';
         }
         catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return 'changeerror';
+        }
+    }
+    
+    public static function changePlace($table){
+          try{
+            $database = SModel::getInstance();
+             $query = "UPDATE `gare` SET `n_place` = :n_place WHERE `n_plaque` = :n_plaque AND `id_client` = :id_client AND `date_debut` = :date_debut";
+              $statement = $database->prepare($query);
+            $statement->execute([
+                'n_place' => $table['n_place'],
+                'n_plaque' => $table['n_plaque'],
+                'id_client' => $table['emprunteur'],
+                'date_debut' => $table['date_debut']
+            ]);
+            
+             return 'changedone';
+          }catch (PDOException $e) {
             printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
             return 'changeerror';
         }
