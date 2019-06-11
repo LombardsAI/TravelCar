@@ -54,7 +54,11 @@ class controllerAdmin
         $resultsPret = ModelUtilisateur::histoirePret($table['utilisateur']);
         require_once '../view/viewInfoUtilisateur.php';
     }
-
+    public static function infoVehicule($table){
+       $results = ModelVehicule::chercherVehicule($table["n_plaque"]); 
+       require_once '../view/viewInfoVehicule.php';
+    }
+    
     public static function changeCondition($table){
         $param = $table;
         require_once('../view/viewChange_condition.php');
