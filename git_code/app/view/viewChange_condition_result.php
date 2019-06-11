@@ -25,6 +25,10 @@ include 'fragmentHeader.html';
         echo ("<h2>Parking est bien ajouté</h2>");
     }else if($results == 'adderror'){
         echo ("<h2>Il y a un problème pour l'ajout</h2>");
+    } else if($results == 'modifierdone'){
+        echo ("<h2>Information de véhicule est bien modifié</h2>");
+    }else if($results == 'modifiererror'){
+        echo ("<h2>Il y a un problème quant à modification</h2>");
     }
     include('fragmentFooter.html');
     ?>

@@ -1,6 +1,7 @@
 <?php
 require_once '../model/ModelAdmin.php';
 require_once '../model/ModelEmprunte.php';
+require_once '../model/ModelVehicule.php';
 
 class controllerAdmin
 {
@@ -94,4 +95,10 @@ class controllerAdmin
         $results = ModelAdmin::addVoiture($table);
         require_once '../view/viewChange_condition_result.php';
     }
+
+    public static function modifierDone_vehicule($table){
+        $results = ModelVehicule::modifierVehicule($table);
+        require_once '../view/viewChange_condition_result.php';
+    }
+
 }

@@ -16,43 +16,36 @@ include 'fragmentHeader.html';
             <form name="modify" id="modify" action="../controller/router.php" method="post" ng-app="" >
                 <input type="hidden" name='action' value='modifierDone_vehicule'>
                 <input type="hidden" name='controlleur' value='administrateur'>
-                <label for='nom'>nom</label>
+                <label for='n_plaque'>No plaque</label>
                 <br>
-                <input name="nom" ng-model="nom" ng-init="nom ='<?php foreach($results as $mv){print($mv->getNom());}?>'" required>
+                <input name="n_plaque" readonly ng-model="n_plaque" ng-init="n_plaque ='<?php foreach($results as $mv){print($mv->getNPlaque());}?>'" required>
                 <div>
-                    <span style="color:red" ng-show="modify.nom.$error.required && modify.nom.$dirty">Nom est vide</span>
+                    <span style="color:red" ng-show="modify.n_plaque.$error.required && modify.n_plaque.$dirty">No plaque est vide</span>
                 </div>
                 <br>
-                <label for='prenom'>Prénom</label>
+                <label for='marque'>Marque</label>
                 <br>
-                <input name="prenom" ng-model="prenom" ng-init="prenom ='<?php foreach($results as $mv){print($mv->getPrenom());}?>'" required >
+                <input name="marque" ng-model="marque" ng-init="marque ='<?php foreach($results as $mv){print($mv->getMarque());}?>'" required>
                 <div>
-                    <span style="color:red" ng-show="modify.prenom.$error.required && modify.prenom.$dirty">Prénom est vide</span>
+                    <span style="color:red" ng-show="modify.marque.$error.required && modify.marque.$dirty">Marque est vide</span>
                 </div>
                 <br>
-                <label for='mail'>E-mail</label>
+                <label for='capacité'>Capacité</label>
                 <br>
-                <input name="ad_mail" ng-model="mail" type="email" ng-init="mail ='<?php foreach($results as $mv){print($mv->getAdMail());}?>'" required>
+                <input name="capacite" ng-model="capacite" ng-init="capacite ='<?php foreach($results as $mv){print($mv->getCapacité());}?>'" required >
                 <div>
-                    <span style="color:red" ng-show="modify.mail.$error.required && modify.mail.$dirty && modify.mail.$invalide">E-mail est vide</span>
+                    <span style="color:red" ng-show="modify.capacite.$error.required && modify.capacite.$dirty">Capacité est vide</span>
                 </div>
                 <br>
-                <label for='telephone'>Téléphone</label>
+                <label for='prix_emprunte'>Prix emprunte</label>
                 <br>
-                <input name="telephone" ng-model="telephone" ng-init="telephone='<?php foreach($results as $mv){print($mv->getTelephone());}?>'" required >
+                <input name="prix_emprunte" ng-model="prix_emprunte" type="prix_emprunte" ng-init="prix_emprunte ='<?php foreach($results as $mv){print($mv->getPrixEmprunte());}?>'" required>
                 <div>
-                    <span style="color:red" ng-show="modify.telephone.$error.required && modify.telephone.$dirty">Télephone est vide</span>
-                </div>
-                <br>
-                <label for='password'>Mot de passe</label>
-                <br>
-                <input name="password" type = "password" ng-model="password" ng-init="password ='<?php foreach($results as $mv){print($mv->getPassword());}?>'" required >
-                <div>
-                    <span style="color:red" ng-show="modify.password.$error.required && modify.password.$dirty">Mot de passe est vide</span>
+                    <span style="color:red" ng-show="modify.prix_emprunte.$error.required && modify.prix_emprunte.$dirty && modify.prix_emprunte.$invalide">Prix Emprunte est vide</span>
                 </div>
                 <br>
                 <?php
-                form_input_submit("Valider");
+                form_input_submit("Modifier !");
                 ?>
             </form>
         </div>
