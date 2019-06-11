@@ -128,6 +128,26 @@ class ModelAdmin
         $this->parking = $parking;
     }
 
+   public static function modifierDone_vehicule($table){
+       try{
+            $database = SModel::getInstance();
+//       $table["capacité"] = $table["capacite"];
+//       unset($table["capacite"]);
+//       $table["plaque"] = $table['n_plaque'];
+        $query = "UPDATE `véhicule` SET `n_plaque` = :n_plaque, `marque` = :marque, `capacité` = :capacite, `prix_emprunte` = :prix_emprunte WHERE `n_plaque` = :plaque";
+       $result = $database->prepare($query);
+        $result ->execute($table);
+         
+       return true;
+       
+       }catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+       
+   }
+   
+   
     public static function chercherAdministrateur(){
         try{
             $id = $_SESSION['id'];
@@ -146,14 +166,30 @@ class ModelAdmin
     public static function changeCondition($table){
         try{
             $database = SModel::getInstance();
-            $query = "UPDATE `emprunte` SET `TYPE` = :condition WHERE `emprunte`.`n_plaque` = :n_plaque AND `emprunte`.`emprunteur` = :emprunteur AND `emprunte`.`date_debut` = :date_debut";
+            if($table["reservation"]=='gare'){
+                $query = "UPDATE `gare` SET `TYPE` = :condition WHERE `n_plaque` = :n_plaque AND `id_client` = :id_client AND `date_debut` = :date_debut";
             $statement = $database->prepare($query);
+            $statement->execute([
+                'condition' => $table['condition'],
+                'n_plaque' => $table['n_plaque'],
+                'id_client' => $table['emprunteur'],
+                'date_debut' => $table['date_debut']
+            ]);
+                
+            }
+         else{
+                $query = "UPDATE `emprunte` SET `TYPE` = :condition WHERE `emprunte`.`n_plaque` = :n_plaque AND `emprunte`.`emprunteur` = :emprunteur AND `emprunte`.`date_debut` = :date_debut";
+                        $statement = $database->prepare($query);
             $statement->execute([
                 'condition' => $table['condition'],
                 'n_plaque' => $table['n_plaque'],
                 'emprunteur' => $table['emprunteur'],
                 'date_debut' => $table['date_debut']
             ]);
+                
+         }
+            
+
             return 'changedone';
         }
         catch (PDOException $e) {

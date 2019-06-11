@@ -5,7 +5,7 @@ include 'fragmentHeader.html';
 
     <body>
     <div class="container">
-        <?php include 'fragmentMenu.html'; ?>
+        <?php include 'fragmentMenuAdmin.html'; ?>
         <!-- Jumbotrom -->
         <div class="panel panel-success">
             <div class="panel-heading">
@@ -16,39 +16,35 @@ include 'fragmentHeader.html';
             <form name="modify" id="modify" action="../controller/router.php" method="post" ng-app="" >
                 <input type="hidden" name='action' value='modifierDone_vehicule'>
                 <input type="hidden" name='controlleur' value='administrateur'>
-                <label for='nom'>nom</label>
+                <input type="hidden" name='plaque' value='<?php foreach($results as $mv){print($mv->getNPlaque());}?>'>
+                <label for='n_plaque'>n_plaque</label>
                 <br>
-                <input name="nom" ng-model="nom" ng-init="nom ='<?php foreach($results as $mv){print($mv->getNom());}?>'" required>
+  
+                <input name="n_plaque" ng-model="n_plaque" ng-init="n_plaque ='<?php foreach($results as $mv){print($mv->getNPlaque());}?>'" required>
                 <div>
-                    <span style="color:red" ng-show="modify.nom.$error.required && modify.nom.$dirty">Nom est vide</span>
+                    <span style="color:red" ng-show="modify.n_plaque.$error.required && modify.n_plaque.$dirty">N_plaque est vide</span>
                 </div>
                 <br>
-                <label for='prenom'>Prénom</label>
+                <label for='marque'>marque</label>
                 <br>
-                <input name="prenom" ng-model="prenom" ng-init="prenom ='<?php foreach($results as $mv){print($mv->getPrenom());}?>'" required >
+                <input name="marque" ng-model="marque" ng-init="marque ='<?php foreach($results as $mv){print($mv->getMarque());}?>'" required >
                 <div>
-                    <span style="color:red" ng-show="modify.prenom.$error.required && modify.prenom.$dirty">Prénom est vide</span>
+                    <span style="color:red" ng-show="modify.marque.$error.required && modify.marque.$dirty">marque est vide</span>
                 </div>
                 <br>
-                <label for='mail'>E-mail</label>
+                <label for='capacité'>capacité</label>
                 <br>
-                <input name="ad_mail" ng-model="mail" type="email" ng-init="mail ='<?php foreach($results as $mv){print($mv->getAdMail());}?>'" required>
+                <input name="capacite" ng-model="capacite" ng-init="capacite='<?php foreach($results as $mv){print($mv->getCapacité());}?>'" required >
                 <div>
-                    <span style="color:red" ng-show="modify.mail.$error.required && modify.mail.$dirty && modify.mail.$invalide">E-mail est vide</span>
+                    <span style="color:red" ng-show="modify.capacite.$error.required && modify.capacite.$dirty">capacité est vide</span>
                 </div>
                 <br>
-                <label for='telephone'>Téléphone</label>
+                <label for='prix_emprunte'>prix par heure</label>
                 <br>
-                <input name="telephone" ng-model="telephone" ng-init="telephone='<?php foreach($results as $mv){print($mv->getTelephone());}?>'" required >
+                
+                <input name="prix_emprunte" ng-model="prix_emprunte" ng-init="prix_emprunte='<?php foreach($results as $mv){print($mv->getPrixEmprunte());}?>'" required >
                 <div>
-                    <span style="color:red" ng-show="modify.telephone.$error.required && modify.telephone.$dirty">Télephone est vide</span>
-                </div>
-                <br>
-                <label for='password'>Mot de passe</label>
-                <br>
-                <input name="password" type = "password" ng-model="password" ng-init="password ='<?php foreach($results as $mv){print($mv->getPassword());}?>'" required >
-                <div>
-                    <span style="color:red" ng-show="modify.password.$error.required && modify.password.$dirty">Mot de passe est vide</span>
+                    <span style="color:red" ng-show="modify.prix_emprunte.$error.required && modify.prix_emprunte.$dirty">prix_emprunte est vide</span>
                 </div>
                 <br>
                 <?php

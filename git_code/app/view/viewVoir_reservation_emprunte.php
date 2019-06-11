@@ -42,7 +42,15 @@ include 'fragmentHeader.html';
 //   $info_label = array();
            $id = $mv->getNPlaque()."&".$mv->getEmprunteur();
             printf(
-                "<tr id='$id'><td>%s</td><td><a href='../controller/router.php?action=infoUtilisateur&controlleur=administrateur&utilisateur=%s'>%s</a></td><td>%s</td><td>%s</td><td>%s</td><td><a href='../controller/router.php?action=changeCondition&controlleur=administrateur&nplaque=%s&emprunteur=%s&datedebut=%s&condition=%s'>%d</a></td><td>%d</td></tr>",
+                "<tr id='$id'>"
+                    . "<td>%s</td>"
+                    . "<td><a href='../controller/router.php?action=infoUtilisateur&controlleur=administrateur&utilisateur=%s'>%s</a></td>"
+                    . "<td>%s</td>"
+                    . "<td>%s</td>"
+                    . "<td>%s</td>"
+                    . "<td><a href='../controller/router.php?action=changeCondition&controlleur=administrateur&nplaque=%s&emprunteur=%s&datedebut=%s&condition=%s&reservation=emprunte'>%d</a></td>"
+                    . "<td>%d</td>"
+                    . "</tr>",
                 $mv->getNPlaque(), $mv->getEmprunteur(),$mv->getEmprunteur(), $mv->getLabelDuParking(), $mv->getDateDebut(), $mv->getDateFin(), $mv->getNPlaque(), $mv->getEmprunteur(),$mv->getDateDebut(), $mv->getTYPE(),$mv->getTYPE(), $mv->getCout());
 
         }

@@ -1,6 +1,7 @@
 <?php
 require_once '../model/ModelAdmin.php';
 require_once '../model/ModelEmprunte.php';
+require_once '../model/ModelVehicule.php';
 
 class controllerAdmin
 {
@@ -57,6 +58,22 @@ class controllerAdmin
     public static function infoVehicule($table){
        $results = ModelVehicule::chercherVehicule($table["n_plaque"]); 
        require_once '../view/viewInfoVehicule.php';
+       
+    }
+    
+    public static function modifierDone_vehicule($table){
+        $results = ModelAdmin:: modifierDone_vehicule($table);
+        if($results){
+          echo "<script type='text/javascript'>alert('success')</script>";
+            
+        }
+        else{
+            echo "<script type='text/javascript'>alert('fail')</script>";
+
+        }
+      echo "<script type='text/javascript'>";
+      echo "window.location.href = 'router.php?action=voirReservationParking&controlleur=administrateur'";
+      echo"</script>";
     }
     
     public static function changeCondition($table){
