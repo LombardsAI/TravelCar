@@ -62,7 +62,9 @@ else{
        case "histoirePret":
         case "voirReservation":
         case "infoUtilisateur":
+        case "infoVehicule":
         case "find":
+        case"modifierDone_vehicule":
         case "findResult":
             case "changeCondition":
         case "conditionChanged":
