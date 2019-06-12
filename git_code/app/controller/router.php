@@ -43,6 +43,9 @@ if(isset($_SESSION["id"])){
             header("Location:$URL");
 
     }
+    if($action == "signIn"){
+        unset($_SESSION["id"]);
+    }
 
 
 }

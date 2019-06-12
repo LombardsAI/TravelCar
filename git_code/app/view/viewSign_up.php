@@ -63,7 +63,7 @@ include 'fragmentHeader.html';
                     <div>
                        <span style="color:red" ng-show="inscription.id.$error.required && inscription.id.$dirty">ID est vide</span>
 
-                       <span style="color:red" id="error_msg" hidden>Existe!</span>
+                       <span style="color:red" id="error_existe" hidden>ID déjà existe</span>
                     </div>
                     <br>
                     <label for='password'>Mot de passe</label>

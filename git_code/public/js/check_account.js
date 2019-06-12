@@ -33,21 +33,20 @@ function checkAccount(map,$msg) {
           if (xmlHttp.responseText === "false") {
 
                               returnInfo=false;
-                          $("#error_msg").show();
+                          $("#error_existe").show();
                      
                       }
                         else if(xmlHttp.responseText === "trueutilisateur" || xmlHttp.responseText ==="true"){
                             
                           
                           returnInfo=true;
-                          $("#error_msg").hide();
+                         $("#error_existe").hide();
                       }
                           else if(xmlHttp.responseText === "trueadministrateur"){
 
                               $("#action").val("accueilAdmin");
                               $("#controlleur").val("administrateur");
                               returnInfo=true;
-                              $("#error_msg").hide();
                           }
                         
                         else{
@@ -84,9 +83,11 @@ function checkAccount(map,$msg) {
 
 function return_Info(){
     if(returnInfo === true){
+        $("#error_msg").hide();
         return true;
     }
     else{
+        $("#error_msg").show();
         return false;
     }
 }

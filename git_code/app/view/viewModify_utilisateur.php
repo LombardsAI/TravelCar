@@ -2,17 +2,7 @@
 include('library_form.php');
 include 'fragmentHeader.html';
 ?>
-    <!--    <script type="text/javascript">
-            $(document).ready(function() {
-                $("#id").blur(function () {
-                    var id = document.inscription.id.value;
-                    var myMap = new Map();
-                    myMap.set("id", id);
-                    checkAccount(myMap, 'sign_up');
-                    document.cookie = "id=" + id;
-                });
-            });
-        </script>-->
+   
     <body>
     <div class="container">
         <?php include 'fragmentMenu.html'; ?>
@@ -63,11 +53,11 @@ include 'fragmentHeader.html';
                 </div>
                 <br>
                 <label for='password'>Mot de passe</label>
-                <br>
+<!--                <br>
                 <input name="password" type = "password" ng-model="password" ng-init="password ='<?php foreach($results as $mv){print($mv->getPassword());}?>'" required >
                 <div>
                     <span style="color:red" ng-show="modify.password.$error.required && modify.password.$dirty">Mot de passe est vide</span>
-                </div>
+                </div>-->
                 <br>
                 <?php
                 form_input_submit("Valider");

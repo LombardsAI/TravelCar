@@ -36,7 +36,15 @@ class controllerUtilisateur
         $results = ModelUtilisateur::chercherUtilisateur(NULL);
         require '../view/viewModify_utilisateur.php';
     }
-
+    
+    public static function modifierPassword(){
+        require '../view/viewModify_password.php';
+    }
+   public static function   modifierPasswordDone($table){
+        $results = ModelUtilisateur::modifyPassword($table);
+        require '../view/viewSign_upResult.php';
+       
+   }
     public static function modifierDone($table){
         $results = ModelUtilisateur::modifyUtilisateur($table);
         require '../view/viewSign_upResult.php';

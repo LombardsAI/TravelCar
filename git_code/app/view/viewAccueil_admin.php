@@ -11,8 +11,11 @@ include 'fragmentHeader.html';
         </div>
     </div>
     <div class="jumbotron">
-        <h1>Welcome <?php echo($_SESSION['id']);?> !</h1>
-        <p>Maximaliser le valeur de vos voitures ....</p>
+       <h1>Welcome,
+       <?php     
+       require_once 'check_session.php';
+        ?>
+                !</h1>
     </div>
     <p/>
 </div>

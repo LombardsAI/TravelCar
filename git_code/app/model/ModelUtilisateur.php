@@ -14,8 +14,10 @@ class ModelUtilisateur
             $this->nom = $nom;
             $this->prenom = $prenom;
             $this->telephone = $telephone;
-            $this->password = $password;
             $this->ad_mail = $ad_mail;
+        }
+        if(!is_null($password)){
+            $this->password = $password;
         }
 
     }
@@ -207,9 +209,9 @@ class ModelUtilisateur
     public static function modifyUtilisateur($table){
         try{
             $database = SModel::getInstance();
-            $query="UPDATE `utilisateur` SET `nom` = :nom, `prenom` = :prenom, `telephone` = :telephone, `password` = :password, `ad_mail` = :ad_mail WHERE `utilisateur`.`id` = :id;";
+            $query="UPDATE `utilisateur` SET `nom` = :nom, `prenom` = :prenom, `telephone` = :telephone,  `ad_mail` = :ad_mail WHERE `utilisateur`.`id` = :id;";
             $result = $database->prepare($query);
-            $result ->execute(['nom' => $table['nom'], 'prenom' => $table['prenom'], 'telephone' => $table['telephone'], 'password' => md5($table['password']), 'ad_mail' => $table['ad_mail'], 'id' => $_SESSION['id']]);
+            $result ->execute(['nom' => $table['nom'], 'prenom' => $table['prenom'], 'telephone' => $table['telephone'], 'ad_mail' => $table['ad_mail'], 'id' => $_SESSION['id']]);
             return True;
         }
         catch (PDOException $e) {
@@ -218,6 +220,20 @@ class ModelUtilisateur
         }
     }
 
+    public static function modifyPassword($table){
+         try{
+            $database = SModel::getInstance();
+            $query="UPDATE `utilisateur` SET `password` = :password WHERE `id` = :id;";
+            $result = $database->prepare($query);
+            $result ->execute(['password' => md5($table['password']), 'id' => $_SESSION['id']]);
+            return True;
+        }
+        catch (PDOException $e) {
+            printf("%s - %s<p/>\n", $e->getCode(), $e->getMessage());
+            return FALSE;
+        }
+    }
+            
     public static function histoireParking($id,$type){
         try{
             if($id == NULL)

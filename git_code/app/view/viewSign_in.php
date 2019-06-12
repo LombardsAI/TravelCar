@@ -43,7 +43,7 @@ include 'fragmentHeader.html';
                     </div>
                     <br>
                     <div>
-                        <span id="error_msg" style="color:red" hidden>Wrong user</span>
+                        <span id="error_msg" style="color:red" hidden>Les informations transmises n'ont pas permis de vous authentifier.</span>
                     </div>
                     <br>
                     
