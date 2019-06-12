@@ -55,6 +55,7 @@ else{
              $_SESSION["id"] = $parametres["id"];
         break;
        case "modifierUtilisateur" :
+       case "modifierPassword" :
        case "add_gare":
        case "add_emprunte":
        case "histoireParking":
