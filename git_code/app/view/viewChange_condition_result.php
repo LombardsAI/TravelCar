@@ -29,6 +29,8 @@ include 'fragmentHeader.html';
         echo ("<h2>Information de véhicule est bien modifié</h2>");
     }else if($results == 'modifiererror'){
         echo ("<h2>Il y a un problème quant à modification</h2>");
+    }else{
+        print_r($results);
     }
     include('fragmentFooter.html');
     ?>

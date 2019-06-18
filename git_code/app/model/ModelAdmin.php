@@ -175,7 +175,6 @@ class ModelAdmin
                 'id_client' => $table['emprunteur'],
                 'date_debut' => $table['date_debut']
             ]);
-                
             }
          else{
                 $query = "UPDATE `emprunte` SET `TYPE` = :condition WHERE `emprunte`.`n_plaque` = :n_plaque AND `emprunte`.`emprunteur` = :emprunteur AND `emprunte`.`date_debut` = :date_debut";

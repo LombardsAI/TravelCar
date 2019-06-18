@@ -22,7 +22,7 @@ require_once 'library_form.php';
         echo "<input name='n_place' value =". $table['n_place'].">"
             . "<input name='emprunteur' value =". $table['emprunteur']." hidden>"
                 . " <input name='n_plaque' value =". $table['nplaque']." hidden>"
-                . " <input name='date_debut' value =". $table['datedebut']." hidden>"
+                . " <input name='date_debut' value ='". $table['datedebut']."' hidden>"
                 . "<input id='controlleur' name='controlleur' value='administrateur' hidden>"
                 . "<input id='action' name='action' value='placeChanged' hidden>";
         form_input_submit("Change !");

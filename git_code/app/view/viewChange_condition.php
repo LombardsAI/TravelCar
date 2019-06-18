@@ -37,7 +37,7 @@ require_once 'library_form.php';
         . "<input id='controlleur' name='controlleur' value='administrateur' hidden>"
                . "<input id='n_plaque' name='n_plaque' value=".$param['nplaque']." hidden>"
                 . "<input id='emprunteur' name='emprunteur' value=".$param['emprunteur']." hidden>"
-                . "<input id='date_debut' name='date_debut' value=".$param['datedebut']." hidden>"
+                . "<input id='date_debut' name='date_debut' value='".$param['datedebut']."' hidden>"
                 . "<br>";
 
         form_input_submit("Change !");
