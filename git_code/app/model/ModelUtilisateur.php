@@ -147,13 +147,13 @@ class ModelUtilisateur
                     echo('false');
                 }
                 else{
-                    $_SESSION["id"] = $table["id"];
+                    $_SESSION["id"] = strtolower($table["id"]);
                     echo('trueadministrateur');
                 }
                 
             }
             else{
-                $_SESSION["id"] = $table["id"];
+                $_SESSION["id"] = strtolower($table["id"]);
                 echo('trueutilisateur');
 
             }

@@ -50,7 +50,7 @@ include 'fragmentHeader.html';
                     . "<td>%s</td>"
                     . "<td>%s</td>"
                     . "<td>%s</td>"
-                    . "<td><a href='../controller/router.php?action=changeCondition&controlleur=administrateur&nplaque=%s&emprunteur=%s&datedebut=%s&condition=%s&reservation=gare'>%d</a></td><td>%d</td>"
+                    . "<td><a href='../controller/router.php?action=changeCondition&controlleur=administrateur&nplaque=%s&emprunteur=%s&datedebut=%s&condition=%s&reservation=gare'>%d</a></td><td>%01.1f</td>"
                     . "</tr>",
                 $mv->getNPlaque(), $mv->getNPlaque(),$mv->getNPlaque(),$mv->getClient(),$mv->getDateDebut(),$mv->getNPlace(),$mv->getNPlace(),$mv->getClient(),$mv->getClient(), $mv->getLabelDuParking(), $mv->getDateDebut(), $mv->getDateFin(), $mv->getNPlaque(), $mv->getClient(),$mv->getDateDebut(), $mv->getTYPE(),$mv->getTYPE(), $mv->getCout());
 

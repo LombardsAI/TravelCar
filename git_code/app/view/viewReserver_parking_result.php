@@ -55,7 +55,7 @@ if(!empty($results)){
   $cout = ceil($mv->getPrix()*((strtotime($info["date_fin"])-strtotime($info["date_debut"]))/3600));
   $temp.="&cout=".$cout;
             printf(
-                "<tr class = 'choose' id = '$temp' style='cursor:pointer' onclick='getPlaque(this,$str)' ><td>%s</td><td>%s</td><td>%d</td><td>%s</td></tr>",
+                "<tr class = 'choose' id = '$temp' style='cursor:pointer' onclick='getPlaque(this,$str)' ><td>%s</td><td>%s</td><td>%01.1f</td><td>%s</td></tr>",
                 $mv->getAeroport(), $mv->getLabel(), $mv->getPrix(), $mv->getAdresse());
             
         }

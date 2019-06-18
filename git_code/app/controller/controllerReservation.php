@@ -25,17 +25,17 @@ class controllerReservation
         $info["date_fin"] = $table["date_fin"];
         $results = ModelReservation::reserver_search($info);
         require ('../view/viewReserver_parking_result.php');
-//        echo $results;
+
     }
     public static function add_gare($table){
         $results = ModelReservation::add_gare($table);
        
-//        if($results){
-//            require ('../view/transition_success.php');
-//        }
-//        else{
-//            require ('../view/transition_fail.php');
-//        }
+        if($results){
+            require ('../view/transition_success.php');
+        }
+        else{
+            require ('../view/transition_fail.php');
+        }
    }
 
    
